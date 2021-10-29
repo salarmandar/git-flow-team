@@ -1,0 +1,1396 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bgt.Ocean.Service</name>
+    </assembly>
+    <members>
+        <member name="M:Bgt.Ocean.Service.Implementations.IActualJobHeaderService.CreateJobForSFO(Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobView)">
+            <summary>
+            For IncidentController DO NOT DELETE
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.CreateAdhocAddSpot(Bgt.Ocean.Service.Messagings.AdhocService.CreateJobAdHocRequest,System.Collections.Generic.List{Bgt.Ocean.Models.TblMasterActualJobServiceStopLegs})">
+            <summary>
+            
+            </summary>
+            <param name="req"></param>
+            <param name="refStop"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.ValidateMaxNumberJobs(System.Int32,System.Guid,System.DateTime,System.Guid)">
+            <summary>
+            This is a preventive validation to identify How many jobs are currently admitted in Dolphin without decrease performance.
+            the user can add as many jobs as he wants, but when he reaches the limit he will receive an alert message.
+            </summary>
+            <param name="unAssignedJobs">number of unassigned jobs.</param>
+            <param name="runGuid">run daily Guid.</param>
+            <param name="workDate">work date selecteed by the user.</param>
+            <param name="language">Language Id of the user.</param>
+            <returns>if the user reaches the limit or not.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.CreateBulkNoteDeposit(Bgt.Ocean.Service.Messagings.AdhocService.CreateJobAdHocRequest,System.Guid,System.Boolean)">
+            <summary>
+            Prepare data of Bulk note deposit capabillity;
+            </summary>
+            <param name="request"></param>
+            <param name="customerLocationGuid"></param>
+            <param name="isFlagOrderMCSAscending"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.PrePareDataBulkCassette(Bgt.Ocean.Service.Messagings.AdhocService.MachineCashServiceRequest)">
+            <summary>
+            Prepare data cassette type All-in.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.PrePareDataBulkDenomination(Bgt.Ocean.Service.Messagings.AdhocService.MachineCashServiceRequest)">
+            <summary>
+            Prepare data Denomination in cassette type All-in.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Adhoc.AdhocService.GetJobLegByServiceJobType(Bgt.Ocean.Service.Messagings.AdhocService.CreateJobAdHocRequest)">
+            <summary>
+            Support only single customer.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.AuditLog.IBaseAuditLogService.InsertTransactionGenericLog(Bgt.Ocean.Service.ModelViews.GenericLog.TransactionGenericLogModel)">
+            <summary>
+            Add generic log (This method will commit DbContext automatically)
+            </summary>
+            <param name="transactionGenericLogModel"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.AuditLog.IObjectComparerService.GetCompareResult``2(``0,``1,System.String,System.Action{Bgt.Ocean.Service.ModelViews.GenericLog.AuditLog.ChangeInfo})">
+            <summary>
+            Compare 2 types to find which property is change and modify value to be logged
+            </summary>
+            <typeparam name="TOld"></typeparam>
+            <typeparam name="TNew"></typeparam>
+            <param name="oldObj"></param>
+            <param name="newObj"></param>
+            <param name="configKey"></param>
+            <param name="fnSetValue">Method for modify its new and old value in ChangeInfo</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Implementations.AuditLog.ISFOApiUserService">
+            <summary>
+            This service provide method for get User of Type DataStorage from SFOTblSystemDataConfiguration_Country
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.AuditLog.OTCManagementService.GetOtcRequestToUpdateOtcTransactionForOcean(Bgt.Ocean.Service.ModelViews.RunControls.JobOtcRequest)">
+            <summary>
+            => TFS#53385:Ability to generate the OTC codes for both legs of Transfer job -> GetOtcRequestToUpdateOtcTransactionForOcean
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.BrinksService.GetCustomer(System.Nullable{System.Guid},System.Guid,System.Nullable{System.Guid},System.Int32)">
+            <summary>
+            Mandatory by country and role
+            </summary>
+            <param name="siteGuid"></param>
+            <param name="countryGuid"></param>
+            <param name="masterUserGuid"></param>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Denomination.DenominationService.GetMasterDenomination(Bgt.Ocean.Service.Messagings.Denomination.GetDenominationRequest)">
+            <summary>
+            => TFS#71743: Denomination => TblMasterDenomination
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Denomination.DenominationService.InsertOrUpdateDenomination(Bgt.Ocean.Service.Messagings.Denomination.SetDenominationAsyncRequest)">
+            <summary>
+            TFS#71743: Denomination => TblMasterActualJobItemsLiability_Denomination
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetFleetMaintenanceByRunResource(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceFilterRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceByRunResource
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetFleetMaintenanceDetail(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceDetailRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceDetail
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetFleetMaintenanceCategoryDetail(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryDetailRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceCategoryDetail
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetMaintenanceID(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceID
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetCurrentOdometerByRunResource(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetCurrentOdometerByRunResource
+            </summary>
+            <param name="runGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.InsertOrUpdateFleetMaintenance(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => InsertOrUpdateFleetMaintenance
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.UpdateCancelFleetMaintenance(System.Nullable{System.Guid})">
+            <summary>
+             => TFS#57836:Fleet Maintenance Revised => UpdateCancelFleetMaintenance
+            </summary>
+            <param name="maintenanceGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetMaintenanceCategoryItems(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryItemsRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceCategoryItems
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetMaintenanceCategory(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceCategory
+            </summary>
+            <param name="brinksCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetVendorBySite(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetVendorBySite
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetVendorByBrinksCompany(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetVendorByBrinksCompany
+            </summary>
+            <param name="brinksCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.FleetMaintenance.FleetMaintenanceService.GetMaintenanceStatus">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised=> GetMaintenanceStatus
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Hubs.AlarmHubService.IsHasAlarm(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Find which run of the list has alarm
+            </summary>
+            <param name="masterDailyRunResourceGuidList"></param>
+            <returns>masterDailyRunGuid who has alarm</returns>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Implementations.IMasterUserAccessGroupCountryEmailService">
+            <summary>
+            interface of UserAccessGroupCountryEmail.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.IMasterUserAccessGroupCountryEmailService.GetPreDefinedEmailsInfo">
+            <summary>
+            Get Pre Defined Emails Info.
+            </summary>
+            <returns>PreDefinedEmailsView List</returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.IMasterUserAccessGroupCountryEmailService.CreateUpdatePreDefinedEmails(Bgt.Ocean.Service.Messaging.SystemConfigurationAdditional.PreDefinedEmailsRequest)">
+            <summary>
+            Create Update Pre-defined Emails List
+            </summary>
+            <param name="_preDefinedEmailsView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.IMasterUserAccessGroupCountryEmailService.DeletePreDefinedEmails(Bgt.Ocean.Service.Messaging.SystemConfigurationAdditional.PreDefinedEmailsRequest)">
+            <summary>
+            Delete Pre-defined Emails List 
+            </summary>
+            <param name="_preDefinedEmailsView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Nemo.RouteOptimization.RouteOptimizationService.GetRouteOptimizationRequestManagement(Bgt.Ocean.Models.RouteOptimization.RequestManagementRequest)">
+            <summary>
+            Display first grid
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.Nemo.RouteOptimization.RouteOptimizationService.InsertMasterRouteRequest(Bgt.Ocean.Service.Messagings.RouteOptimization.MasterRouteInsertRequest)">
+            <summary>
+            add new route optimize type Master-Route(RM).
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.PreVault.PrevaultManagementService.GetPrevaultBySite(System.Guid)">
+            <summary>
+            USE IN DROPDOWN VAULT BALANCE
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.PreVault.VaultBalanceService.GetVaultBalanceState(Bgt.Ocean.Service.Messagings.PreVault.VaultBalanceRequest)">
+            <summary>
+            =>  TFS#71736:Vault Balance Report
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.PricingRules.PricingRuleService.SavePricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.SavePricingRuleRequest)">
+            <summary>
+            Save pricing rule detail
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.PricingRules.PricingRuleService.DeletePricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.DeleteRequest)">
+            <summary>
+            Delete pricing rule - click from grid on tab "Pricing" in product detail
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.PushToDolphin.PushToDolphinService.SetHistoryLogPushToDolphin(Bgt.Ocean.Service.Messagings.RunControlService.SyncToDolphinRequest)">
+            <summary>
+            Open transaction in method.
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.OTCRunControlService.UpdateJobHeaderOTCAfterSave(Bgt.Ocean.Service.ModelViews.RunControls.JobOtcRequest)">
+            <summary>
+            => TFS#53385:Ability to generate the OTC codes for both legs of Transfer job -> UpdateJobHeaderOTCAfterSave
+            </summary>
+            <param name="JobOtcRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.OTCRunControlService.CreateActualJobHeaderOTCSupportCashAdd(Bgt.Ocean.Service.ModelViews.ActualJobHeader.CreateJobHeaderOtcRequest)">
+            <summary>
+            OTC Support Cash add 
+            Otc per job leg.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.ProductService.GetProductList(System.Guid)">
+            <summary>
+            Get product in company
+            </summary>
+            <param name="brinksCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.ProductService.GetProductInContract(System.Guid)">
+            <summary>
+            Get product in contract
+            </summary>
+            <param name="contractGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.ProductService.GetPricingRuleInContractProduct(System.Guid,System.Guid)">
+            <summary>
+            Get pricing rule in product of contract
+            </summary>
+            <param name="contractGuid"></param>
+            <param name="productGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.RunControl.RunControlService.ValidateAssignJobsToRun(Bgt.Ocean.Service.Messagings.RunControlService.ValidateAssignJobsToRunRequest)">
+            <summary>
+            => TFS#67763:[Run Control] - TV job is able to assign into the same run -> ValidateAssignJobsToRun
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.ITruckLiabilityLimitService.IsOverLiabilityLimitWhenExistJobs(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsJobsRequest)">
+            <summary>
+            MOVE JOBS
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.ITruckLiabilityLimitService.IsOverLiabilityLimitWhenNoExistsItems(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitNoExistsItemsRequest)">
+            <summary>
+            EDIT/UPDATE
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.ITruckLiabilityLimitService.GetTruckLiabilityLimitPercentageAlert(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsRunRequest)">
+            <summary>
+            Check Run  Percentage Liability
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.ITruckLiabilityLimitService.GetConvertBankCleanOutTotalLiability(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.ConvertBankCleanOutTotalLiabilityRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.TruckLiabilityLimitService.IsOverLiabilityLimitWhenExistJobs(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsJobsRequest)">
+            <summary>
+            => TFS#63341: Global ability to manage the truck liability limit  -> IsOverLiabilityLimitWhenExistJobs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.TruckLiabilityLimitService.IsOverLiabilityLimitWhenNoExistsItems(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitNoExistsItemsRequest)">
+            <summary>
+            => TFS#63341: Global ability to manage the truck liability limit  -> IsOverLialibityLimitWhenNoExistsJobs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.TruckLiabilityLimitService.IsOverLialibityLimitWhenNoExistsJobs(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitNoExistsJobsRequest)">
+            <summary>
+            => TFS#63341: Global ability to manage the truck liability limit  -> IsOverLialibityLimitWhenNoExistsJobs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.TruckLiabilityLimit.TruckLiabilityLimitService.GetTruckLiabilityLimitPercentageAlert(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsRunRequest)">
+            <summary>
+            => TFS#63341: Global ability to manage the truck liability limit  -> GetTruckLiabilityLimitPercentageAlert
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.IUserService.CreateAccessAPILogHistory(System.Nullable{System.Guid},System.DateTime,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Create api access history.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Messagings.AdhocService.AdhocTempData.getMsgId_ForAdhocJob_LegP">
+            <summary>
+            Job P, TV(P), T ---------> If job is TV and there are 2 Runs, check only TV(P) because it starts from P
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Messagings.AdhocService.AdhocTempData.getMsgId_ForAdhocJob_LegD">
+            <summary>
+            Job D, TV(D) that has no Run in TV(P) ---------> If job is TV and there are 2 Runs, check only TV(P) because it starts from P
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.AdhocService.AdhocLegRequest.LocationByLegGuid">
+            <summary>
+            Get data either from arr_LocationGuid or LocationGuid property
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Messagings.BaseResponse.SetMessageView(Bgt.Ocean.Service.ModelViews.Systems.SystemMessageView)">
+            <summary>
+            setup message view
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Messagings.BaseResponse.SetMessageView(Bgt.Ocean.Service.ModelViews.Systems.SystemMessageView,System.String)">
+            <summary>
+            setup message view with single parameter
+            </summary>
+            <param name="msg"></param>
+            <param name="textParam"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Messagings.BaseResponse.SetMessageView(Bgt.Ocean.Service.ModelViews.Systems.SystemMessageView,System.String[])">
+            <summary>
+            setup message view with parameter
+            </summary>
+            <param name="msg"></param>
+            <param name="textParams"></param>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.Consolidation.ConMultiBranchCreateUpdateRequest.FlagSealed">
+            <summary>
+            true: Click Seal (Sealed), false: Click Save (In-Process)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.Consolidation.ConMultiBranchCreateUpdateResponse.StatusName">
+            <summary>
+            Old Name: StatusMasterID
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.OriginCustomerLocation_Guid">
+            <summary>
+            [MasterRoute] Pick Up Customer
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.OriginSite_Guid">
+            <summary>
+            [MasterRoute] Pick Up Site
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.SystemSubServiceType_Guid">
+            <summary>
+            [MasterRoute] Job Type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.SystemServiceJobType_Guid">
+            <summary>
+            [MasterRoute] Job Type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.MasterLineOfBusiness_Guid">
+            <summary>
+            [MasterRoute] LOB
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.SystemDayOfWeek_Guid">
+            <summary>
+            [MasterRoute] Delivery Day Of Week
+             delivery_daysequence = pickup_daysequence + DayInvault
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.FlagShowAll">
+            <summary>
+            [MasterRoute] Delivery Check Box Show All
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrDestinationDetailRequest.MasterRoute_Guid">
+            <summary>
+            [MasterRoute] Delivery Master Route
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrOriginDetailRequest.DestLocation_Guid">
+            <summary>
+            BCD: Delivery Customer
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMultiBrOriginDetailRequest.DestSite_Guid">
+            <summary>
+            BCD: Delivery Site
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetAdhocAllCustomerAndLocationRequest.Site_Guid">
+            <summary>
+            [MasterRoute] selected Site 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetAdhocAllCustomerAndLocationRequest.MasterCustomer_Guid">
+            <summary>
+            [MasterRoute] selected customer
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetAdhocAllCustomerAndLocationRequest.OriginSite_Guid">
+            <summary>
+            [MasterRoute] not allow master site,origin site 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.Site_Guid">
+            <summary>
+            [MasterRoute] selected Site 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.SystemServiceJobType_Guid">
+            <summary>
+            [MasterRoute] selected Job Type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.SystemSubServiceType_Guid">
+            <summary>
+            [MasterRoute] selected Sub Service Type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.MasterLineOfBusiness_Guid">
+            <summary>
+            [MasterRoute] selected LOB
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.SystemDayOfWeek_Guid">
+            <summary>
+            [MasterRoute] selected Day Of Week
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.FlagShowAll">
+            <summary>
+            [MasterRoute] selected Check Box Show All
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.MasterRoute_Guid">
+            <summary>
+            [MasterRoute] selected Master Route
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.MasterCustomer_Guid">
+            <summary>
+            [MasterRoute] selected customer
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.OriginSite_Guid">
+            <summary>
+            [MasterRoute] not allow master site,origin site 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetMasterRouteAllCustomerAndLocationRequest.strJobActionAbb">
+            <summary>
+            [MasterRoute] Action Job 'P' or 'D'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetAllSitePathRequest.OriginSite_Guid">
+            <summary>
+            Not null
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.CustomerLocationService.GetAllSitePathRequest.DestinationSite_Guid">
+            <summary>
+            Not null
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ExportExcelService.GetFileRequest.FileType">
+            <summary>
+            File type as 'pdf', 'xlsx'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.FileService.FileTempRequest.FileType">
+            <summary>
+            File type as 'pdf', 'xlsx'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.FileService.FileTempRequest.ExpiredDateTime">
+            <summary>
+            File expired in 30 mins.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceFilterRequest">
+            <summary>
+            Main grid filter
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceDetailRequest">
+            <summary>
+            Maintenace Detail By Id
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryDetailRequest">
+            <summary>
+            Maintenace Category
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryItemsRequest">
+            <summary>
+            Maintenace Category Items
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceRequest">
+            <summary>
+            Create/Update Maintenance
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.MassUpdateJobCriteriaRequest.FlagIncludeHoliday">
+            <summary>
+            True = include holiday.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.MassUpdateJobCriteriaRequest.FlagEveryWeek">
+            <summary>
+            True = include everweek.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.MassUpdateJobCriteriaRequest.FlagA_Week">
+            <summary>
+            True = include A Week.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.MassUpdateJobCriteriaRequest.FlagB_Week">
+            <summary>
+            True = Include B Week.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.MassUpdateJobCriteriaRequest.ActionReplace">
+            <summary>
+            P = PickUp
+            D = Delivery
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.UpdateJobOrderRequest.FlagInRoue">
+            <summary>
+            true : IF u wanna update job order all route detail in template
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.UpdateJobOrderRequest.LanguageGuid">
+            <summary>
+            not required,can get from session
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.UpdateJobOrderRequest.RouteGuids">
+            <summary>
+            IF u wanna update job order all route detail in template
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.MasterRouteService.UpdateJobOrderRequest.JobDetails">
+            <summary>
+            update some route detail 
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.Service.Messagings.NemoDynamicRouteService.SolutionRouteOptimizationRequest">
+            <summary>
+            Request for Nemo Solution Route Optimization.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.CopyPricingRuleRequest.Product_Guid">
+            <summary>
+            new Guid of duplicated product
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.CopyPricingRuleRequest.SourceProduct_Guid">
+            <summary>
+            original product (for copy in feature duplicate product)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.SaveActionRequest.SystemPricingVariable_Guid">
+            <summary>
+            for progressive
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.SaveActionRequest.SystemPricingCriteria_Guid">
+            <summary>
+            for condition
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.SaveRuleRequest.Entity_TableName">
+            <summary>
+            TableName from TblSystemPricingEntity
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.PricingRuleService.SaveRuleRequest.Operator">
+            <summary>
+            SQL operator from TblSystemOperator, It must depend on SystemOperator_Guid
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.QuotationService.AdjustRateRequest.Product_Guid">
+            <summary>
+            Optional for adjust all pricing in product need this
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.QuotationService.AdjustRateRequest.MasterUser_Guid">
+            <summary>
+            Get sale user from user login
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.QuotationService.CheckRateExceedRequest.MasterUser_Guid">
+            <summary>
+            User as sale person
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.QuotationService.GetPricingRuleTreeViewReqeust.Contract_Guid">
+            <summary>
+            For quotation with contract need to send this parameter to get treeview of pricing rule without pricing rule in contract 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RequestBase.ClientDateTime">
+            <summary>
+            UTC now + local offset
+            local offset come from client-side by integer offset in header like -420 is UTC +7
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RequestBase.UserName">
+            <summary>
+            Request by user
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RequestBase.LocalClientDateTime">
+            <summary>
+            DateTime from client-side [undefined offset]
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RequestBase.UniversalDatetime">
+            <summary>
+            DateTime offset zero (dateNow) - Ocean back-end style
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RunControlService.JobPropertiesRequest.TabID">
+            <summary>
+            more detail >>>
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RunControlService.ValidateCrewOnPortalResponse.responseCode">
+            <summary>
+            1 = Success, 0 = Invalid request, -1 = Error
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RunControlService.ValidateCrewOnPortalResponse.rows">
+            <summary>
+            Number of row
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.RunControlService.ValidateCrewOnPortalRequest.runDate">
+            <summary>
+            Required date format (MM/dd/yyyy Ex. 12/31/2018)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseCreateServiceRequest.responseCode">
+            <summary>
+            1 = Success, 0 = Invalid request, -1 = Error
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseCreateServiceRequest.rows">
+            <summary>
+            Number of row
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestQueryServiceRequest.statusId">
+            <summary>
+            1 = Open, 9 = Closed, 103 = Pending, 104 = Dispatched, 105 = Cancelled, 107 = Planned, 108 = Reopen, 109 = On Hold
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestQueryServiceRequest.createdUser">
+            <summary>
+            Preferred 'OceanWebApiUser'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.createdDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.modifiedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.openedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.notifiedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.downedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.servicedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.dueDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.dispatchedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.acknowlegedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.etaDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.departedToOnsiteDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.reportedOnsiteDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.resolvedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.departedToOriginDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.reportedToOriginDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.ResponseQueryServiceRequest_DatetimeDetail.closedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest.machineDetail">
+            <summary>
+            For all service type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest.serviceRequestDetail">
+            <summary>
+            For all service type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest.datetimeDetail">
+            <summary>
+            For all service type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest.eCashDetail">
+            <summary>
+            For eCash service type (Optional)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest.techMeetDetail">
+            <summary>
+            For Tech meet service type (Optional)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_MachineDetail.countryAbb">
+            <summary>
+            Country abbreviation (Ex. US, CA, MX)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_ServiceRequestDetail.serviceJobTypeAbb">
+            <summary>
+            ATM Machine = FLM, ECASH, TM;
+            CompuSafe Machine = FLM, F/SLM
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_ServiceRequestDetail.openSourceId">
+            <summary>
+            Preferred '13'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_ServiceRequestDetail.createdUser">
+            <summary>
+            Always be 'OceanWebApiUser'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_DatetimeDetail.notifiedDatetime">
+            <summary>
+            Required format yyyy-MM-dd HH:mm (Ex. 2018-12-31 23:30) in UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_DatetimeDetail.downedDateTime">
+            <summary>
+            Required format yyyy-MM-dd HH:mm (Ex. 2018-12-31 23:30) in UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.RequestCreateServiceRequest_DatetimeDetail.servicedDatetime">
+            <summary>
+            Required format yyyy-MM-dd HH:mm (Ex. 2018-12-31 23:30) in UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ServiceRequest.SRCreateRequestFLM.ProblemGuid">
+            <summary>
+            Call type
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseRequestQuery.countryAbb">
+            <summary>
+            Country abbreviation (Ex. US, CA, MX)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseRequestQuery.createdDatetimeFrom">
+            <summary>
+            Required format yyyy-MM-dd HH:mm (Ex. 2018-12-31 08:30) in UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseRequestQuery.createdDatetimeTo">
+            <summary>
+            Required format yyyy-MM-dd HH:mm (Ex. 2018-12-31 23:30) in UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseResponse.responseCode">
+            <summary>
+            1 = Success, 0 = Invalid request, -1 = Error
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseResponse.rows">
+            <summary>
+            Number of row
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseResponseQuery.createdDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.StandardTable.BaseResponseQuery.modifiedDatetime">
+            <summary>
+            UTC +0
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.UserName">
+            <summary>
+            Application username
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.Password">
+            <summary>
+            Application password
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.ApplicationId">
+            <summary>
+            Application Id
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobHoldOverView.SFOTechnicianName">
+            <summary>
+            Techmeet Name
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobPickedUpView.SFOTechnicianName">
+            <summary>
+            Techmeet Name
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobView.SFOTechnicianName">
+            <summary>
+            Techmeet Name
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobHeaderRequest.SFOTechnicianName">
+            <summary>
+            Techmeet Name
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Consolidation.ConsolidateModel.FlagSealed">
+            <summary>
+            true: Click Seal (Sealed), false: Click Save (In-Process)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Customer.AccountView.MasterCustomer_Guid">
+            <summary>
+            Main Customer
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Customer.AccountView.Account_Guid">
+            <summary>
+            TblMasterCustomer (Account)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Customer.AccountView.AccountCustomerName">
+            <summary>
+            TblMasterCustomer (Account)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.FleetMaintenanceViewModel.FleetAccidentViewModel.AccidentImageModelView.IsActualImage">
+            <summary>
+            True = Data From TblMasterRunResource_Accident_Images
+            False = Data From TblMasterImageTemp
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PreVault.CheckOutDepartmentViewModel.WorkDate">
+            <summary>
+            TFS#35898 : Add capability to filter the packages by route name and route date
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_ChargeView.BasisPricingVariable_Guid">
+            <summary>
+            Basis as same as detail of charge
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_ChargeView.QuantityOfBasis">
+            <summary>
+            For every {QuantityOfBasis} of basis 
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_ChargeView.SystemPricingVariable_Guid">
+            <summary>
+            Selected value from drop-down beside 'For every'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_ChargeView.Entity_TableName">
+            <summary>
+            TableName from TblSystemPricingEntity
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_ChargeView.Logical_Operator">
+            <summary>
+            SQL operator from TblSystemLogicalOperator
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_Charge_ConditionView.Operator">
+            <summary>
+            SQL operator from TblSystemOperator, It must depend on SystemOperator_Guid
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.Action_Charge_ConditionView.PricingVariable_AttributeName">
+            <summary>
+            AttributeName from TblSystemPricingVariable
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.PricingRuleView.MasterPricingRule_Guid">
+            <summary>
+            Reference pricing rule after clone
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.ProductTreeView.Guid">
+            <summary>
+            Primary key of product table
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.ProductTreeView.CountChildLeaf">
+            <summary>
+            (Equal or More than 1) = Has child leaf
+            (0) = No child leaf
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.ProductTreeView.IsParentOfSelectedProduct">
+            <summary>
+            flag for mark this product is parent of selected product; found on move product page
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.QuotationMappingPricingView.Guid">
+            <summary>
+            PK mapping quotation -> pricing rule
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.PricingRules.TreeViewBase.expanded">
+            <summary>
+            For expand tree view on UI
+            Warning: case sensitive
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ServiceRequest.ServiceRequestView.TechMeetInformation">
+            <summary>
+            TechMeet Information
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SiteNetWork.SiteNetWorkRequest.SiteGuid">
+            <summary>
+            Origin of site guid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.EmailDomainsView.AllowedDomain_Guid">
+            <summary>
+            Gets or sets AllowedDomain_Guid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.EmailDomainsView.AllowedDomain">
+            <summary>
+            Gets or sets AllowedDomain.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogGuid">
+            <summary>
+            Gets or sets Log_Guid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.EventID">
+            <summary>
+            Type of Event in number
+            1 = Add
+            2 = Edit
+            3 = Delete
+            0 = Undefined
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.EventType">
+            <summary>
+            Type of event in string
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.UserName">
+            <summary>
+            user who made the change
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.ConfigType">
+            <summary>
+            Name of function
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppKey">
+            <summary>
+            Gets or sets AppKey.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue1">
+            <summary>
+            Gets or sets AppValue1.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue2">
+            <summary>
+            Gets or sets AppValue2.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue3">
+            <summary>
+            Gets or sets AppValue3.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue4">
+            <summary>
+            Gets or sets AppValue4.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue5">
+            <summary>
+            Gets or sets AppValue5.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue6">
+            <summary>
+            Gets or sets AppValue6.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue7">
+            <summary>
+            Gets or sets AppValue7.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue8">
+            <summary>
+            Gets or sets AppValue8.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppValue9">
+            <summary>
+            Gets or sets AppValue9.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.LogAppDescription">
+            <summary>
+            Gets or sets AppDescription.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.ConfigurationAuditLogView.Date">
+            <summary>
+            Date of change
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.NotificationConfigPeriodsView.DaysBeforeDueDate">
+            <summary>
+            Days for notification GlobalUserAdmon
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.NotificationConfigPeriodsView.NotifyBeforeDueDate">
+            <summary>
+            Days for Notification LocalUser this parameter will been used for WinService Notification.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.PreDefinedEmailsView.UserAccessGroupCountryEmailGuid">
+            <summary>
+            Gets or sets UserAccessGroupCountryEmailGuid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.PreDefinedEmailsView.CountryGuid">
+            <summary>
+            Gets or sets CountryGuid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.PreDefinedEmailsView.Country">
+            <summary>
+            Gets or sets Country.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.PreDefinedEmailsView.AllowedEmailList">
+            <summary>
+            Gets or sets AllowedEmailList.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentGuid">
+            <summary>
+            Gets or sets SystemEnvironment_Guid.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppKey">
+            <summary>
+            Gets or sets AppKey.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue1">
+            <summary>
+            Gets or sets AppValue1.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue2">
+            <summary>
+            Gets or sets AppValue2.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue3">
+            <summary>
+            Gets or sets AppValue3.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue4">
+            <summary>
+            Gets or sets AppValue4.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue5">
+            <summary>
+            Gets or sets AppValue5.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue6">
+            <summary>
+            Gets or sets AppValue6.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue7">
+            <summary>
+            Gets or sets AppValue7.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue8">
+            <summary>
+            Gets or sets AppValue8.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppValue9">
+            <summary>
+            Gets or sets AppValue9.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.SystemConfigurationAdditional.SystemEnvironmentView.SystemEnvironmentAppDescription">
+            <summary>
+            Gets or sets AppDescription.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.Guid">
+            <summary>
+            Gets or sets the guid of a Unit.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UnitName">
+            <summary>
+            Gets or sets the Unit Name.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UnitNameAbbrevaition">
+            <summary>
+            Gets or sets the Unit Name.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.SystemGlobalUnitType_Guid">
+            <summary>
+            Gets or sets the id of Unit Type.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.SystemDisplayTextControls_Guid">
+            <summary>
+            Gets or sets the id of text Controls.
+            With this ids you can get the name of a Unit in different languages.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.FlagDisable">
+            <summary>
+            Gets or sets a value indicating whether the record is active or not.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UnitTypeName">
+            <summary>
+            Gets or sets the UnitTypeName.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UserCreated">
+            <summary>
+            Gets or sets the user that create the record.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.DatetimeCreated">
+            <summary>
+            Gets or sets the date when the record was created.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UniversalDatetimeCreated">
+            <summary>
+            Gets or sets the universal date when the record was created.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UserModified">
+            <summary>
+            Gets or sets the user that modify the record.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.DatetimeModified">
+            <summary>
+            Gets or sets the date when the record was modified.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UniversalDatetimeModified">
+            <summary>
+            Gets or sets the universal date when the record was modified.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UnitID">
+            <summary>
+            Gets or sets the UnitID.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Systems.SystemGlobalUnitView.UnitNameDisplayText">
+            <summary>
+            Gets or sets the Unit Name by user languages.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Users.DataStorage.SiteName">
+            <summary>
+            Site Code + Site Name
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Users.DataStorage.FlagLimitedTimeAccess">
+            <summary>
+            default is 'false' -> no limit access time (can access all the time)
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Users.DataStorage.FormatDateTime">
+            <summary>
+            this will return '{FormatDate} {HH:mm or hh:mm tt}' base on FlagUseAmPm
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Users.DataStorage.FormatTime">
+            <summary>
+            return time format of user base on FlagUseAmPm
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.Users.DataStorage.NumberCurrencyCultureCode">
+            <summary>
+            Format number currency
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Services.Messagings.StandardTable.Machine.ResponseQueryMachine_Main.flagDisable">
+            <summary>
+            True = Inactive, False = Active
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Services.Messagings.StandardTable.Machine.ResponseQueryMachine_Main.flagSuspension">
+            <summary>
+            True = Suspension, False = Available
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Services.Messagings.StandardTable.Machine.ResponseQueryMachine_SLA.flmSlaTime">
+            <summary>
+            Time in minute
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Services.Messagings.StandardTable.Machine.ResponseQueryMachine_SLA.eCashSlaTime">
+            <summary>
+            Time in minute
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Services.Messagings.StandardTable.Machine.ResponseQueryMachine_SLA.compuSafeSlaTime">
+            <summary>
+            Time in minute
+            </summary>
+        </member>
+    </members>
+</doc>

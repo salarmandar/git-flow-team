@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SFOLogDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblSystemCustomerLocation_Audit_Log">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemLogCategory_Guid" Type="uniqueidentifier" />
+    <Property Name="SystemLogProcess_Guid" Type="uniqueidentifier" />
+    <Property Name="CustomerLocation_Guid" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="7" />
+    <Property Name="UserModifed" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModified" Type="datetime" />
+    <Property Name="UniversalDatetimeModified" Type="datetimeoffset" Precision="7" />
+  </EntityType>
+  <EntityType Name="SFOTblSystemLogCategory">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemModelConfig_Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemLogProcess_Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CategoryCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="7" />
+    <Property Name="UserModifed" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModified" Type="datetime" />
+    <Property Name="UniversalDatetimeModified" Type="datetimeoffset" Precision="7" />
+  </EntityType>
+  <EntityType Name="SFOTblSystemLogProcess">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProcessCode" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProcessName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="7" />
+    <Property Name="UserModifed" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModified" Type="datetime" />
+    <Property Name="UniversalDatetimeModified" Type="datetimeoffset" Precision="7" />
+  </EntityType>
+  <EntityType Name="SFOTblSystemModelConfig">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConfigKey" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModelNameSource" Type="nvarchar" MaxLength="200" />
+    <Property Name="ModelNameTarget" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="0" />
+    <Property Name="UserModify" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModify" Type="datetime" />
+    <Property Name="UniversalDatetimeModify" Type="datetimeoffset" Precision="0" />
+    <Property Name="DefaultSystemMsgID" Type="nvarchar" MaxLength="20" />
+    <Property Name="DefaultLabelIndex" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SFOTblSystemModelConfig_Property">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemModelConfig_Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNameSource" Type="nvarchar" MaxLength="200" />
+    <Property Name="PropertyNameTarget" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="0" />
+    <Property Name="UserModify" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModify" Type="datetime" />
+    <Property Name="UniversalDatetimeModify" Type="datetimeoffset" Precision="0" />
+    <Property Name="LabelKey" Type="nvarchar" MaxLength="100" />
+    <Property Name="SystemModelConfig_PropertyQuery_Guid" Type="uniqueidentifier" />
+    <Property Name="SystemLogCategory_Guid" Type="uniqueidentifier" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="OverwriteSystemMsgID" Type="nvarchar" MaxLength="20" />
+    <Property Name="OverwriteLabelIndex" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SFOTblSystemModelConfig_PropertyQuery">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="QueryString" Type="nvarchar(max)" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="7" />
+    <Property Name="UserModifed" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModified" Type="datetime" />
+    <Property Name="UniversalDatetimeModified" Type="datetimeoffset" Precision="7" />
+  </EntityType>
+  <EntityType Name="SFOTblTransactionGenericLog">
+    <Key>
+      <PropertyRef Name="Guid" />
+    </Key>
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SystemLogCategory_Guid" Type="uniqueidentifier" />
+    <Property Name="SystemLogProcess_Guid" Type="uniqueidentifier" />
+    <Property Name="ReferenceValue" Type="nvarchar" MaxLength="200" />
+    <Property Name="FlagDisable" Type="bit" Nullable="false" />
+    <Property Name="UserCreated" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateTimeCreated" Type="datetime" />
+    <Property Name="UniversalDatetimeCreated" Type="datetimeoffset" Precision="7" />
+    <Property Name="UserModifed" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatetimeModified" Type="datetime" />
+    <Property Name="UniversalDatetimeModified" Type="datetimeoffset" Precision="7" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SystemMsgID" Type="nvarchar" MaxLength="20" />
+    <Property Name="LabelIndex" Type="nvarchar" MaxLength="100" />
+    <Property Name="JSONValue" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_SFOTblSystemLogCategory_SFOTblSystemLogProcess">
+    <End Role="SFOTblSystemLogProcess" Type="Self.SFOTblSystemLogProcess" Multiplicity="1" />
+    <End Role="SFOTblSystemLogCategory" Type="Self.SFOTblSystemLogCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemLogProcess">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblSystemLogCategory">
+        <PropertyRef Name="SystemLogProcess_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblSystemLogCategory_SFOTblSystemModelConfig">
+    <End Role="SFOTblSystemModelConfig" Type="Self.SFOTblSystemModelConfig" Multiplicity="1" />
+    <End Role="SFOTblSystemLogCategory" Type="Self.SFOTblSystemLogCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemModelConfig">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblSystemLogCategory">
+        <PropertyRef Name="SystemModelConfig_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemLogCategory">
+    <End Role="SFOTblSystemLogCategory" Type="Self.SFOTblSystemLogCategory" Multiplicity="0..1" />
+    <End Role="SFOTblSystemModelConfig_Property" Type="Self.SFOTblSystemModelConfig_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemLogCategory">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblSystemModelConfig_Property">
+        <PropertyRef Name="SystemLogCategory_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig">
+    <End Role="SFOTblSystemModelConfig" Type="Self.SFOTblSystemModelConfig" Multiplicity="1" />
+    <End Role="SFOTblSystemModelConfig_Property" Type="Self.SFOTblSystemModelConfig_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemModelConfig">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblSystemModelConfig_Property">
+        <PropertyRef Name="SystemModelConfig_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig_PropertyQuery">
+    <End Role="SFOTblSystemModelConfig_PropertyQuery" Type="Self.SFOTblSystemModelConfig_PropertyQuery" Multiplicity="0..1" />
+    <End Role="SFOTblSystemModelConfig_Property" Type="Self.SFOTblSystemModelConfig_Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemModelConfig_PropertyQuery">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblSystemModelConfig_Property">
+        <PropertyRef Name="SystemModelConfig_PropertyQuery_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblTransactionGenericLog_SFOTblSystemLogCategory">
+    <End Role="SFOTblSystemLogCategory" Type="Self.SFOTblSystemLogCategory" Multiplicity="0..1" />
+    <End Role="SFOTblTransactionGenericLog" Type="Self.SFOTblTransactionGenericLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemLogCategory">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblTransactionGenericLog">
+        <PropertyRef Name="SystemLogCategory_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SFOTblTransactionGenericLog_SFOTblSystemLogProcess">
+    <End Role="SFOTblSystemLogProcess" Type="Self.SFOTblSystemLogProcess" Multiplicity="0..1" />
+    <End Role="SFOTblTransactionGenericLog" Type="Self.SFOTblTransactionGenericLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SFOTblSystemLogProcess">
+        <PropertyRef Name="Guid" />
+      </Principal>
+      <Dependent Role="SFOTblTransactionGenericLog">
+        <PropertyRef Name="SystemLogProcess_Guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SFOLogDbModelStoreContainer">
+    <EntitySet Name="TblSystemCustomerLocation_Audit_Log" EntityType="Self.TblSystemCustomerLocation_Audit_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SFOTblSystemLogCategory" EntityType="Self.SFOTblSystemLogCategory" Schema="SFO" store:Type="Tables" />
+    <EntitySet Name="SFOTblSystemLogProcess" EntityType="Self.SFOTblSystemLogProcess" Schema="SFO" store:Type="Tables" />
+    <EntitySet Name="SFOTblSystemModelConfig" EntityType="Self.SFOTblSystemModelConfig" Schema="SFO" store:Type="Tables" />
+    <EntitySet Name="SFOTblSystemModelConfig_Property" EntityType="Self.SFOTblSystemModelConfig_Property" Schema="SFO" store:Type="Tables" />
+    <EntitySet Name="SFOTblSystemModelConfig_PropertyQuery" EntityType="Self.SFOTblSystemModelConfig_PropertyQuery" Schema="SFO" store:Type="Tables" />
+    <EntitySet Name="SFOTblTransactionGenericLog" EntityType="Self.SFOTblTransactionGenericLog" Schema="SFO" store:Type="Tables" />
+    <AssociationSet Name="FK_SFOTblSystemLogCategory_SFOTblSystemLogProcess" Association="Self.FK_SFOTblSystemLogCategory_SFOTblSystemLogProcess">
+      <End Role="SFOTblSystemLogProcess" EntitySet="SFOTblSystemLogProcess" />
+      <End Role="SFOTblSystemLogCategory" EntitySet="SFOTblSystemLogCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblSystemLogCategory_SFOTblSystemModelConfig" Association="Self.FK_SFOTblSystemLogCategory_SFOTblSystemModelConfig">
+      <End Role="SFOTblSystemModelConfig" EntitySet="SFOTblSystemModelConfig" />
+      <End Role="SFOTblSystemLogCategory" EntitySet="SFOTblSystemLogCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemLogCategory" Association="Self.FK_SFOTblSystemModelConfig_Property_SFOTblSystemLogCategory">
+      <End Role="SFOTblSystemLogCategory" EntitySet="SFOTblSystemLogCategory" />
+      <End Role="SFOTblSystemModelConfig_Property" EntitySet="SFOTblSystemModelConfig_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig" Association="Self.FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig">
+      <End Role="SFOTblSystemModelConfig" EntitySet="SFOTblSystemModelConfig" />
+      <End Role="SFOTblSystemModelConfig_Property" EntitySet="SFOTblSystemModelConfig_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig_PropertyQuery" Association="Self.FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig_PropertyQuery">
+      <End Role="SFOTblSystemModelConfig_PropertyQuery" EntitySet="SFOTblSystemModelConfig_PropertyQuery" />
+      <End Role="SFOTblSystemModelConfig_Property" EntitySet="SFOTblSystemModelConfig_Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblTransactionGenericLog_SFOTblSystemLogCategory" Association="Self.FK_SFOTblTransactionGenericLog_SFOTblSystemLogCategory">
+      <End Role="SFOTblSystemLogCategory" EntitySet="SFOTblSystemLogCategory" />
+      <End Role="SFOTblTransactionGenericLog" EntitySet="SFOTblTransactionGenericLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SFOTblTransactionGenericLog_SFOTblSystemLogProcess" Association="Self.FK_SFOTblTransactionGenericLog_SFOTblSystemLogProcess">
+      <End Role="SFOTblSystemLogProcess" EntitySet="SFOTblSystemLogProcess" />
+      <End Role="SFOTblTransactionGenericLog" EntitySet="SFOTblTransactionGenericLog" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

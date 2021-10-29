@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bgt.Ocean.Service</RootNamespace>
+    <AssemblyName>Bgt.Ocean.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <CodeAnalysisRuleSet>..\..\..\Ocean Online\Ocean Online\SonarLintRuleSet\OceanOnlineWay.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Design.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.2.2.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.2.2\lib\net45\System.Linq.Dynamic.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomJsonContractResolver\IgnoreResolver.cs" />
+    <Compile Include="CustomJsonContractResolver\NameResolver.cs" />
+    <Compile Include="CustomJsonContractResolver\_BaseContractResolver.cs" />
+    <Compile Include="CustomJsonContractResolver\_IContractResolver.cs" />
+    <Compile Include="CustomJsonContractResolver\_MainContractResolver.cs" />
+    <Compile Include="Helpers\PaginationHelper.cs" />
+    <Compile Include="Helpers\TreeViewHelper.cs" />
+    <Compile Include="Implementations\ActualJobHeaderService.cs" />
+    <Compile Include="Implementations\Adhoc\AdhocService.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial1.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial2.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial_Delivery.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial_PickUp.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial3.cs" />
+    <Compile Include="Implementations\Adhoc\_AdhocServicePartial_MultiBranch.cs" />
+    <Compile Include="Implementations\AuditLog\BaseAuditLogService.cs" />
+    <Compile Include="Implementations\AuditLog\CustomerLocationAuditLogService.cs" />
+    <Compile Include="Implementations\BrinksService.cs" />
+    <Compile Include="Implementations\Configuration\SettingsService.cs" />
+    <Compile Include="Implementations\Consolidation\ConsolidationService.cs" />
+    <Compile Include="Implementations\Denomination\DenominationService.cs" />
+    <Compile Include="Implementations\Email\EmailService.cs" />
+    <Compile Include="Implementations\ExportExcelService.cs" />
+    <Compile Include="Implementations\File\FileService.cs" />
+    <Compile Include="Implementations\FleetMaintenance\FleetAccidentService.cs" />
+    <Compile Include="Implementations\FleetMaintenance\FleetGasolineService.cs" />
+    <Compile Include="Implementations\FleetMaintenance\FleetMainService.cs" />
+    <Compile Include="Implementations\FleetMaintenance\FleetMaintenanceService.cs" />
+    <Compile Include="Implementations\FleetMaintenance\FleetSummaryService.cs" />
+    <Compile Include="Implementations\Hubs\AlarmHubBroadcastService.cs" />
+    <Compile Include="Implementations\Hubs\AlarmHubService.cs" />
+    <Compile Include="Implementations\Hubs\RouteOptimizationBroadcastService.cs" />
+    <Compile Include="Implementations\MasterRoute\ManageMasterJobService.cs" />
+    <Compile Include="Implementations\MasterRoute\MasterRouteTransactionLogService.cs" />
+    <Compile Include="Implementations\MasterRoute\MasterRouteService.cs" />
+    <Compile Include="Implementations\MasterRoute\OnHandRouteService.cs" />
+    <Compile Include="Implementations\MasterUserAccessGroupCountryEmailService.cs" />
+    <Compile Include="Implementations\Monitoring\MonitoringService.cs" />
+    <Compile Include="Implementations\NemoConfigurationService.cs" />
+    <Compile Include="Implementations\Nemo\NemoAuthenticationService.cs" />
+    <Compile Include="Implementations\Nemo\NemoSync\NemoSyncService.cs" />
+    <Compile Include="Implementations\Nemo\RouteOptimization\RouteOptimizationService.cs" />
+    <Compile Include="Implementations\PreVault\CheckOutDepartmentService.cs" />
+    <Compile Include="Implementations\PreVault\DiscrepancyManagementService.cs" />
+    <Compile Include="Implementations\PreVault\PrevaultManagementService.cs" />
+    <Compile Include="Implementations\PreVault\VaultBalanceService_Partial2.cs" />
+    <Compile Include="Implementations\PreVault\VaultBalanceService_Partial1.cs" />
+    <Compile Include="Implementations\PreVault\VaultBalanceService.cs" />
+    <Compile Include="Implementations\PricingRules\SaleService.cs" />
+    <Compile Include="Implementations\PushToDolphin\SFOPushToDolphinService.cs" />
+    <Compile Include="Implementations\Report\ReportService.cs" />
+    <Compile Include="Implementations\SFO\ObjectComparerService.cs" />
+    <Compile Include="Implementations\SFO\RuleEngineService.cs" />
+    <Compile Include="Implementations\SFO\ServiceRequest\ServiceRequestCreatorService.cs" />
+    <Compile Include="Implementations\SFO\ServiceRequest\ServiceRequestEditorService.cs" />
+    <Compile Include="Implementations\SFO\ServiceRequest\ServiceRequestReaderService.cs" />
+    <Compile Include="Implementations\SFO\SFIService.cs" />
+    <Compile Include="Implementations\SFO\SFOApiUserService.cs" />
+    <Compile Include="Implementations\StandardTable\MoniteringNetWorkService.cs" />
+    <Compile Include="Implementations\StandardTable\SiteNetworkAuditoLogService.cs" />
+    <Compile Include="Implementations\StandardTable\SiteNetworkService.cs" />
+    <Compile Include="Implementations\StandardTable\SitePathService.cs" />
+    <Compile Include="Implementations\Systems\SystemConfigurationAuditLogService.cs" />
+    <Compile Include="Implementations\Systems\SystemEmailActionService.cs" />
+    <Compile Include="Implementations\Systems\SystemNotificationPeriodsService.cs" />
+    <Compile Include="Implementations\OTCRunControlService.cs" />
+    <Compile Include="Implementations\PricingRules\ContractService.cs" />
+    <Compile Include="Implementations\PricingRules\PricingRuleService.cs" />
+    <Compile Include="Implementations\PricingRules\QuotationService.cs" />
+    <Compile Include="Implementations\ProductService.cs" />
+    <Compile Include="Implementations\PushToDolphin\PushToDolphinService.cs" />
+    <Compile Include="Implementations\RunControl\CrewService.cs" />
+    <Compile Include="Implementations\RunControl\RunControlService.cs" />
+    <Compile Include="Implementations\AuditLog\GenericLogService.cs" />
+    <Compile Include="Implementations\SFO\MachineService.cs" />
+    <Compile Include="Implementations\SFO\OTCManagementService.cs" />
+    <Compile Include="Implementations\SFO\SFOMasterDataService.cs" />
+    <Compile Include="Implementations\StandardTable\MasterCustomerLocationService.cs" />
+    <Compile Include="Implementations\StandardTable\MasterCustomerService.cs" />
+    <Compile Include="Implementations\StandardTable\ProblemPriorityService.cs" />
+    <Compile Include="Implementations\StandardTable\RunResourceTypeService.cs" />
+    <Compile Include="Implementations\StandardTable\RouteGroupService.cs" />
+    <Compile Include="Implementations\StandardTable\ReasonCodeService.cs" />
+    <Compile Include="Implementations\StandardTable\ProblemService.cs" />
+    <Compile Include="Implementations\StandardTable\MachineSubServiceTypeService.cs" />
+    <Compile Include="Implementations\StandardTable\MachineServiceTypeService.cs" />
+    <Compile Include="Implementations\Systems\SystemDomainEmailService.cs" />
+    <Compile Include="Implementations\Systems\SystemEnvironmentService.cs" />
+    <Compile Include="Implementations\Systems\SystemService.cs" />
+    <Compile Include="Implementations\TruckLiabilityLimit\TruckLiabilityLimitService.cs" />
+    <Compile Include="Implementations\UserService.cs" />
+    <Compile Include="Mapping\Mappers\AdhocMapper.cs" />
+    <Compile Include="Mapping\Mappers\AlarmHubMapper.cs" />
+    <Compile Include="Mapping\Mappers\BrinksMapper.cs" />
+    <Compile Include="Mapping\Mappers\CustomerMapper.cs" />
+    <Compile Include="Mapping\Mappers\DomainEmailMapper.cs" />
+    <Compile Include="Mapping\Mappers\FleetMaintenanceMapper.cs" />
+    <Compile Include="Mapping\Mappers\MachineMapper.cs" />
+    <Compile Include="Mapping\Mappers\MasterMapper.cs" />
+    <Compile Include="Mapping\Mappers\MonitoringMapper.cs" />
+    <Compile Include="Mapping\Mappers\NemoConfigurationMapper.cs" />
+    <Compile Include="Mapping\Mappers\ConsolidateMapper.cs" />
+    <Compile Include="Mapping\Mappers\NemoSyncMapper.cs" />
+    <Compile Include="Mapping\Mappers\OnHandRouteMapper.cs" />
+    <Compile Include="Mapping\Mappers\PreVaultMapper.cs" />
+    <Compile Include="Mapping\Mappers\PricingRuleMapper.cs" />
+    <Compile Include="Mapping\Mappers\RouteOptimizeMapper.cs" />
+    <Compile Include="Mapping\Mappers\SFODataMapper.cs" />
+    <Compile Include="Mapping\Mappers\SiteNetworkMapper.cs" />
+    <Compile Include="Mapping\Mappers\SitePathMapper.cs" />
+    <Compile Include="Mapping\Mappers\SystemConfigurationAdditionalMapper.cs" />
+    <Compile Include="Mapping\Mappers\SystemMapper.cs" />
+    <Compile Include="Mapping\Mappers\UserMapper.cs" />
+    <Compile Include="Mapping\Mappers\VaultBalanceMapper.cs" />
+    <Compile Include="Mapping\ServiceMapperBootstrapper.cs" />
+    <Compile Include="Messagings\AdhocService\AdhocJobResponse.cs" />
+    <Compile Include="Messagings\AdhocService\AdhocJob_Info.cs" />
+    <Compile Include="Messagings\AdhocService\AdhocTempData.cs" />
+    <Compile Include="Messagings\AdhocService\CheckEmployeeCanDoOTC.cs" />
+    <Compile Include="Messagings\AdhocService\CreateJobAdHocResponse.cs" />
+    <Compile Include="Messagings\AdhocService\DetailDestinationForMultibranchReponse.cs" />
+    <Compile Include="Messagings\AdhocService\DetailDestinationForDeliveryReponse.cs" />
+    <Compile Include="Messagings\AdhocService\UpdateJobOrderInRunRequest.cs" />
+    <Compile Include="Messagings\AlarmHub\AlarmHubAcknowledgeRequest.cs" />
+    <Compile Include="Messagings\AlarmHub\AlarmHubAlertResponse.cs" />
+    <Compile Include="Messagings\AlarmHub\AlarmHubCreateRequest.cs" />
+    <Compile Include="Messagings\BaseRequest.cs" />
+    <Compile Include="Messagings\BaseResponse.cs" />
+    <Compile Include="Messagings\BrinksService\BrinksCompanyResponse.cs" />
+    <Compile Include="Messagings\BrinksService\CountryByUserResponse.cs" />
+    <Compile Include="Messagings\BrinksService\CustomerContractRequest.cs" />
+    <Compile Include="Messagings\BrinksService\CustomerGeneralResponse.cs" />
+    <Compile Include="Messagings\Consolidation\ConAndDeconsolidationRequest.cs" />
+    <Compile Include="Messagings\Consolidation\ConAndDeconsolidationResponse.cs" />
+    <Compile Include="Messagings\Consolidation\ConsolidationRequest.cs" />
+    <Compile Include="Messagings\ContractService\GetSyncingContractRequest.cs" />
+    <Compile Include="Messagings\CustomerLocationService\CustomerLocationDestinationRequest.cs" />
+    <Compile Include="Messagings\CustomerService\CustomerBaseRequest.cs" />
+    <Compile Include="Messagings\Denomination\DenominationMessaging.cs" />
+    <Compile Include="Messagings\ExportExcelService\GetFileRequest.cs" />
+    <Compile Include="Messagings\FileService\FileResponse.cs" />
+    <Compile Include="Messagings\FileService\FileRequest.cs" />
+    <Compile Include="Messagings\FileService\FileTempRequest.cs" />
+    <Compile Include="Messagings\FleetMaintenance\FleetAccidentMessaging.cs" />
+    <Compile Include="Messagings\FleetMaintenance\FleetGasolineMessaging.cs" />
+    <Compile Include="Messagings\FleetMaintenance\FleetMainMessaging.cs" />
+    <Compile Include="Messagings\FleetMaintenance\FleetMaintenanceMessaging.cs" />
+    <Compile Include="Messagings\FleetMaintenance\FleetSummaryMessaging.cs" />
+    <Compile Include="Messagings\MasterRouteService\GetMasterRouteCopyDeliveryMessaging.cs" />
+    <Compile Include="Messagings\MasterRouteService\ManualSortSeqIndexMessaging.cs" />
+    <Compile Include="Messagings\MasterRouteService\MassUpdateJobCriteriaMessaging.cs" />
+    <Compile Include="Messagings\MasterRouteService\OnHandMasterRouteRequest.cs" />
+    <Compile Include="Messagings\MasterRouteService\OnHandJobOnRunView.cs" />
+    <Compile Include="Messagings\MasterRouteService\UpdateSequenceIndexMessaging.cs" />
+    <Compile Include="Messagings\MasterRouteService\MasterRouteCopyJobsRequest.cs" />
+    <Compile Include="Messagings\MasterRouteService\MasterRouteCreateJobRequest.cs" />
+    <Compile Include="Messagings\MasterRouteService\UpdateJobOrderRequest.cs" />
+    <Compile Include="Messagings\MasterService\MasterDistrictResponse.cs" />
+    <Compile Include="Messagings\MasterService\SystemApplicationResponse.cs" />
+    <Compile Include="Messagings\MonitorService\PodMonitorRequest.cs" />
+    <Compile Include="Messagings\MonitorService\PodMonitorResponse.cs" />
+    <Compile Include="Messagings\MonitorService\SmartBillingMonitorRequest.cs" />
+    <Compile Include="Messagings\MonitorService\SmartBillingMonitorResponse.cs" />
+    <Compile Include="Messagings\NemoConfigurationService\NemoConfigValueRequest.cs" />
+    <Compile Include="Messagings\NemoDynamicRouteService\SolutionRouteOptimizationRequest.cs" />
+    <Compile Include="Messagings\OTCManagement\GetJobListByRunRequest.cs" />
+    <Compile Include="Messagings\PreVault\CheckOutDepartmentRequest.cs" />
+    <Compile Include="Messagings\PreVault\CheckOutDepartmentResponse.cs" />
+    <Compile Include="Messagings\PreVault\DiscrepancyManagement\DiscrepancyItemsResponse.cs" />
+    <Compile Include="Messagings\PreVault\VaultBalance\InternalDepartmentResponse.cs" />
+    <Compile Include="Messagings\PreVault\VaultBalance\VaultBalanceMessaging.cs" />
+    <Compile Include="Messagings\PreVault\VaultBalance\VaultBalanceDetailReponse.cs" />
+    <Compile Include="Messagings\PreVault\VaultBalance\VaultBalanceDetailRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\CopyPricingRuleRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\DeleteRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\DeleteResponse.cs" />
+    <Compile Include="Messagings\PricingRuleService\RemoveRulesAndActionsRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveActionRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveActionResponse.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveChargeCategoryRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveChargeCategoryResponse.cs" />
+    <Compile Include="Messagings\PricingRuleService\SavePricingRuleRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\SavePricingRuleResponse.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveRuleRequest.cs" />
+    <Compile Include="Messagings\PricingRuleService\SaveRuleResponse.cs" />
+    <Compile Include="Messagings\QuotationService\SaveCopyProductRequest.cs" />
+    <Compile Include="Messagings\ProductService\SaveProductRequest.cs" />
+    <Compile Include="Messagings\ProductService\SaveProductResponse.cs" />
+    <Compile Include="Messagings\QuotationService\AdjustRateRequest.cs" />
+    <Compile Include="Messagings\QuotationService\CheckRateExceedRequest.cs" />
+    <Compile Include="Messagings\QuotationService\GetPricingRuleTreeViewReqeust.cs" />
+    <Compile Include="Messagings\QuotationService\SaveCopyProductResponse.cs" />
+    <Compile Include="Messagings\QuotationService\SaveLegalToQuotationRequest.cs" />
+    <Compile Include="Messagings\QuotationService\SavePricingRuleToBidResponse.cs" />
+    <Compile Include="Messagings\QuotationService\MappingPricingRuleRequest.cs" />
+    <Compile Include="Messagings\QuotationService\SavePricingRuleToBidRequest.cs" />
+    <Compile Include="Messagings\RequestBase.cs" />
+    <Compile Include="Messagings\RouteOptimizationHub\RouteOptimizationHubNotifyRequest.cs" />
+    <Compile Include="Messagings\RouteOptimization\RequestManagementMessaging.cs" />
+    <Compile Include="Messagings\RouteOptimization\MasterRouteRequestMessaging.cs" />
+    <Compile Include="Messagings\RunControlService\DolphinCreateJobsRequest.cs" />
+    <Compile Include="Messagings\RunControlService\DolphinReorderJobsRequest.cs" />
+    <Compile Include="Messagings\RunControlService\JobPropertiesRequest.cs" />
+    <Compile Include="Messagings\RunControlService\LimitRunLiabilityRequest.cs" />
+    <Compile Include="Messagings\RunControlService\TruckToTruckRequest.cs" />
+    <Compile Include="Messagings\RunControlService\ManuallyCloseRunRequest.cs" />
+    <Compile Include="Messagings\RunControlService\PrintedReceiptNumberRequest.cs" />
+    <Compile Include="Messagings\RunControlService\ValidateAssignJobsToRunRequest.cs" />
+    <Compile Include="Messagings\RunControlService\ValidateCrewOnPortalResponse.cs" />
+    <Compile Include="Messagings\RunControlService\ValidateCrewOnPortalRequest.cs" />
+    <Compile Include="Messagings\RunControlService\ValidateTruckLiabilityLimitRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\CreateServiceRequestResponse.cs" />
+    <Compile Include="Messagings\ServiceRequest\RequestUpdateResponderData.cs" />
+    <Compile Include="Messagings\ServiceRequest\ResponseCreateServiceRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\RequestQueryServiceRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\ResponseQueryServiceRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\ResponseUpdateResponderData.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCancelRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCancelResponse.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestECash.cs" />
+    <Compile Include="Messagings\ServiceRequest\RequestCreateServiceRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\ResquestCreateServiceRequestData.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestFLM.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestMCSCashAdd.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestSFI.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestSLM.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateRequestTechMeet.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRCreateResponse.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRRescheduleRequest.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRRescheduleResponse.cs" />
+    <Compile Include="Messagings\ServiceRequest\SRJournalCreateRequest.cs" />
+    <Compile Include="Messagings\StandardTable\BaseRequestQuery.cs" />
+    <Compile Include="Messagings\StandardTable\BaseResponse.cs" />
+    <Compile Include="Messagings\StandardTable\BaseResponseQuery.cs" />
+    <Compile Include="Messagings\StandardTable\MachineServiceType\ResponseQueryMachineServiceType.cs" />
+    <Compile Include="Messagings\StandardTable\MachineServiceType\RequestQueryMachineServiceType.cs" />
+    <Compile Include="Messagings\StandardTable\MachineSubServiceType\RequestQueryMachineSubServiceType.cs" />
+    <Compile Include="Messagings\StandardTable\MachineSubServiceType\ResponseQueryMachineSubServiceType.cs" />
+    <Compile Include="Messagings\StandardTable\Machine\RequestQueryMachine.cs" />
+    <Compile Include="Messagings\StandardTable\Machine\ResponseQueryMachine.cs" />
+    <Compile Include="Messagings\StandardTable\MonitoringNetwork\RequestMonitoringNetwork.cs" />
+    <Compile Include="Messagings\StandardTable\MonitoringNetwork\ResponseMonitoringNetwork.cs" />
+    <Compile Include="Messagings\StandardTable\ProblemPriority\RequestQueryProblemPriority.cs" />
+    <Compile Include="Messagings\StandardTable\ProblemPriority\ResponseQueryProblemPriority.cs" />
+    <Compile Include="Messagings\StandardTable\Problem\RequestQueryProblem.cs" />
+    <Compile Include="Messagings\StandardTable\Problem\ResponseQueryProblem.cs" />
+    <Compile Include="Messagings\StandardTable\ReasonCode\RequestQueryReasonCode.cs" />
+    <Compile Include="Messagings\StandardTable\ReasonCode\ResponseQueryReasonCode.cs" />
+    <Compile Include="Messagings\StandardTable\RouteGroup\RequestQueryRouteGroup.cs" />
+    <Compile Include="Messagings\StandardTable\RouteGroup\ResponseQueryRouteGroup.cs" />
+    <Compile Include="Messagings\StandardTable\RunResourceType\RequestQueryRunResourceType.cs" />
+    <Compile Include="Messagings\StandardTable\RunResourceType\ResponseQueryRunResourceType.cs" />
+    <Compile Include="Messagings\SystemConfigurationAdditional\SystemConfigurationAdditionalRequest.cs" />
+    <Compile Include="Messagings\TruckLiabilityLimit\TruckLiabilityLimitRequest.cs" />
+    <Compile Include="Messagings\UserService\AuthenLoginResponse.cs" />
+    <Compile Include="Messagings\UserService\MasterMenuDetailResult.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\AdhocJobDetailJobHoldOverView.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\AdhocJobDetailJobPickedUpView.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\CassetteModelView.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\CreateJobHeaderOtcRequest.cs" />
+    <Compile Include="ModelViews\Adhoc\Adhoc_LOB_ServiceJobTypeView.cs" />
+    <Compile Include="ModelViews\Adhoc\CustomerLocationInternalDepartmentView.cs" />
+    <Compile Include="ModelViews\Adhoc\OnwardDestinationTypeView.cs" />
+    <Compile Include="ModelViews\Adhoc\SpecialCommandView.cs" />
+    <Compile Include="ModelViews\Adhoc\SubJobTypeView.cs" />
+    <Compile Include="ModelViews\AuditLog\AuditLogBase.cs" />
+    <Compile Include="ModelViews\Consolidation\ConsolidateInfoView.cs" />
+    <Compile Include="ModelViews\Consolidation\ConsolidateModel.cs" />
+    <Compile Include="ModelViews\CustomerLocation\AdhocCustomerLocationView.cs" />
+    <Compile Include="ModelViews\Customer\AccountView.cs" />
+    <Compile Include="ModelViews\Customer\AdhocCustomerView.cs" />
+    <Compile Include="ModelViews\DisplayTextDropDownView.cs" />
+    <Compile Include="ModelViews\FleetMaintenanceViewModel\FleetAccidentViewModel\FleetMaintenanceAccidentModelView.cs" />
+    <Compile Include="ModelViews\GenericLog\ChangeInfo.cs" />
+    <Compile Include="ModelViews\GenericLog\ComparableConfig.cs" />
+    <Compile Include="ModelViews\GenericLog\ComparableConfigProperty.cs" />
+    <Compile Include="ModelViews\GenericLog\CompareResult.cs" />
+    <Compile Include="ModelViews\GenericLog\TransactionGenericLogModel.cs" />
+    <Compile Include="ModelViews\Machine\MachineModel.cs" />
+    <Compile Include="ModelViews\MasterRoute\MasterRouteServiceStopLegView.cs" />
+    <Compile Include="ModelViews\Masters\CityView.cs" />
+    <Compile Include="ModelViews\Masters\CommodityView.cs" />
+    <Compile Include="ModelViews\Masters\CountryView.cs" />
+    <Compile Include="ModelViews\Masters\CurrencyView.cs" />
+    <Compile Include="ModelViews\Masters\DistrictView.cs" />
+    <Compile Include="ModelViews\Masters\GroupView.cs" />
+    <Compile Include="ModelViews\Masters\MasterSiteView.cs" />
+    <Compile Include="ModelViews\Masters\ProvinceStateView.cs" />
+    <Compile Include="ModelViews\ModelBase.cs" />
+    <Compile Include="ModelViews\Monitoring\PodMonitoringView.cs" />
+    <Compile Include="ModelViews\Monitoring\SmartBillingConfigView.cs" />
+    <Compile Include="ModelViews\Monitoring\SmartBillingGenerateStatusView.cs" />
+    <Compile Include="ModelViews\NemoDynamicRoute\SolutionRouteOptimizationView.cs" />
+    <Compile Include="ModelViews\NemoDynamicRoute\StatusRouteOptimizationView.cs" />
+    <Compile Include="ModelViews\PreVault\CheckOutDepartmentViewModel.cs" />
+    <Compile Include="ModelViews\PreVault\CheckOutDeptInternalDeptModelView.cs" />
+    <Compile Include="ModelViews\PreVault\CheckOutNonbarcodeModelView.cs" />
+    <Compile Include="ModelViews\PreVault\CheckOutDeptModelView.cs" />
+    <Compile Include="ModelViews\PreVault\RouteGroupRunResourceModelView.cs" />
+    <Compile Include="ModelViews\PreVault\VaultBalance\VaultBalanceModelView.cs" />
+    <Compile Include="ModelViews\PreVault\VaultBalance\VaultBalanceNonbarcodeModelView.cs" />
+    <Compile Include="ModelViews\PreVault\VaultBalance\VaultBalanceSealModelView.cs" />
+    <Compile Include="ModelViews\PricingRules\ActionView.cs" />
+    <Compile Include="ModelViews\PricingRules\ChargeCategoryView.cs" />
+    <Compile Include="ModelViews\PricingRules\ClauseCopyDataView.cs" />
+    <Compile Include="ModelViews\PricingRules\PricingRuleView.cs" />
+    <Compile Include="ModelViews\PricingRules\ProductClauseView.cs" />
+    <Compile Include="ModelViews\PricingRules\ProductTreeView.cs" />
+    <Compile Include="ModelViews\PricingRules\QuotationMappingPricingView.cs" />
+    <Compile Include="ModelViews\PricingRules\RuleView.cs" />
+    <Compile Include="ModelViews\PricingRules\TreeViewBase.cs" />
+    <Compile Include="ModelViews\Problem\ProblemView.cs" />
+    <Compile Include="ModelViews\Products\ProductView.cs" />
+    <Compile Include="ModelViews\Reports\ReportProductivityCollection.cs" />
+    <Compile Include="ModelViews\RunControls\GetMasterSpecialCommandsView.cs" />
+    <Compile Include="ModelViews\RunControls\JobLegsViewRequest.cs" />
+    <Compile Include="ModelViews\ServiceRequest\CreateServiceRequestView.cs" />
+    <Compile Include="ModelViews\ServiceRequest\Dolphin\PushCancelSFOJobView.cs" />
+    <Compile Include="ModelViews\ServiceRequest\Dolphin\PushRescheduleSFOJobView.cs" />
+    <Compile Include="ModelViews\ServiceRequest\Dolphin\PushSFOJobView.cs" />
+    <Compile Include="ModelViews\ServiceRequest\ServiceRequestView.cs" />
+    <Compile Include="Messagings\UserService\ChangeLanguageRequest.cs" />
+    <Compile Include="Messagings\UserService\ChangePasswordRequest.cs" />
+    <Compile Include="Messagings\UserService\UserAuthenRequest.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\AdhocJobDetailView.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\AdhocJobHeaderView.cs" />
+    <Compile Include="ModelViews\ActualJobHeader\UserModifyDetailView.cs" />
+    <Compile Include="ModelViews\SiteNetWork\SiteNetWorkModelView.cs" />
+    <Compile Include="ModelViews\SitePath\SitePathView.cs" />
+    <Compile Include="ModelViews\SystemConfigurationAdditional\EmailDomainsView.cs" />
+    <Compile Include="ModelViews\SystemConfigurationAdditional\ConfigurationAuditLogView.cs" />
+    <Compile Include="ModelViews\SystemConfigurationAdditional\NotificationConfigPeriodsView.cs" />
+    <Compile Include="ModelViews\SystemConfigurationAdditional\PreDefinedEmailsView.cs" />
+    <Compile Include="ModelViews\SystemConfigurationAdditional\SystemEnvironmentView.cs" />
+    <Compile Include="ModelViews\Systems\DomainView.cs" />
+    <Compile Include="ModelViews\Systems\LanguageView.cs" />
+    <Compile Include="ModelViews\Systems\LineOfBusinessView.cs" />
+    <Compile Include="ModelViews\Systems\ServiceJobTypeView.cs" />
+    <Compile Include="Messagings\UserService\SystemDomainAilesResponse.cs" />
+    <Compile Include="Messagings\UserService\SystemDomainDCResponse.cs" />
+    <Compile Include="ModelViews\Systems\SystemDayOfWeekView.cs" />
+    <Compile Include="ModelViews\Systems\SystemGlobalUnitView.cs" />
+    <Compile Include="ModelViews\Systems\SystemMaterRouteTypeOfWeekView.cs" />
+    <Compile Include="ModelViews\Systems\SystemMessageView.cs" />
+    <Compile Include="ModelViews\Systems\SystemTripIndicatorView.cs" />
+    <Compile Include="ModelViews\Users\AuthenDetails.cs" />
+    <Compile Include="ModelViews\Users\DataStorage.cs" />
+    <Compile Include="ModelViews\Users\MasterGroupView.cs" />
+    <Compile Include="ModelViews\Users\MasterUserGroupView.cs" />
+    <Compile Include="ModelViews\Users\UserAuthenType.cs" />
+    <Compile Include="ModelViews\Users\UserGroupView.cs" />
+    <Compile Include="ModelViews\Users\UserView.cs" />
+    <Compile Include="ModelViews\Users\WebAPIUserApplicationView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bgt.Ocean.Infrastructure\Bgt.Ocean.Infrastructure.csproj">
+      <Project>{1BD9CC03-C846-4774-8A9A-283D6AC23383}</Project>
+      <Name>Bgt.Ocean.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bgt.Ocean.Models\Bgt.Ocean.Models.csproj">
+      <Project>{495f0f21-89b1-4b87-b866-0986b3b70909}</Project>
+      <Name>Bgt.Ocean.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bgt.Ocean.Repository.EntityFramework\Bgt.Ocean.Repository.EntityFramework.csproj">
+      <Project>{03e54ef3-61a3-48a3-a7ac-b749b3036c2c}</Project>
+      <Name>Bgt.Ocean.Repository.EntityFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Bgt.Ocean.Models.Reports.VaultBalance.VaultBalanceModelReport.datasource" />
+    <None Include="Properties\DataSources\Bgt.Ocean.Models.Reports.VaultBalance.VaultBalanceModelReport_BalanceNonBar.datasource" />
+    <None Include="Properties\DataSources\Bgt.Ocean.Models.Reports.VaultBalance.VaultBalanceModelReport_DisNonBar.datasource" />
+    <None Include="Properties\DataSources\Bgt.Ocean.Models.TblVaultBalanceHeader.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementations\NemoDynamicRoute\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Report\VaultBalanceReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

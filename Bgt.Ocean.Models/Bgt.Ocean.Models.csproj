@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{495F0F21-89B1-4B87-B866-0986B3B70909}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bgt.Ocean.Models</RootNamespace>
+    <AssemblyName>Bgt.Ocean.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Ocean Online\Ocean Online\SonarLintRuleSet\OceanOnlineWay.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AccountView.cs" />
+    <Compile Include="ActualJob\CashAddModel\CapabilityView.cs" />
+    <Compile Include="ActualJob\CashAddModel\CashAddDetailView.cs" />
+    <Compile Include="ActualJob\DenomiationView.cs" />
+    <Compile Include="ActualJob\DenominationOnMachineCassettView.cs" />
+    <Compile Include="ActualJob\JobListReturnPreVaultView.cs" />
+    <Compile Include="ActualJob\JobWithLegsModel.cs" />
+    <Compile Include="ActualJob\JobWithSTCView.cs" />
+    <Compile Include="ActualJob\TemplateCommodityView.cs" />
+    <Compile Include="AdhocCheckDuplicateJobInDayResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdhocCustomerResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdhocDestinationResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdhocLocationByCustomerResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenLoginResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BrinksCompanyResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BrinksSiteByUserResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ColumnAttribute.cs" />
+    <Compile Include="Consolidation\ConsolidationView.cs" />
+    <Compile Include="Consolidation\PreVaultConsolidateInfoResult.cs" />
+    <Compile Include="CountryByUserResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CountryOptionResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Currency\CurrencyView.cs" />
+    <Compile Include="CustomerByCompanyResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGeneralResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLocation\CustomerLocationInternalDepartmentModel.cs" />
+    <Compile Include="CustomerLocation\LocationDestinationView.cs" />
+    <Compile Include="CustomerLocation\LocationEmailActionView.cs" />
+    <Compile Include="CustomerLocation\LocationEmailRequest.cs" />
+    <Compile Include="CustomerLocation\LocationView.cs" />
+    <Compile Include="Customer\AdhocCustomerRequest.cs" />
+    <Compile Include="Customer\CustomerContractView.cs" />
+    <Compile Include="Customer\CustomerEmailActionModel.cs" />
+    <Compile Include="Customer\CustomerView.cs" />
+    <Compile Include="Denomination\MasterDenominationView.cs" />
+    <Compile Include="Email\EmailModel.cs" />
+    <Compile Include="Environment\SystemEnvironmentMasterCountryTreeViewView.cs" />
+    <Compile Include="FleetMaintenance\FleetAccidentView.cs" />
+    <Compile Include="FleetMaintenance\FleetGasolineVendorView.cs" />
+    <Compile Include="FleetMaintenance\FleetGasolineView.cs" />
+    <Compile Include="FleetMaintenance\FleetMainResourceDataView.cs" />
+    <Compile Include="FleetMaintenance\FleetMaintenanceView.cs" />
+    <Compile Include="FleetMaintenance\FleetRunResourceView.cs" />
+    <Compile Include="FleetMaintenance\FleetSummaryView.cs" />
+    <Compile Include="Fn_UserDetailCountryAndRole_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Group\MasterGroupAlarmModel.cs" />
+    <Compile Include="InternalDepartments\InternalDepartmentView.cs" />
+    <Compile Include="LineOfBusinessJobTypeByFlagAdhocJobResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMenuDetailResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterRouteUpdateJobOrderSetResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterRoute\MassUpdateView.cs" />
+    <Compile Include="MasterRoute\MasterRouteCopyDeliveryView.cs" />
+    <Compile Include="MasterRoute\MasterRouteCopyJobsProcedure.cs" />
+    <Compile Include="MasterRoute\MasterRouteJobServiceStopLegsView.cs" />
+    <Compile Include="MasterRoute\MasterRouteLogModel.cs" />
+    <Compile Include="MasterRoute\MasterRouteUpdateSeqIndexResult.cs" />
+    <Compile Include="MasterRoute\RouteGroupDetailByRouteResult.cs" />
+    <Compile Include="Masters\GroupView.cs" />
+    <Compile Include="Masters\JobItemView.cs" />
+    <Compile Include="Masters\MasterImageView.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="BaseModel\PagingBase.cs" />
+    <Compile Include="NemoConfiguration\NemoConfigValueView.cs" />
+    <Compile Include="NemoConfiguration\NemoCountryValueView.cs" />
+    <Compile Include="NemoConfiguration\NemoSiteValueView.cs" />
+    <Compile Include="NemoConfiguration\NemoTrafficFactorValueView.cs" />
+    <Compile Include="NemoRouteOptimizationResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nemo\Authentication\NemoAutenticationResponse.cs" />
+    <Compile Include="Nemo\NemoSync\NemoErrorMessage.cs" />
+    <Compile Include="Nemo\NemoSync\SyncMasterCustomerLocationRequest.cs" />
+    <Compile Include="Nemo\NemoSync\SyncMasterCustomerRequest.cs" />
+    <Compile Include="Nemo\NemoSync\SyncSystemServiceJobTypeRequest.cs" />
+    <Compile Include="Nemo\NemoSync\SyncDataResponse.cs" />
+    <Compile Include="Nemo\NemoSync\SyncMasterSiteRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\DailyRunDetail.cs" />
+    <Compile Include="Nemo\RouteOptimization\DataErrorResponse.cs" />
+    <Compile Include="Nemo\RouteOptimization\EnumRouteOptimization.cs" />
+    <Compile Include="Nemo\RouteOptimization\MasterRouteOptimizationView.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoCriteriaRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationActionRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationCreateJobResponse.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationLocations.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationModel.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationResponse.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationTransactionDetail.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationTransactionResponse.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizationViewRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoOptimizedDetails.cs" />
+    <Compile Include="Nemo\RouteOptimization\NemoRouteOptimizationObject.cs" />
+    <Compile Include="Nemo\RouteOptimization\OptimizeNode.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteDirectionAll.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteDirectionRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteDirectionResult.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteGroupDetailByRouteResult.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteOptimizationDetailRequest.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteOptimizedJobDetails.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteOptimizedLocationDetails.cs" />
+    <Compile Include="Nemo\RouteOptimization\RouteOptimizeResponseView.cs" />
+    <Compile Include="Nemo\RouteOptimization\SolutionRouteOptimizationResponse.cs" />
+    <Compile Include="Nemo\RouteOptimization\TimeWindow.cs" />
+    <Compile Include="OceanDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OceanDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OceanDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OceanDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OceanDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OceanDbEx.cs" />
+    <Compile Include="OnHandRoute\JobDetailOnRunView.cs" />
+    <Compile Include="OTCManagement\GetJobListByRunModel.cs" />
+    <Compile Include="OTCManagement\GetOTCRequestModel.cs" />
+    <Compile Include="OTCManagement\OTCStatusResult.cs" />
+    <Compile Include="PrevaultDepartmentBarcodeScanOutResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrevaultDepartmentSealConsolidateScanOutResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PreVault\DiscrepancyCloseCaseModel.cs" />
+    <Compile Include="PreVault\ISAAuthenticateModel.cs" />
+    <Compile Include="PreVault\ISAPassingInfoModel.cs" />
+    <Compile Include="PreVault\VaultBalanceView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategoryView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategory_ActionView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategory_Action_ChargeView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategory_Action_Charge_ConditionView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategory_RuleView.cs" />
+    <Compile Include="PricingRules\SyncChargeCategory_Rule_ValueView.cs" />
+    <Compile Include="PricingRules\SyncPricingRuleView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportProductivityMexResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DailyPlan\DailyPlaneResponse.cs" />
+    <Compile Include="Reports\DailyPlan\DailyPlanRequest.cs" />
+    <Compile Include="Reports\ExportFileResponse.cs" />
+    <Compile Include="Reports\VaultBalance\VaultBalanceModelReport.cs" />
+    <Compile Include="RouteOptimization\DailyRouteRequest.cs" />
+    <Compile Include="RouteOptimization\DailyRouteView.cs" />
+    <Compile Include="RouteOptimization\JobUnassignedView.cs" />
+    <Compile Include="RouteOptimization\MasterRouteRequest.cs" />
+    <Compile Include="RouteOptimization\MasterRouteView.cs" />
+    <Compile Include="RouteOptimization\RequestManagementView.cs" />
+    <Compile Include="RouteOptimization\RequestManagementRequest.cs" />
+    <Compile Include="RouteOptimization\DailyRouteSummaryRequest.cs" />
+    <Compile Include="RouteOptimization\MasterRouteSummaryRequest.cs" />
+    <Compile Include="RouteOptimization\MasterRouteSummaryView.cs" />
+    <Compile Include="RoutesDataResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControlJobAndJobLegInRunResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControlJobByRunDisplayJobResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControlJobLegsDetailByJobGetResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControlRunResourceDailyBySiteAndDateGetResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControlValidateEMPRequestOTCResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RunControl\AutoAssignJobInRunView.cs" />
+    <Compile Include="RunControl\LiabilityLimitModel\JobDetailViewExtension.cs" />
+    <Compile Include="RunControl\LiabilityLimitModel\LiabilityLimitActionModel.cs" />
+    <Compile Include="RunControl\LiabilityLimitModel\LiabilityLimitJobsActionView.cs" />
+    <Compile Include="RunControl\LiabilityLimitModel\LiabilityLimitView.cs" />
+    <Compile Include="RunControl\RouteGroupDetailRunResourceView.cs" />
+    <Compile Include="RunControl\ServiceDetail\BulkCashDepositView.cs" />
+    <Compile Include="RunControl\ServiceDetail\BulkNoteDepositView.cs" />
+    <Compile Include="RunControl\ServiceDetail\CapturedCardView.cs" />
+    <Compile Include="RunControl\ServiceDetail\ChecklistView.cs" />
+    <Compile Include="RunControl\ServiceDetail\CitDelvieryView.cs" />
+    <Compile Include="RunControl\ServiceDetail\CoinExchangeView.cs" />
+    <Compile Include="RunControl\ServiceDetail\NoteWithdrawView.cs" />
+    <Compile Include="RunControl\ServiceDetail\RecyclingView.cs" />
+    <Compile Include="RunControl\ServiceDetail\SmallBagDepositView.cs" />
+    <Compile Include="RunControl\CloseRunManuallyProcedure.cs" />
+    <Compile Include="RunControl\JobLegsView.cs" />
+    <Compile Include="RunControl\JobPropertiesView.cs" />
+    <Compile Include="RunControl\MasterDailyRunAlarmExtend.cs" />
+    <Compile Include="RunControl\MasterDailyRunLogView.cs" />
+    <Compile Include="RunControl\Tabs\TabDetailView.cs" />
+    <Compile Include="RunControl\Tabs\TabHistoryView.cs" />
+    <Compile Include="RunControl\Tabs\TablegView.cs" />
+    <Compile Include="RunControl\Tabs\TabServiceDetailView.cs" />
+    <Compile Include="RunControl\ValidateCrewOnPortalView.cs" />
+    <Compile Include="RunControl\TruckToTruckTransferView.cs" />
+    <Compile Include="RunControl\ValidateJobCannotCloseResponse.cs" />
+    <Compile Include="RunControl\ValidateTruckLiabilityLimitResponse.cs" />
+    <Compile Include="RunResourceByGroupDetailAndWorkDayResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nemo\RouteOptimization\DailyRunOptimizationView.cs" />
+    <Compile Include="SerializableClass.cs" />
+    <Compile Include="ServiceRequest\GetCreateServiceRequestDataView.cs" />
+    <Compile Include="ServiceRequest\CreateServiceRequestView.cs" />
+    <Compile Include="ServiceRequest\QueryServiceRequestView.cs" />
+    <Compile Include="ServiceRequest\RuleEngineView.cs" />
+    <Compile Include="ServiceRequest\ServiceRequestExtend.cs" />
+    <Compile Include="ServiceRequest\PartialGetServiceRequestByGuidEscalationResult.cs" />
+    <Compile Include="SFOJobListByRunResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOLogDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFOLogDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOLogDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFOLogDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOLogDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFOLogDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SFOLogDbEx.cs" />
+    <Compile Include="SFOOTCRequestResult.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterCassette.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterCountryTimeZone.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterEscalationDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterEscalationDetail_AdditionalEmail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterEscalationDetail_Position.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterEscalationHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterJournal.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachineModelType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachineModelType_Capability.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachineModelType_DefaultCassette.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachineServiceType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine_AssociatedMachine.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine_Capabilties.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine_Cassette.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine_ECash.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMachine_LockType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterMonitoringNetwork.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterOTCLockMode.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterProblem.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterProblem_Solution.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterSolution.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblMasterSource.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemAllowServiceRequestStatusDuplicate.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemDataConfiguration.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemDataConfiguration_Country.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemEnvironment_Global.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemEscalationRuleDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemEscalationRuleHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemEscalationRuleHeader_EscalationRuleDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemLockType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemLogCategory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemLogProcess.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemMachineCapability.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemModelConfig.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemModelConfig_Property.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemModelConfig_PropertyQuery.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemOTCLockMode.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblSystemServiceRequestState.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionGenericLog.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionOTC.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest_Ecash.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest_Info.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest_Journal.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest_Problem.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SFOTblTransactionServiceRequest_Solution.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteNetwork\SiteNetworkView.cs" />
+    <Compile Include="StandardTable\MasterMonitoringNetworkView.cs" />
+    <Compile Include="StandardTable\RunResourceTypeView.cs" />
+    <Compile Include="StandardTable\RouteGroupView.cs" />
+    <Compile Include="StandardTable\ReasonCodeView.cs" />
+    <Compile Include="StandardTable\ProblemPriorityView.cs" />
+    <Compile Include="StandardTable\ProblemView.cs" />
+    <Compile Include="StandardTable\MachineSubServiceTypeView.cs" />
+    <Compile Include="StandardTable\MachineServiceTypeView.cs" />
+    <Compile Include="StandardTable\MachineView.cs" />
+    <Compile Include="StandardTable\SitePathView.cs" />
+    <Compile Include="SystemConfigurationAdditional\ISystemEmailDomainsRepository.cs" />
+    <Compile Include="SystemConfigurationAdditional\SystemNotificationConfigPeriodsView.cs" />
+    <Compile Include="Systems\CountryOptionView.cs" />
+    <Compile Include="Systems\RunNumberRefModel.cs" />
+    <Compile Include="Systems\SystemApplicationView.cs" />
+    <Compile Include="Systems\SystemJobHideFieldView.cs" />
+    <Compile Include="Systems\SystemJobHideScreenView.cs" />
+    <Compile Include="Systems\SystemTitleNameView.cs" />
+    <Compile Include="TblBankCleanOutJobDelivery_NonbarCodeTemp.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblBankCleanOutJobDelivery_SealTemp.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblBankCleanOutJobDelivery_Temp.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory_Action.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory_Action_Charge.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory_Action_Charge_Condition.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory_Rule.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblChargeCategory_Rule_Value.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashContract_PricingRules.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashMasterCategoryClause.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashMasterClause.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashMasterClauseScope.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashMasterClauseScopeDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_Clause.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Certification.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Discrepancy.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_GeoLocation_City.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Info.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Limit_Items.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Limit_Values.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_Limit_Weight.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_ResponseTime.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_ServiceWindows.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_TimeDeadLine.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_TimeSendReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ProductAttribute_TimeSendReport_Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashProduct_ServiceType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_Clause.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_Customer_Mapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_History.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_Location_Mapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_PricingRule_Mapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_Product.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblLeedToCashQuotation_ProductAttribute.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobActualCount.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobCashAdd.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobCashReturn.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobHeader_Capability.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobHeader_OTC.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobHideScreenMapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemDiscrapencies.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsCommodity.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsCommodity_ScanHistory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsLiability.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsLiability_Denomination.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsSeal.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemsSeal_ScanHistory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobItemUnknow.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMachineReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkDepositReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkDepositReportEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkJammed.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkJammedDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkJammedEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkRetract.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkRetractEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkSuspectFake.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkSuspectFakeDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkSuspectFakeEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSBulkT1Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCITDelivery.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinBulkNoteCollect.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinBulkNoteCollectEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinCashAdd.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinCashAddEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinCashReturn.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinCashReturnEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinMachineBalance.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinMachineBalanceEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinSuspectFake.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinSuspectFakeDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSCoinSuspectFakeEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSItemSeal.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingActualCount.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingActualCountEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingCashRecycling.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingCashRecyclingEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingMachineReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobMCSRecyclingMachineReportEntry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobServiceStop.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobServiceStopLegs.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobServiceStopSpecialCommand.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobSumActualCount.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobSumCashAdd.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobSumCashReturn.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterActualJobSumMachineReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCapturedCard.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCheckList.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCity.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCommodity.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCommodityCountry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCommodityGroup.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterConAndDeconsolidate_Header.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCountry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCountry_State.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCurrency.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCurrencyDependOnCountry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCurrency_ExchangeRate.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomer.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerContract.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerContract_ServiceLocation.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation_BrinksSite.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation_EmailAction.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation_InternalDepartment.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation_LocationDestination.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomerLocation_ServiceHour.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomer_Account.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomer_JobHideScreen.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterCustomer_ReasonCode.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterDailyEmployee.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterDailyRunResource.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterDailyRunResource_Alarm.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterDenomination.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterDistrict.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterEmailTemplate.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterEmployee.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGasloine.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGasloine_Vendor.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGroup.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGroup_Menu.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGroup_MenuCommand.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterGroup_Site.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistoryErrorPodByService.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistoryLogPodByService.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_ActaulJobOnDailyRunResource.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_ActualJob.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_DailyRunResource.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_DolphinAssignToAnotherRun.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_ReportPushToSmart.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_Seal.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterHistory_StandardTable.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterImage.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterImageTemp.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterLogVerifyKey.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterMaintenanceCategory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterMaintenanceCategory_Items.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterMenuDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterMenuDetailCommand.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoCountryValue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoDetailRouteOptimization.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoErrorRouteOptimization.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoQueueRouteOptimization.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoQueueRouteOptimization_Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoSiteValue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterNemoTrafficFactorValue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterPlace.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterPosition.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterReasonType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterReasonUnableToService.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRoute.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRouteGroup.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRouteGroup_Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRouteJobHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRouteJobServiceStopLegs.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRouteTransactionLog.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRoute_OptimizationStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRoute_RouteGroupDetailMonitoring_Mapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResourceBrand.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResourceType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_Accident.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_Accident_Images.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_Accident_ListDetailDamaged.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_GasolineExpense.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_Maintenance.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_Maintenance_Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_PeriodicMaintenance.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterRunResource_PeriodicMaintenance_History.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSalesLevel.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSalesTeam.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSalesTeamCustomerMapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSalesTeamUserMapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSite.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSiteNetwork.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSiteNetworkAuditLog.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSiteNetworkMember.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSiteNetworkUsergroup.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSitePathAuditLog.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSitePathDestination.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSitePathDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSitePathHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSite_SmartBillingSchedule.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSpecialCommand.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSubLob.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterSubServiceType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterUser.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterUserAccessGroupCountryEmail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterUserEmailTemplate.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterUserGroup.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterUserLimitedTimeAccess.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMasterVendor.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblMobileATMCheckListEE.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblPricingRule.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSmartBillingSchedule_Day_Mapping.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemApiHistory.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemApplication.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemATMScreen.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemCassetteType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemConAndDeconsolidateStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemConfigurationAuditLog.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemCustomerLocationType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemCustomerLocation_Audit_Log.cs">
+      <DependentUpon>SFOLogDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemCustomerOfType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDayOfWeek.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDenominationType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDenominationUnit.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDisplayTextControlsLanguage.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDomain.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDomainAiles.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDomainDC.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemDomainEmailWhiteList.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEmailAction.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEnvironmentMasterCountry.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEnvironmentMasterCountryTreeView.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEnvironmentMasterCountryValue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEnvironmentMasterSiteValue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemEnvironment_Global.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemFileType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemFormat_Date.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemFormat_NumberCurrency.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemGlobalUnit.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemInternalDepartmentType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemJobAction.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemJobHideField.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemJobHideScreen.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemJobStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLanguage.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLeedToCashContractStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLeedToCashQuotationType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLeedToCashStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLineOfBusiness.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLog_Activity.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLog_AttemptToLogin.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLog_HistoryError.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemLog_SaveLastPWD.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemMaintenanceStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemMaterRouteTypeOfWeek.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemMCSCITDeliveryCommodityType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemMCSCITDeliveryScanStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemMessage.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemModeOfTransport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemNotificationConfigPeriods.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemNotificationConfigPeriodsUsers.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemOnwardDestinationType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemReportStyle.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRouteOptimizationRequestType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRouteOptimizationRouteType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRouteOptimizationRouteType_RequestType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRouteOptimizationStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRunningValue_Custom.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRunningVaule_Global.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemRunResourceStatus.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemSealType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemServiceJobType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemServiceJobTypeLOB.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemServiceStopType.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemTimezone.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemTitleName.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemTripIndicator.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblSystemVersion.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTempMainPrevaultReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTempPrevaultNonBarcodeReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTempPrevaultSealReport.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTransactionRouteOptimizationHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTransactionRouteOptimizationHeader_Detail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTransactionRouteOptimizationHeader_Detail_Item.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblTransactionRouteOptimizationHeader_Queue.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblVaultBalanceDetail.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblVaultBalanceHeader.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblVaultBalanceNonbarcode.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblVaultBalanceSealAndMaster.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblVaultBalance_Discrepancy.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblWebAPIUser.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblWebAPIUserApplication.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblWebAPIUser_Token.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Adhoc_CheckDuplicateJobInDay_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Adhoc_Customer_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Adhoc_Destination_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Adhoc_LocationByCustomer_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_AuthenLogin_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_BrinksCompany_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_BrinksSiteByUser_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_CountryOption_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Customer_General_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_LineOfBusinessJobTypeByFlagAdhocJob_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_MasterMenuDetail_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_PrevaultDepartment_Barcode_ScanOut_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_PrevaultDepartment_Seal_SealConsolidate_ScanOut_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_Report_Productivity_Mex_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RouteOptimization_GetRoutesData_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunControl_JobAndJobLegInRun_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunControl_JobByRun_Display_Job_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunControl_JobLegsDetailByJob_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunControl_RunResourceDailyBySiteAndDate_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunControl_ValidateEMPRequestOTC_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_RunResourceByGroupDetailAndWorkDay_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_SFO_GetServiceRequestByGuidEscalation_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_SFO_SearchDataConfiguration_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_SFO_SearchMachine_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Up_OceanOnlineMVC_StandardTable_CountryByUser_Get_Result.cs">
+      <DependentUpon>OceanDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users\MasterGroupView.cs" />
+    <Compile Include="Users\MasterUserGroupView.cs" />
+    <Compile Include="Users\UserGroupView.cs" />
+    <Compile Include="Users\UserView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="OceanDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OceanDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="OceanDb.edmx.diagram">
+      <DependentUpon>OceanDb.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="SFOLogDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SFOLogDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SFOLogDb.edmx.diagram">
+      <DependentUpon>SFOLogDb.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OceanDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OceanDb.edmx</DependentUpon>
+      <LastGenOutput>OceanDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OceanDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OceanDb.edmx</DependentUpon>
+      <LastGenOutput>OceanDb.cs</LastGenOutput>
+    </Content>
+    <Content Include="SFOLogDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SFOLogDb.edmx</DependentUpon>
+      <LastGenOutput>SFOLogDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SFOLogDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SFOLogDb.edmx</DependentUpon>
+      <LastGenOutput>SFOLogDb.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bgt.Ocean.Infrastructure\Bgt.Ocean.Infrastructure.csproj">
+      <Project>{1BD9CC03-C846-4774-8A9A-283D6AC23383}</Project>
+      <Name>Bgt.Ocean.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFrameworkExtras.EF6\EntityFrameworkExtras.EF6.csproj">
+      <Project>{7ed1d61c-9396-4663-952d-d2f7dad19b19}</Project>
+      <Name>EntityFrameworkExtras.EF6</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RunResource\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

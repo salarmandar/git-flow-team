@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SFOLogDbModelStoreContainer" CdmEntityContainer="SFOLogDbEntities">
+    <EntitySetMapping Name="SFOTblSystemLogCategory">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblSystemLogCategory">
+        <MappingFragment StoreEntitySet="SFOTblSystemLogCategory">
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="SystemModelConfig_Guid" ColumnName="SystemModelConfig_Guid" />
+          <ScalarProperty Name="SystemLogProcess_Guid" ColumnName="SystemLogProcess_Guid" />
+          <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="UserModifed" ColumnName="UserModifed" />
+          <ScalarProperty Name="DatetimeModified" ColumnName="DatetimeModified" />
+          <ScalarProperty Name="UniversalDatetimeModified" ColumnName="UniversalDatetimeModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SFOTblSystemLogProcess">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblSystemLogProcess">
+        <MappingFragment StoreEntitySet="SFOTblSystemLogProcess">
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="ProcessCode" ColumnName="ProcessCode" />
+          <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="UserModifed" ColumnName="UserModifed" />
+          <ScalarProperty Name="DatetimeModified" ColumnName="DatetimeModified" />
+          <ScalarProperty Name="UniversalDatetimeModified" ColumnName="UniversalDatetimeModified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SFOTblTransactionGenericLog">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblTransactionGenericLog">
+        <MappingFragment StoreEntitySet="SFOTblTransactionGenericLog">
+          <ScalarProperty Name="JSONValue" ColumnName="JSONValue" />
+          <ScalarProperty Name="LabelIndex" ColumnName="LabelIndex" />
+          <ScalarProperty Name="SystemMsgID" ColumnName="SystemMsgID" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="SystemLogCategory_Guid" ColumnName="SystemLogCategory_Guid" />
+          <ScalarProperty Name="SystemLogProcess_Guid" ColumnName="SystemLogProcess_Guid" />
+          <ScalarProperty Name="ReferenceValue" ColumnName="ReferenceValue" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="UserModifed" ColumnName="UserModifed" />
+          <ScalarProperty Name="DatetimeModified" ColumnName="DatetimeModified" />
+          <ScalarProperty Name="UniversalDatetimeModified" ColumnName="UniversalDatetimeModified" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SFOTblSystemModelConfig">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblSystemModelConfig">
+        <MappingFragment StoreEntitySet="SFOTblSystemModelConfig">
+          <ScalarProperty Name="DefaultLabelIndex" ColumnName="DefaultLabelIndex" />
+          <ScalarProperty Name="DefaultSystemMsgID" ColumnName="DefaultSystemMsgID" />
+          <ScalarProperty Name="UniversalDatetimeModify" ColumnName="UniversalDatetimeModify" />
+          <ScalarProperty Name="DatetimeModify" ColumnName="DatetimeModify" />
+          <ScalarProperty Name="UserModify" ColumnName="UserModify" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="DatetimeCreated" ColumnName="DatetimeCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="ModelNameTarget" ColumnName="ModelNameTarget" />
+          <ScalarProperty Name="ModelNameSource" ColumnName="ModelNameSource" />
+          <ScalarProperty Name="ConfigKey" ColumnName="ConfigKey" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SFOTblSystemModelConfig_Property">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblSystemModelConfig_Property">
+        <MappingFragment StoreEntitySet="SFOTblSystemModelConfig_Property">
+          <ScalarProperty Name="OverwriteLabelIndex" ColumnName="OverwriteLabelIndex" />
+          <ScalarProperty Name="OverwriteSystemMsgID" ColumnName="OverwriteSystemMsgID" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="SystemLogCategory_Guid" ColumnName="SystemLogCategory_Guid" />
+          <ScalarProperty Name="SystemModelConfig_PropertyQuery_Guid" ColumnName="SystemModelConfig_PropertyQuery_Guid" />
+          <ScalarProperty Name="LabelKey" ColumnName="LabelKey" />
+          <ScalarProperty Name="UniversalDatetimeModify" ColumnName="UniversalDatetimeModify" />
+          <ScalarProperty Name="DatetimeModify" ColumnName="DatetimeModify" />
+          <ScalarProperty Name="UserModify" ColumnName="UserModify" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="DatetimeCreated" ColumnName="DatetimeCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="PropertyNameTarget" ColumnName="PropertyNameTarget" />
+          <ScalarProperty Name="PropertyNameSource" ColumnName="PropertyNameSource" />
+          <ScalarProperty Name="SystemModelConfig_Guid" ColumnName="SystemModelConfig_Guid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SFOTblSystemModelConfig_PropertyQuery">
+      <EntityTypeMapping TypeName="SFOLogDbModel.SFOTblSystemModelConfig_PropertyQuery">
+        <MappingFragment StoreEntitySet="SFOTblSystemModelConfig_PropertyQuery">
+          <ScalarProperty Name="UniversalDatetimeModified" ColumnName="UniversalDatetimeModified" />
+          <ScalarProperty Name="DatetimeModified" ColumnName="DatetimeModified" />
+          <ScalarProperty Name="UserModifed" ColumnName="UserModifed" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="QueryString" ColumnName="QueryString" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSystemCustomerLocation_Audit_Log">
+      <EntityTypeMapping TypeName="SFOLogDbModel.TblSystemCustomerLocation_Audit_Log">
+        <MappingFragment StoreEntitySet="TblSystemCustomerLocation_Audit_Log">
+          <ScalarProperty Name="UniversalDatetimeModified" ColumnName="UniversalDatetimeModified" />
+          <ScalarProperty Name="DatetimeModified" ColumnName="DatetimeModified" />
+          <ScalarProperty Name="UserModifed" ColumnName="UserModifed" />
+          <ScalarProperty Name="UniversalDatetimeCreated" ColumnName="UniversalDatetimeCreated" />
+          <ScalarProperty Name="DateTimeCreated" ColumnName="DateTimeCreated" />
+          <ScalarProperty Name="UserCreated" ColumnName="UserCreated" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FlagDisable" ColumnName="FlagDisable" />
+          <ScalarProperty Name="CustomerLocation_Guid" ColumnName="CustomerLocation_Guid" />
+          <ScalarProperty Name="SystemLogProcess_Guid" ColumnName="SystemLogProcess_Guid" />
+          <ScalarProperty Name="SystemLogCategory_Guid" ColumnName="SystemLogCategory_Guid" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

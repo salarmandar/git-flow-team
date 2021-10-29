@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bgt.Ocean.Repository.EntityFramework</RootNamespace>
+    <AssemblyName>Bgt.Ocean.Repository.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\Ocean Online\Ocean Online\SonarLintRuleSet\OceanOnlineWay.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\OceanDbFactory.cs" />
+    <Compile Include="Core\OceanUnitOfWork.cs" />
+    <Compile Include="Core\SFOLogDbFactory.cs" />
+    <Compile Include="Core\SFOLogDbUnitOfWork.cs" />
+    <Compile Include="DbFactory.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="Extensions\SqlCommandExt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityExtension.cs" />
+    <Compile Include="Repositories\AuditLog\SystemCustomerLocationAuditLogRepository.cs" />
+    <Compile Include="Repositories\Commodities\MasterCommodityCountryRepository.cs" />
+    <Compile Include="Repositories\Consolidation\MasterConAndDeconsolidate_HeaderRepository.cs" />
+    <Compile Include="Repositories\Consolidation\SystemConAndDeconsolidateStatusRepository.cs" />
+    <Compile Include="Repositories\CustomerLocation\MasterCustomerLocationBrinksSiteRepository.cs" />
+    <Compile Include="Repositories\CustomerLocation\MasterCustomerLocationInternalDepartmentRepository.cs" />
+    <Compile Include="Repositories\CustomerLocation\MasterCustomerLocationRepository.cs" />
+    <Compile Include="Repositories\CustomerLocation\MasterCustomerLocation_EmailActionRepository.cs" />
+    <Compile Include="Repositories\CustomerLocation\MasterCustomerLocation_LocationDestinationRepository.cs" />
+    <Compile Include="Repositories\Customer\MasterCustomerContractServiceLocationRepository.cs" />
+    <Compile Include="Repositories\Customer\MasterCustomerJobHideScreenRepository.cs" />
+    <Compile Include="Repositories\Customer\MasterCustomer_AccountRepository.cs" />
+    <Compile Include="Repositories\Email\MasterEmailTemplateRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterAccidentImagesRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterAccidentListDetailDamagedRespository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterGasolineRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterGasolineVendorRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterMaintenanceCategoryRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterRunResourceAccidentRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterRunResourceGasolineExpenseRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterRunResourceMaintenanceDetailRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterRunResourceMaintenanceRepository.cs" />
+    <Compile Include="Repositories\FleetMaintenance\MasterRunResourcePeriodicMaintenanceHistoryRepository.cs" />
+    <Compile Include="Repositories\History\MasterActualJobItemsCommodity_ScanHistoryRepository.cs" />
+    <Compile Include="Repositories\History\MasterActualJobItemsSeal_ScanHistoryRepository.cs" />
+    <Compile Include="Repositories\History\MasterHistoryStandardTableRepository.cs" />
+    <Compile Include="Repositories\History\MasterHistory_ActualJobRepository.cs" />
+    <Compile Include="Repositories\History\MasterHistory_DailyRunResourceRepository.cs" />
+    <Compile Include="Repositories\History\MasterHistory_DolphinAssignToAnotherRunRepository.cs" />
+    <Compile Include="Repositories\History\MasterHistory_SealRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobItemsLiabilityRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobItemUnknowRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingCashRecyclingEntryRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingCashRecyclingRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingActualCountEntryRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingActualCountRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingMachineReportEntryRepository.cs" />
+    <Compile Include="Repositories\Job\Recycling\MasterActualJobMCSRecyclingMachineReportRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinSuspectFakeDetailRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinSuspectFakeEntryRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinSuspectFakeRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinBulkNoteCollectEntryRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinBulkNoteCollectRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobMCSItemSealRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterActualJobMCSBulkJammedRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinCashAddEntryRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinCashAddRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinCashReturnEntryRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinCashReturnRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinMachineBalanceEntryRepository.cs" />
+    <Compile Include="Repositories\Job\CoinExchange\MasterActualJobMCSCoinMachineBalanceRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkDepositReportEntryRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkDepositReportRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobHeaderCapabilityRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobHeaderOTCRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobHeaderRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobHideScreenMappingRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobItemDiscrapenciesRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobItemsCommodityRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobItemsSealRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobServiceStopLegsRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobServiceStopSpecialCommandRepository.cs" />
+    <Compile Include="Repositories\Job\MasterActualJobServiceStopsRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobSumActualCountRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobSumCashAddRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobSumCashReturnRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobSumMachineReportRepository.cs" />
+    <Compile Include="Repositories\Job\MasterHistoryActualJobOnDailyRunResourceRepository.cs" />
+    <Compile Include="Repositories\Job\MasterHistoryActualJobRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkJammedDetailRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkJammedEntryRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkRetractEntryRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkRetractRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkSuspectFakeDetailRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkSuspectFakeEntryRepository.cs" />
+    <Compile Include="Repositories\Job\BulkNoteDeposit\MasterMCSBulkSuspectFakeRepository.cs" />
+    <Compile Include="Repositories\Job\MasterPlaceRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobActualCountRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobCashAddRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobCashReturnRepository.cs" />
+    <Compile Include="Repositories\Job\NoteWithdraw\MasterActualJobMachineReportRepository.cs" />
+    <Compile Include="Repositories\MasterCityRepository.cs" />
+    <Compile Include="Repositories\Commodities\MasterCommodityRepository.cs" />
+    <Compile Include="Repositories\MasterCountryRepository.cs" />
+    <Compile Include="Repositories\MasterCountry_StateRepository.cs" />
+    <Compile Include="Repositories\MasterCurrencyRepository.cs" />
+    <Compile Include="Repositories\Customer\MasterCustomerContractRepository.cs" />
+    <Compile Include="Repositories\Customer\MasterCustomerRepository.cs" />
+    <Compile Include="Repositories\MasterData\MasterGroupRepository.cs" />
+    <Compile Include="Repositories\MasterData\MasterImageTempRepository.cs" />
+    <Compile Include="Repositories\MasterData\MasterImageRepository.cs" />
+    <Compile Include="Repositories\MasterData\MasterReasonTypeRepository.cs" />
+    <Compile Include="Repositories\MasterDistrictRepository.cs" />
+    <Compile Include="Repositories\MasterLogVerifyKeyRepository.cs" />
+    <Compile Include="Repositories\MasterMenuDetailRepository.cs" />
+    <Compile Include="Repositories\MasterNemoCountryValueRepository.cs" />
+    <Compile Include="Repositories\MasterNemoSiteValueRepository.cs" />
+    <Compile Include="Repositories\MasterNemoTrafficFactorValueRepository.cs" />
+    <Compile Include="Repositories\MasterReportRepository.cs" />
+    <Compile Include="Repositories\MasterRoute\MasterRouteJobHeaderRepository.cs" />
+    <Compile Include="Repositories\MasterRoute\MasterRouteJobServiceStopLegsRepository.cs" />
+    <Compile Include="Repositories\MasterRoute\MasterRouteRepository.cs" />
+    <Compile Include="Repositories\MasterRoute\MasterRouteTransactionLogRepository.cs" />
+    <Compile Include="Repositories\MasterSiteNetworkRepository.cs" />
+    <Compile Include="Repositories\MasterSiteRepository.cs" />
+    <Compile Include="Repositories\MasterSpecialCommandRepository.cs" />
+    <Compile Include="Repositories\MasterSubServiceTypeRepository.cs" />
+    <Compile Include="Repositories\MasterUserAccessGroupCountryEmailRepository.cs" />
+    <Compile Include="Repositories\MasterUserRepository.cs" />
+    <Compile Include="Repositories\MasterVendorRepository.cs" />
+    <Compile Include="Repositories\Mobile\MasterCheckListRepository.cs" />
+    <Compile Include="Repositories\Monitoring\MasterHistoryErrorPodByServiceRepository.cs" />
+    <Compile Include="Repositories\Monitoring\MasterHistoryLogPodByServiceRepository.cs" />
+    <Compile Include="Repositories\Monitoring\MasterHistoryReportPushToSmartRepository.cs" />
+    <Compile Include="Repositories\Monitoring\MasterSite_SmartBillingScheduleRepository.cs" />
+    <Compile Include="Repositories\Monitoring\SmartBillingScheduleDayMappingRepository.cs" />
+    <Compile Include="Repositories\NemoDynamicRoute\MasterDetailRouteOptimizationRepository.cs" />
+    <Compile Include="Repositories\NemoDynamicRoute\MasterErrorRouteOptimizationRepository.cs" />
+    <Compile Include="Repositories\NemoDynamicRoute\MasterQueueRouteOptimizationRepository.cs" />
+    <Compile Include="Repositories\NemoDynamicRoute\NemoDynamicRouteRepository.cs" />
+    <Compile Include="Repositories\Nemo\MasterNemoQueueRouteOptimizationDetailRepository.cs" />
+    <Compile Include="Repositories\Nemo\MasterNemoQueueRouteOptimizationRepository.cs" />
+    <Compile Include="Repositories\PricingRules\ChargeCategoryRepository.cs" />
+    <Compile Include="Repositories\PricingRules\MasterClauseRepository.cs" />
+    <Compile Include="Repositories\PricingRules\PricingRuleRepository.cs" />
+    <Compile Include="Repositories\PricingRules\QuotationRepository.cs" />
+    <Compile Include="Repositories\PricingRules\Quotation_HistoryRepository.cs" />
+    <Compile Include="Repositories\PricingRules\Quotation_PricingRule_MappingRepository.cs" />
+    <Compile Include="Repositories\PricingRules\Quotation_ProductRepository.cs" />
+    <Compile Include="Repositories\PricingRules\SystemLeedToCashStatusRepository.cs" />
+    <Compile Include="Repositories\Products\LeedToCashProductRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\MasterRouteOptimizationStatusRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\SystemRouteOptimizationRequestTypeRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\SystemRouteOptimizationRouteTypeRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\SystemRouteOptimizationRouteTypeRequestTypeRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\SystemRouteOptimizationStatusRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\TransactionRouteOptimizationHeaderDetailItemRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\TransactionRouteOptimizationHeaderDetailRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\TransactionRouteOptimizationHeaderQueueRepository.cs" />
+    <Compile Include="Repositories\RouteOptimization\TransactionRouteOptimizationHeaderRepository.cs" />
+    <Compile Include="Repositories\Run\MasterDailyEmployeeRepository.cs" />
+    <Compile Include="Repositories\Run\MasterDailyRunResourceAlarmRepository.cs" />
+    <Compile Include="Repositories\Run\MasterDailyRunResourceHistoryRepository.cs" />
+    <Compile Include="Repositories\Run\MasterDailyRunResourceRepository.cs" />
+    <Compile Include="Repositories\Run\MasterHistoryDailyRunResourceSignatureTruckToTruckTransferRepository.cs" />
+    <Compile Include="Repositories\Run\MasterRunResourceRepository.cs" />
+    <Compile Include="Repositories\SFOTblMasterMachineModelTypeDefaultCassetteRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterCountryTimeZoneRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterEscalationDetail_EmailRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterEscalationDetail_PositionRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterEscalationDetailRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterJournalRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterMachineCassetteRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterMachineLockTypeRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterMachineRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterMachineServiceTypeRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterMonitoringNetworkRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterOTCLockModeRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterProblemRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterSolutionRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterSourceRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemDataConfigurationRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemEnvironmentGlobalRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemEscalationRuleDetailRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOMasterEscalationHeaderRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemServiceRequestStateRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemEscalationRuleHeader_DetailRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemEscalationRuleHeaderRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemFunctionRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemLockTypeRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemModelConfigRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOSystemOTCLockModeRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTblSystemLogCategoryRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTblSystemLogProcessRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTblTransactionOTCRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionGenericLogRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestEcashRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestInfoRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestJournalRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestProblemRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestRepository.cs" />
+    <Compile Include="Repositories\SFO\SFOTransactionServiceRequestSolutionRepository.cs" />
+    <Compile Include="Repositories\SiteNetwork\MasterSitePathHeaderRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterActualJobItemsLiabilityDenominationRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterSiteNetworkAuditLogRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterSiteNetworkMemberRepository.cs" />
+    <Compile Include="Repositories\StandardTable\SitePath\MasterSitePathAuditLogRepository.cs" />
+    <Compile Include="Repositories\StandardTable\SitePath\MasterSitePathDestinationRepository.cs" />
+    <Compile Include="Repositories\StandardTable\SitePath\MasterSitePathDetailRepository.cs" />
+    <Compile Include="Repositories\StandardTable\SitePath\MasterSitePathRepository.cs" />
+    <Compile Include="Repositories\StandardTable\PositionRepository.cs" />
+    <Compile Include="Repositories\StandardTable\EmployeeRepository.cs" />
+    <Compile Include="Repositories\StandardTable\UserEmailTemplateRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterDenominationRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterRouteGroupDetailRepository.cs" />
+    <Compile Include="Repositories\StandardTable\ProblemPriorityRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MasterRouteGroupRepository.cs" />
+    <Compile Include="Repositories\StandardTable\ReasonCodeRepository.cs" />
+    <Compile Include="Repositories\StandardTable\ProblemRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MachineSubServiceTypeRepository.cs" />
+    <Compile Include="Repositories\StandardTable\MachineServiceTypeRepository.cs" />
+    <Compile Include="Repositories\StandardTable\RunResourceTypeRepository.cs" />
+    <Compile Include="Repositories\SystemConfigurationAuditLogRepository.cs" />
+    <Compile Include="Repositories\SystemEmailDomainsRepository.cs" />
+    <Compile Include="Repositories\SystemEnvironmentMasterCountryValueRepository.cs" />
+    <Compile Include="Repositories\SystemNotificationConfigPeriodsRepository.cs" />
+    <Compile Include="Repositories\SystemNotificationConfigPeriodsUsersRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemApplicationRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemATMScreenRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemCustomerLocationTypeRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemDayOfWeekRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemDisplayTextControlsLanguageRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemDomainsRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemEmailActionRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemEnvironmentMasterCountryRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemEnvironmentMasterCountryTreeViewRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemEnvironment_GlobalRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemFormatDateRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemFormat_NumberCurrencyRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemGlobalUnitRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemInternalDepartmentTypesRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemJobActionsRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemJobHideFieldRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemJobHideScreenRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemJobStatusRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemLanguageRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemFileTypeRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemLineOfBusinessRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemLog_ActivityRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemLog_AttemptToLoginRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemLog_HistoryErrorRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemMaintenanceStatusRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemMaterRouteTypeOfWeekRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemMessageRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemOnwardDestinationTypesRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemRunningValueCustomRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemRunningValueGlobalRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemServiceJobTypeLOBRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemServiceJobTypeRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemServiceStopTypesRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemTimeZoneRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemTitleNameRepository.cs" />
+    <Compile Include="Repositories\Systems\SystemTripIndicatorRepository.cs" />
+    <Compile Include="Repositories\TempReport\SystemReportStyleRepository.cs" />
+    <Compile Include="Repositories\TempReport\TempMainPrevaultReportRepository.cs" />
+    <Compile Include="Repositories\TempReport\TempPrevaultNonBarcodeReportRepository.cs" />
+    <Compile Include="Repositories\TempReport\TempPrevaultSealReportRepository.cs" />
+    <Compile Include="Repositories\User\MasterUserLimitedTimeAccessRepository.cs" />
+    <Compile Include="Repositories\VaultBalance\VaultBalanceDetailRepository.cs" />
+    <Compile Include="Repositories\VaultBalance\VaultBalanceDiscrepancyRepository.cs" />
+    <Compile Include="Repositories\VaultBalance\VaultBalanceHeaderRepository.cs" />
+    <Compile Include="Repositories\VaultBalance\VaultBalanceNonbarcodeRepository.cs" />
+    <Compile Include="Repositories\VaultBalance\VaultBalanceSealAndMasterRepository.cs" />
+    <Compile Include="Repositories\WebAPIUserRepository.cs" />
+    <Compile Include="Repositories\WebAPIUser_TokenRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="StringQuery\Masterroute\UpdateSeqIndexQuery.cs" />
+    <Compile Include="Repositories\SystemEnvironmentMasterSiteValueRepository.cs" />
+    <Compile Include="StringQuery\OnHandRoute\JobDetailOnRunQuery.cs" />
+    <Compile Include="StringQuery\RunResource\DailyRunResourceQuery.cs" />
+    <Compile Include="StringQuery\RouteOptimize\RouteOptimizeQuery.cs" />
+    <Compile Include="StringQuery\StandardTable\CustomerLocationQuery.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bgt.Ocean.Infrastructure\Bgt.Ocean.Infrastructure.csproj">
+      <Project>{1bd9cc03-c846-4774-8a9a-283d6ac23383}</Project>
+      <Name>Bgt.Ocean.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bgt.Ocean.Models\Bgt.Ocean.Models.csproj">
+      <Project>{495F0F21-89B1-4B87-B866-0986B3B70909}</Project>
+      <Name>Bgt.Ocean.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityFrameworkExtras.EF6\EntityFrameworkExtras.EF6.csproj">
+      <Project>{7ed1d61c-9396-4663-952d-d2f7dad19b19}</Project>
+      <Name>EntityFrameworkExtras.EF6</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="51b085dfd426414aa040985243b91267" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory" Width="1.5" PointX="12.75" PointY="63.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory_Action" Width="1.5" PointX="15" PointY="64.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory_Action_Charge_Condition" Width="1.5" PointX="19.5" PointY="64.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory_Rule_Value" Width="1.5" PointX="17.25" PointY="63.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashContract_PricingRules" Width="1.5" PointX="16.75" PointY="59" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashMasterCategoryClause" Width="1.5" PointX="3.75" PointY="78" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashMasterClause" Width="1.5" PointX="6" PointY="78" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashMasterClauseScope" Width="1.5" PointX="8.25" PointY="78" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashMasterClauseScopeDetail" Width="1.5" PointX="10.5" PointY="65" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct" Width="1.5" PointX="8.25" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_Clause" Width="1.5" PointX="10.5" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute" Width="1.5" PointX="13.5" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Certification" Width="1.5" PointX="16.75" PointY="61" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Discrepancy" Width="1.5" PointX="18.75" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_GeoLocation_City" Width="1.5" PointX="18.75" PointY="71" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Limit_Items" Width="1.5" PointX="18.75" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Limit_Values" Width="1.5" PointX="3" PointY="54.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Limit_Weight" Width="1.5" PointX="19.75" PointY="63" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_ResponseTime" Width="1.5" PointX="15.75" PointY="71.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_ServiceWindows" Width="1.5" PointX="15.75" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_TimeDeadLine" Width="1.5" PointX="15.75" PointY="74" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_TimeSendReport" Width="1.5" PointX="15.75" PointY="76.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_TimeSendReport_Detail" Width="1.5" PointX="18" PointY="76.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ServiceType" Width="1.5" PointX="10.5" PointY="70.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation" Width="1.5" PointX="5.25" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_Clause" Width="1.5" PointX="12.75" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_Customer_Mapping" Width="1.5" PointX="12.75" PointY="62.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_Location_Mapping" Width="1.5" PointX="15.75" PointY="57" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_PricingRule_Mapping" Width="3.25" PointX="12.75" PointY="65.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_Product" Width="1.5" PointX="10.5" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_ProductAttribute" Width="1.5" PointX="15.75" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobActualCount" Width="1.5" PointX="8" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobCashAdd" Width="1.5" PointX="8.25" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobCashReturn" Width="1.5" PointX="11.25" PointY="46.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobHeader_Capability" Width="1.5" PointX="17" PointY="40.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobHeader_OTC" Width="1.5" PointX="3" PointY="39.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsCommodity_ScanHistory" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsLiability" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsSeal_ScanHistory" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMachineReport" Width="1.5" PointX="6" PointY="46.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobServiceStop" Width="1.5" PointX="2.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobServiceStopLegs" Width="1.5" PointX="0.75" PointY="40.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobServiceStopSpecialCommand" Width="1.5" PointX="4.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobSumActualCount" Width="1.5" PointX="9" PointY="54.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobSumCashReturn" Width="1.5" PointX="6" PointY="44.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobSumMachineReport" Width="1.5" PointX="11" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCapturedCard" Width="1.5" PointX="3" PointY="58.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCheckList" Width="1.5" PointX="11" PointY="15" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCity" Width="1.5" PointX="6.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCommodity" Width="1.5" PointX="14.25" PointY="26.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCommodityCountry" Width="1.5" PointX="19.5" PointY="27.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCommodityGroup" Width="1.5" PointX="12" PointY="26.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCountry" Width="1.5" PointX="1.5" PointY="32.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCountry_State" Width="1.5" PointX="8.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCurrency" Width="1.5" PointX="0.75" PointY="48.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCurrencyDependOnCountry" Width="1.5" PointX="9.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomer" Width="1.5" PointX="3" PointY="69" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomer_Account" Width="4.25" PointX="5.25" PointY="74.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerContract" Width="1.5" PointX="10.5" PointY="72" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerContract_ServiceLocation" Width="1.5" PointX="13.75" PointY="61" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation" Width="1.5" PointX="6" PointY="48.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation_BrinksSite" Width="1.5" PointX="14.25" PointY="52.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation_InternalDepartment" Width="1.5" PointX="6.75" PointY="73.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation_LocationDestination" Width="1.5" PointX="14.25" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation_ServiceHour" Width="1.5" PointX="13.25" PointY="44.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterDailyEmployee" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterDailyRunResource" Width="1.5" PointX="6.75" PointY="24.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterDenomination" Width="1.5" PointX="3" PointY="28.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterDistrict" Width="1.5" PointX="16.5" PointY="80" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterEmployee" Width="1.5" PointX="12" PointY="73.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGroup" Width="1.5" PointX="8" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGroup_Menu" Width="1.5" PointX="2.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGroup_MenuCommand" Width="1.5" PointX="10.25" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGroup_Site" Width="1.5" PointX="4.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_ActaulJobOnDailyRunResource" Width="1.5" PointX="6.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_ActualJob" Width="1.5" PointX="8.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_DailyRunResource" Width="1.5" PointX="10.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_Seal" Width="1.5" PointX="10.75" PointY="8.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistoryErrorPodByService" Width="1.5" PointX="10.75" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistoryLogPodByService" Width="1.5" PointX="11.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterLogVerifyKey" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterMenuDetail" Width="1.5" PointX="5.75" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterMenuDetailCommand" Width="1.5" PointX="8" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoCountryValue" Width="1.5" PointX="2.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoTrafficFactorValue" Width="1.5" PointX="4.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterPlace" Width="1.5" PointX="3.75" PointY="35.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterPosition" Width="1.5" PointX="16.5" PointY="27.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterReasonType" Width="1.5" PointX="6" PointY="34.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterReport" Width="1.5" PointX="6.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRouteGroup" Width="1.5" PointX="8.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRouteGroup_Detail" Width="1.5" PointX="9.75" PointY="30.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRouteJobHeader" Width="1.5" PointX="3.75" PointY="23.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRouteJobServiceStopLegs" Width="1.5" PointX="12" PointY="36.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource" Width="1.5" PointX="3" PointY="66.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSalesLevel" Width="1.5" PointX="0.75" PointY="70.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSalesTeam" Width="1.5" PointX="3" PointY="73" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSalesTeamCustomerMapping" Width="1.5" PointX="5.25" PointY="71" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSalesTeamUserMapping" Width="1.5" PointX="8.25" PointY="65.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSiteNetwork" Width="1.5" PointX="1.5" PointY="34.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSiteNetworkAuditLog" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSiteNetworkMember" Width="1.5" PointX="14.75" PointY="33.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSiteNetworkUsergroup" Width="1.5" PointX="17" PointY="33.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSitePathAuditLog" Width="1.5" PointX="3.75" PointY="34.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSitePathDestination" Width="1.5" PointX="11.25" PointY="54.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSitePathDetail" Width="1.5" PointX="14.75" PointY="37.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSitePathHeader" Width="1.5" PointX="1.5" PointY="36.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSpecialCommand" Width="1.5" PointX="12.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSubLob" Width="1.5" PointX="5.25" PointY="67" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSubServiceType" Width="1.5" PointX="19.25" PointY="40.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterUser" Width="1.5" PointX="3" PointY="70.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterUserAccessGroupCountryEmail" Width="1.5" PointX="3.75" PointY="31" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterUserEmailTemplate" Width="1.5" PointX="14.25" PointY="18.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterUserGroup" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblPricingRule" Width="1.5" PointX="10.5" PointY="58" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemApiHistory" Width="1.5" PointX="12.75" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemApplication" Width="1.5" PointX="12" PointY="18.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemATMScreen" Width="1.5" PointX="11" PointY="56.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemConAndDeconsolidateStatus" Width="1.5" PointX="9" PointY="33.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemConfigurationAuditLog" Width="1.5" PointX="12.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemCustomerLocationType" Width="1.5" PointX="6.5" PointY="32.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemCustomerOfType" Width="1.5" PointX="13.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDayOfWeek" Width="1.5" PointX="11" PointY="34.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDenominationType" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDisplayTextControlsLanguage" Width="1.5" PointX="2.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDomain" Width="1.5" PointX="4.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDomainAiles" Width="1.5" PointX="6.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDomainDC" Width="1.5" PointX="13.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDomainEmailWhiteList" Width="1.5" PointX="14.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEnvironment_Global" Width="1.5" PointX="14.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEnvironmentMasterCountry" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEnvironmentMasterCountryValue" Width="1.5" PointX="14.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemFormat_NumberCurrency" Width="1.5" PointX="14.75" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemGlobalUnit" Width="1.5" PointX="12" PointY="27.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemInternalDepartmentType" Width="1.5" PointX="14.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemJobAction" Width="1.5" PointX="15.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemJobStatus" Width="1.5" PointX="12" PointY="17" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLanguage" Width="1.5" PointX="1.5" PointY="30.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLeedToCashContractStatus" Width="1.5" PointX="8.25" PointY="76" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLeedToCashQuotationType" Width="1.5" PointX="3" PointY="71.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLeedToCashStatus" Width="1.5" PointX="6" PointY="76" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLineOfBusiness" Width="1.5" PointX="11" PointY="39.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLog_Activity" Width="1.5" PointX="14.25" PointY="20.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLog_AttemptToLogin" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLog_HistoryError" Width="1.5" PointX="2.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemLog_SaveLastPWD" Width="1.5" PointX="4.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemMessage" Width="1.5" PointX="6.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemNotificationConfigPeriods" Width="1.5" PointX="3.75" PointY="19.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemNotificationConfigPeriodsUsers" Width="1.5" PointX="6" PointY="19.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemOnwardDestinationType" Width="1.5" PointX="8.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemReportStyle" Width="1.5" PointX="14.5" PointY="78" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRunningVaule_Global" Width="1.5" PointX="15.75" PointY="14.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemSealType" Width="1.5" PointX="14.75" PointY="25.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemServiceJobType" Width="1.5" PointX="11" PointY="38.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemServiceJobTypeLOB" Width="1.5" PointX="19.25" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemServiceStopType" Width="1.5" PointX="16.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemTimezone" Width="1.5" PointX="1.5" PointY="62.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemTripIndicator" Width="1.5" PointX="16.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTempMainPrevaultReport" Width="1.5" PointX="16.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTempPrevaultNonBarcodeReport" Width="1.5" PointX="16.75" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTempPrevaultSealReport" Width="1.5" PointX="16.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblWebAPIUser" Width="1.5" PointX="12" PointY="13.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblWebAPIUser_Token" Width="1.5" PointX="14.25" PointY="13.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblWebAPIUserApplication" Width="1.5" PointX="14.25" PointY="16.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterCountryTimeZone" Width="1.5" PointX="3.75" PointY="62.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterEscalationDetail" Width="1.5" PointX="16.5" PointY="29.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterEscalationDetail_AdditionalEmail" Width="1.5" PointX="18.75" PointY="30.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterEscalationDetail_Position" Width="1.5" PointX="18.75" PointY="29.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterEscalationHeader" Width="1.5" PointX="14.25" PointY="29.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterJournal" Width="1.5" PointX="16.25" PointY="44.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine" Width="1.5" PointX="8.25" PointY="56.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine_AssociatedMachine" Width="1.5" PointX="10.5" PointY="61.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine_Capabilties" Width="1.5" PointX="10.5" PointY="62.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine_Cassette" Width="1.5" PointX="3" PointY="48.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine_ECash" Width="1.5" PointX="6" PointY="52.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachine_LockType" Width="1.5" PointX="16.5" PointY="54.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachineModelType" Width="1.5" PointX="8.75" PointY="32.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachineModelType_Capability" Width="1.5" PointX="8.25" PointY="62.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachineServiceType" Width="1.5" PointX="6" PointY="64.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterOTCLockMode" Width="1.5" PointX="18.25" PointY="35.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterProblem" Width="1.5" PointX="14.25" PointY="40.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterProblem_Solution" Width="1.5" PointX="17.25" PointY="38.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterSolution" Width="1.5" PointX="15" PointY="38.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterSource" Width="1.5" PointX="12" PointY="33.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemAllowServiceRequestStatusDuplicate" Width="1.5" PointX="16.25" PointY="23.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemDataConfiguration" Width="1.5" PointX="4.5" PointY="21.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemDataConfiguration_Country" Width="1.5" PointX="6.75" PointY="30.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemEnvironment_Global" Width="1.5" PointX="16.75" PointY="16.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemEscalationRuleDetail" Width="1.5" PointX="17.25" PointY="37" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemEscalationRuleHeader" Width="1.5" PointX="14.25" PointY="32" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemEscalationRuleHeader_EscalationRuleDetail" Width="1.5" PointX="19.5" PointY="32" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemLockType" Width="1.5" PointX="6" PointY="62.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemMachineCapability" Width="1.5" PointX="8.75" PointY="35.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemOTCLockMode" Width="1.5" PointX="3.75" PointY="32.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemServiceRequestState" Width="1.5" PointX="12" PointY="31.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest" Width="1.5" PointX="14.25" PointY="48.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest_Ecash" Width="1.5" PointX="16.5" PointY="49.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest_Info" Width="1.5" PointX="16.5" PointY="48.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest_Journal" Width="1.5" PointX="18.5" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest_Problem" Width="1.5" PointX="16.5" PointY="46.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionServiceRequest_Solution" Width="1.5" PointX="19.5" PointY="48.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_Action_TblChargeCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashContract_PricingRules_TblMasterCustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashContract_PricingRules_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashContract_PricingRules_TblPricingRuleSource" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterCategoryClause_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClause_TblLeedToCashMasterCategoryClause" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClause_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClause_TblSystemLeedToCashStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClauseScope_TblLeedToCashMasterClause" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_Clause_TblLeedToCashMasterClause" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClauseScopeDetail_TblLeedToCashMasterClauseScope" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashMasterClauseScopeDetail_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_Clause_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ServiceType_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_TblSystemLeedToCashStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Product_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_ServiceLocation_TblLeedToCashProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblPricingRule_TblProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Certification_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Discrepancy_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_GeoLocation_City_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Items_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Values_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Weight_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_ResponseTime_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_ServiceWindows_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_TblSystemLeedToCashStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_TimeDeadLine_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_TimeSendReport_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_ProductAttribute_TblLeedToCashProduct_ProductAttribute" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Certification_TblSystemReportStyle" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Discrepancy_TblMasterCommodity" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_GeoLocation_City_TblMasterDistrict" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Items_TblMasterCommodity" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Values_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Limit_Weight_TblSystemGlobalUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_TimeSendReport_Detail_TblLeedToCashProduct_ProductAttribute_TimeSendReport" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Clause_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Customer_Mapping_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Location_Mapping_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_MasterBrinksComp" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_PricingRule_Mapping_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Product_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_ProductAttribute_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_TblMasterUser" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_TblMasterUser_SalesPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_TblSystemLeedToCashQuotationType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_TblLeedToCashQuotation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Clause_TblLeedToCashQuotation_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Customer_Mapping_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Customer_Mapping_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Location_Mapping_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_Location_Mapping_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_PricingRule_Mapping_TblLeedToCashQuotation_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_PricingRule_Mapping_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_PricingRule_Mapping_TblPricingRuleSource" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_ProductAttribute_TblLeedToCashQuotation_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobActualCount_TblMasterActualJobSumActualCount" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobActualCount_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobActualCount_TblMasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashAdd_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashAdd_TblMasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashReturn_TblMasterActualJobSumCashReturn" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashReturn_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashReturn_TblMasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHeader_Capability_SFOTblSystemMachineCapability" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMachineReport_TblMasterActualJobSumMachineReport" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMachineReport_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMachineReport_TblMasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumActualCount_TblMasterActualJobServiceStopLegs" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashReturn_TblMasterActualJobServiceStopLegs" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumMachineReport_TblMasterActualJobServiceStopLegs" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumActualCount_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashReturn_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumMachineReport_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCommodity_TblMasterCommodityGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCommodity_TblSystemGlobalUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCommodityCountry_TblMasterCommodity" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCommodityCountry_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.DF_TblMasterUserAccessGroupCountryEmail_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterCountryTimeZone_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationHeader_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineServiceType_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterSolution_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemAllowServiceRequestStatusDuplicate_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemDataConfiguration_Country_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemEscalationRuleHeader_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemOTCLockMode_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCountry_TblSystemLanguage" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesLevel_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesTeam_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSiteNetwork_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterUserEmailTemplate_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemNotificationConfigPeriods_TblMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_Cassette_MasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_ECash_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblPricingRule_TblMasterCurrency" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterAccount_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_TblMasterCustomer_BrinksCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesTeamCustomerMapping_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSubLob_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FKTblMasterCustomer_Account_TblMasterCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_ServiceLocation_TblMasterCustomerContract" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_TblMasterUser_SalesPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_TblSystemLeedToCashContractStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_ServiceLocation_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerContract_ServiceLocation_TblPricingRule" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_BrinksSite_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_LocationDestination_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_LocationDestination_TblMasterCustomerLocationDes" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_ServiceHour_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_SFOTblMasterCountryTimeZone" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_TblSystemTimezone" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathDestination_TblMasterCustomerLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_LocationDestination_TblMasterSitePathHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_ServiceHour_TblSystemDayOfWeek" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_ServiceHour_TblSystemLineOfBusiness" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_ServiceHour_TblSystemServiceJobType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_Cassette_MasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_ECash_TblMasterDenomination" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterGroup_MenuCommand_TblMasterGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterGroup_MenuCommand_TblMasterMenuDetailCommand" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterMenuDetailCommand_TblMasterMenuDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationDetail_Position_TblMasterPosition" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_MasterReasonType_Guid" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRouteJobHeader_TblMasterSitePathHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterUser_TblMasterSalesLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesTeamCustomerMapping_TblMasterSalesTeam" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesTeamUserMapping_TblMasterSalesTeam" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSalesTeamUserMapping_TblMasterUser" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSiteNetworkMember_TblMasterSiteNetwork" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathHeader_TblMasterSiteNetwork" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSiteNetworkUsergroup_TblMasterSiteNetworkMember" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathAuditLog_TblMasterSitePathHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathDestination_TblMasterSitePathHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathDetail_TblMasterSitePathHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSubLob_TblSystemLineOfBusiness" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSubServiceType_TblSystemLineOfBusiness" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSubServiceType_TblSystemServiceJobType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationDetail_TblMasterUserEmailTemplate" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterUserEmailTemplate_TblSystemApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemLog_Activity_TblSystemApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblWebAPIUserApplication_TblSystemApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemATMScreen_SFOTblSystemMachineCapability" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationHeader_TblSystemCustomerLocationType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblSystemCustomerLocationType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblSystemCustomerLocationType_2" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_TblSystemCustomerLocationType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemNotificationConfigPeriods_TblSystemEnvironmentMasterCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemAllowServiceRequestStatusDuplicate_TblSystemJobStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemEscalationRuleHeader_TblSystemJobStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemServiceJobTypeLOB_TblSystemLineOfBusiness" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemNotificationConfigPeriodsUsers_TblSystemNotificationConfigPeriods" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterOTCLockMode_TblSystemOTCJobType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemServiceJobTypeLOB_TblSystemServiceJobType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterCountryTimeZone_TblSystemTimeZone" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblWebAPIUser_Token_TblWebAPIUser" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblWebAPIUserApplication_TblWebAPIUser" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_SFOTblMasterCountryTimeZone" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationDetail_AdditionalEmail_SFOTblMasterEscalationDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationDetail_Position_SFOTblMasterEscalationDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationDetail_SFOTblMasterEscalationHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationHeader_SFOTblSystemServiceRequestState" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Journal_SFOTblMasterJournal" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterMachine_Capabilties_MasterMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_AssociatedMachine_SFOMasterAssociatedMachine_Guid" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_AssociatedMachine_SFOMasterMachine_Guid" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_Cassette_MasterMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_ECash_SFOTblMasterMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_LockType_SFOTblMasterMachine" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_SFOTblMasterMachineModelType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_SFOTblMasterMachineServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_SFOTblSystemLockType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterMachine_Capabilties_MasterMachineModelType_Capability" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_LockType_SFOTblSystemLockType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterMachineCapability_MasterMachineModelType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterMachineCapability_SystemCapability" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_SFOTblMasterMachineServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Problem_SFOTblMasterMachineServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_SFOTblMasterMachineServiceType" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterOTCLockMode_SFOTblSystemOTCLockMode" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_Solution_SFOTblMasterProblem" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Problem_SFOTblMasterProblem" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Solution_SFOTblMasterProblem" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_Solution_SFOTblMasterSolution" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Solution_SFOTblMasterProblem_Solution" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Solution_SFOTblMasterSolution" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_SFOTblMasterSource_CloseSource" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_SFOTblMasterSource_OpenSource" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemDataConfiguration_Country_SFOTblSystemDataConfiguration" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemEscalationRuleHeader_EscalationRuleDetail_SFOTblSystemEscalationRuleDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemEscalationRuleHeader_EscalationRuleDetail_SFOTblSystemEscalationRuleHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemEscalationRuleHeader_SFOTblSystemServiceRequestState" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_SFOTblSystemServiceRequestState" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Ecash_SFOTblTransactionServiceRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Info_SFOTblTransactionServiceRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Journal_SFOTblTransactionServiceRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Problem_SFOTblTransactionServiceRequest" ManuallyRouted="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Solution_SFOTblTransactionServiceRequest" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoSiteValue" Width="1.5" PointX="17.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoDetailRouteOptimization" Width="1.5" PointX="11.25" PointY="40.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoErrorRouteOptimization" Width="1.5" PointX="11.25" PointY="24.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoQueueRouteOptimization" Width="1.5" PointX="9" PointY="24.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterNemoDetailRouteOptimization_MasterCustomerLocation" />
+        <AssociationConnector Association="OceanDbModel.FK_MasterNemoQueueRouteOptimization_MasterDailyRunResource" />
+        <AssociationConnector Association="OceanDbModel.FK_NemoDetailRouteOptimization_NemoQueueRouteOptimization" />
+        <AssociationConnector Association="OceanDbModel.FK_NemoErrorRouteOptimization_NemoQueueRouteOptimization" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterReasonUnableToService" Width="1.5" PointX="5.75" PointY="18.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory_Action_Charge" Width="1.5" PointX="17.25" PointY="64.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblChargeCategory_Rule" Width="1.5" PointX="15" PointY="63.125" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_Rule_TblChargeCategory" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_Action_Charge_TblChargeCategory_Action" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_Action_Charge_Condition_TblChargeCategory_Action_Charge" />
+        <AssociationConnector Association="OceanDbModel.FK_TblChargeCategory_Rule_Value_TblChargeCategory_Rule" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashQuotation_History" Width="1.5" PointX="7.5" PointY="71" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashQuotation_History_TblLeedToCashQuotation" />
+        <EntityTypeShape EntityType="OceanDbModel.TblLeedToCashProduct_ProductAttribute_Info" Width="1.5" PointX="15.75" PointY="75.125" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblLeedToCashProduct_ProductAttribute_Info_TblLeedToCashProduct_ProductAttribute" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterImage" Width="1.5" PointX="7.75" PointY="18.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterImageTemp" Width="1.5" PointX="17.75" PointY="13.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemFileType" Width="1.5" PointX="16.75" PointY="18.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEnvironmentMasterSiteValue" Width="1.5" PointX="18.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemDiscrapencies" Width="1.5" PointX="18.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterDailyRunResource_Alarm" Width="1.5" PointX="14.25" PointY="54.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_Alarm_TblMasterDailyRunResource" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemJobHideScreen" Width="1.5" PointX="6" PointY="80" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobHideScreenMapping" Width="1.5" PointX="18.5" PointY="57.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomer_JobHideScreen" Width="1.5" PointX="8.25" PointY="69" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHideScreenMapping_TblSystemJobHideScreen" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomer_JobHideScreen_TblMasterCustomer" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomer_JobHideScreen_TblSystemJobHideScreen" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomer_JobHideScreen_TblSystemLineOfBusiness" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomer_JobHideScreen_TblSystemServiceJobType" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkDepositReport" Width="1.5" PointX="3" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkJammed" Width="1.5" PointX="6" PointY="54.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkJammedEntry" Width="1.5" PointX="13.25" PointY="56.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkRetract" Width="1.5" PointX="3" PointY="40.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkRetractEntry" Width="1.5" PointX="5.25" PointY="38.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkSuspectFakeDetail" Width="1.5" PointX="5.25" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkSuspectFakeEntry" Width="1.5" PointX="8.25" PointY="46.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinBulkNoteCollect" Width="1.5" PointX="3" PointY="56.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinBulkNoteCollectEntry" Width="1.5" PointX="5.25" PointY="60.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinCashAdd" Width="1.5" PointX="9" PointY="48.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinCashAddEntry" Width="1.5" PointX="13.25" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinCashReturn" Width="1.5" PointX="9" PointY="52.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinCashReturnEntry" Width="1.5" PointX="16.25" PointY="50.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinMachineBalance" Width="1.5" PointX="6" PointY="40.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinMachineBalanceEntry" Width="1.5" PointX="11.25" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinSuspectFake" Width="1.5" PointX="3" PointY="52.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinSuspectFakeDetail" Width="1.5" PointX="8.25" PointY="58.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCoinSuspectFakeEntry" Width="1.5" PointX="5.25" PointY="58.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSItemSeal" Width="1.5" PointX="17" PointY="42.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingActualCountEntry" Width="1.5" PointX="8.25" PointY="44.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingCashRecycling" Width="1.5" PointX="6" PointY="56.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingCashRecyclingEntry" Width="1.5" PointX="14.25" PointY="58.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingMachineReport" Width="1.5" PointX="6" PointY="42.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingMachineReportEntry" Width="1.5" PointX="11.25" PointY="48.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkDepositReport_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkDepositReport_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammed_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammed_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammedEntry_TblMasterActualJobMCSBulkJammed" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammedEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammedEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetract_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetract_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetractEntry_TblMasterActualJobMCSBulkRetract" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetractEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetractEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeDetail_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeDetail_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollect_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollect_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollectEntry_TblMasterActualJobMCSCoinBulkNoteCollect" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollectEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollectEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAdd_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAdd_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAddEntry_TblMasterActualJobMCSCoinCashAdd" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAddEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAddEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturn_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturn_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturnEntry_TblMasterActualJobMCSCoinCashReturn" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturnEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturnEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalance_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalance_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalanceEntry_TblMasterActualJobMCSCoinMachineBalance" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalanceEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalanceEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFake_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFake_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeDetail_TblMasterActualJobMCSCoinSuspectFake" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeEntry_TblMasterActualJobMCSCoinSuspectFake" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeDetail_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeDetail_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSItemSeal_SFOTblSystemMachineCapability" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSItemSeal_TblSystemSealType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCountEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCountEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecycling_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecycling_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecyclingEntry_TblMasterActualJobMCSRecyclingCashRecycling" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecyclingEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecyclingEntry_TblMasterDenomination" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReport_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReport_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReportEntry_TblMasterActualJobMCSRecyclingMachineReport" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReportEntry_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReportEntry_TblMasterDenomination" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemDenominationUnit" Width="1.5" PointX="18.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemCassetteType" Width="1.5" PointX="9" PointY="36.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterCassette" Width="1.5" PointX="3" PointY="26.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAddEntry_TblSystemCassetteType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturnEntry_TblSystemCassetteType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalanceEntry_TblSystemCassetteType" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterCassette_TblMasterCountry" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterCassette_TblSystemCassetteType" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_Cassette_MasterCassette" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomer_ReasonCode" Width="1.5" PointX="18.75" PointY="9.375" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCheckList_SFOTblSystemMachineCapability" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFakeDetail_TblMasterDenomination1" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkSuspectFake" Width="1.5" PointX="3" PointY="50.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFake_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFake_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeDetail_TblMasterActualJobMCSBulkSuspectFake" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFakeEntry_TblMasterActualJobMCSBulkSuspectFake" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkDepositReportEntry" Width="1.5" PointX="5.25" PointY="36.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkDepositReportEntry_TblMasterActualJobMCSBulkDepositReport" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkDepositReportEntry_SFOTblMasterCassette" />
+ 
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionGenericLog" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionGenericLog_SFOTblSystemLogCategory" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionGenericLog_SFOTblSystemLogProcess" />       <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemLogCategory" Width="1.5" PointX="3" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemLogProcess" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemLogCategory_SFOTblSystemLogProcess" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRouteTransactionLog" Width="1.5" Point  13.25 5 44.875"5" IsExp"1 Point"1"5" IsExpanded="false" PointX="5.25" PointY="4.75""      <AssociationConnector Association="OceanDbModel.FK_TblMasterRouteTransactionLog_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRouteTransactionLog_TblMasterActualJobServiceStopLegs" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCustomerLocation_EmailAction" Width="1.5" PointX="18.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemModelConfig" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemModelConfig_Property" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblSystemModelConfig_PropertyQuery" Width="1.5" PointX="3" PointY="1.125" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemLogCategory_SFOTblSystemModelConfig" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemModelConfig_Property_SFOTblSystemLogCategory" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblSystemModelConfig_Property_SFOTblSystemModelConfig_PropertyQuery" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterNemoQueueRouteOptimization_Detail" Width="1.5" PointX="18.75" PointY="15.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblTransactionOTC" Width="1.5" PointX="3" PointY="59.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemUnknow" Width="1.5" PointX="18.75" PointY="17.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRoute" Width="1.5" PointX="4.5" PointY="24.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_TblMasterRoute" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_TblMasterRouteFirst" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkJammedDetail" Width="1.5" PointX="11.25" PointY="59.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammedDetail_TblMasterActualJobMCSBulkJammed" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammedDetail_TblMasterReasonType" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterUserLimitedTimeAccess" Width="1.5" PointX="19.25" PointY="53.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterUserLimitedTimeAccess_TblMasterUser" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterUserLimitedTimeAccess_TblSystemDayOfWeek" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMobileATMCheckListEE" Width="1.5" PointX="3" PointY="18.375" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMobileATMCheckListEE_MasterActualJobServiceStopLeg" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEmailAction" Width="1.5" PointX="18.75" PointY="19.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMachineModelType_DefaultCassette" Width="1.5" PointX="11" PointY="44.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_DefaultCassette_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_DefaultCassette_SFOTblMasterCassette" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_DefaultCassette_SFOTblMasterMachineModelType" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_DefaultCassette_SFOTblSystemMachineCapability" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_Alarm_MasterCustomerLocation_Guid" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_Alarm_MasterEmployee_Guid" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_TblMasterPlace" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSBulkT1Detail" Width="1.5" PointX="8.25" PointY="38.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkT1Detail_TblMasterActualJobMCSBulkRetract" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkT1Detail_TblMasterReasonType" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemJobHideField" Width="1.5" PointX="8.25" PointY="81.25" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHideScreenMapping_TblSystemJobHideField" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemJobHideField_TblSystemJobHideScreen" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemMCSCITDeliveryCommodityType" Width="1.5" PointX="11" PointY="21.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemMCSCITDeliveryScanStatus" Width="1.5" PointX="11" PointY="23.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSCITDelivery" Width="1.5" PointX="13.25" PointY="35.25" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCITDelivery_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCITDelivery_TblMasterReasonType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCITDelivery_TblSystemMCSCITDeliveryCommodityType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCITDelivery_TblSystemMCSCITDeliveryScanStatus" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobMCSRecyclingActualCount" Width="1.5" PointX="3" PointY="46.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCount_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCount_TblMasterCurrency" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCountEntry_TblMasterActualJobMCSRecyclingActualCount" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemModeOfTransport" Width="1.5" PointX="19.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_Accident" Width="1.5" PointX="0.75" PointY="20.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_Accident_Images" Width="1.5" PointX="19.75" PointY="13.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_Accident_ListDetailDamaged" Width="1.5" PointX="20.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_GasolineExpense" Width="1.5" PointX="20.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_Maintenance" Width="1.5" PointX="20.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_Maintenance_Detail" Width="1.5" PointX="20.75" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_PeriodicMaintenance" Width="1.5" PointX="20.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResource_PeriodicMaintenance_History" Width="1.5" PointX="13.75" PointY="21.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemMaintenanceStatus" Width="1.5" PointX="20.75" PointY="15.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterVendor" Width="1.5" PointX="15.75" PointY="21.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobSumCashAdd" Width="1.5" PointX="3" PointY="44.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobCashAdd_TblMasterActualJobSumCashAdd" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashAdd_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashAdd_TblMasterCurrency" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGasloine" Width="1.5" PointX="20.75" PointY="17.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterGasloine_Vendor" Width="1.5" PointX="17.75" PointY="21.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_StandardTable" Width="1.5" PointX="20.75" PointY="19.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResourceBrand" Width="1.5" PointX="19.75" PointY="21.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRunResourceType" Width="1.5" PointX="21.75" PointY="1.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterMaintenanceCategory" Width="1.5" PointX="0.75" PointY="22.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterMaintenanceCategory_Items" Width="1.5" PointX="21.75" PointY="13.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemTitleName" Width="1.5" PointX="21.75" PointY="21.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.SFOTblMasterMonitoringNetwork" Width="1.5" PointX="6" PointY="63.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMonitoringNetwork_TblMasterCountry" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_SFOTblMasterMonitoringNetwork" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemVersion" Width="1.5" PointX="22.75" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer" Width="1.5" PointX="19.25" PointY="47.375" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer_TblMasterDailyRunResource_New" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer_TblMasterDailyRunResource_Old" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer_TblMasterEmployee" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DailyRunResource_SignatureTruckToTruckTransfer_TblMasterEmployee1" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_DolphinAssignToAnotherRun" Width="1.5" PointX="16" PointY="35.25" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DolphinAssignToAnotherRun_TblMasterDailyRunResource" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterEmailTemplate" Width="1.5" PointX="22.75" PointY="5.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemMaterRouteTypeOfWeek" Width="1.5" PointX="2.25" PointY="24.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRoute_TblSystemMaterRouteTypeOfWeek" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRouteOptimizationRouteType" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRouteOptimizationRouteType_RequestType" Width="1.5" PointX="13.75" PointY="23.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRouteOptimizationStatus" Width="1.5" PointX="1.5" PointY="38.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTransactionRouteOptimizationHeader" Width="1.5" PointX="9.75" PointY="28.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTransactionRouteOptimizationHeader_Detail" Width="1.5" PointX="12" PointY="29.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTransactionRouteOptimizationHeader_Detail_Item" Width="1.5" PointX="14.25" PointY="46.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_Item_TblMasterActualJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_Item_TblMasterCustomerLocation" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_TblMasterRoute" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_Item_TblMasterRouteJobServiceStopLegs" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemRouteOptimizationRouteType_RequestType_TblSystemRouteOptimizationRouteType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_TblSystemRouteOptimizationRouteType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_TblSystemRouteOptimizationStatus" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_Item_TblTransactionRouteOptimizationHeader_Detail" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRouteOptimizationRequestType" Width="1.5" PointX="7.5" PointY="29.375" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemRouteOptimizationRouteType_RequestType_TblSystemRouteOptimizationRequestType" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_TblSystemRouteOptimizationRequestType" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRoute_OptimizationStatus" Width="1.5" PointX="17" PointY="31.625" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRoute_OptimizationStatus_TblMasterRoute" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRoute_OptimizationStatus_TblMasterRouteGroup_Detail" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRoute_OptimizationStatus_TblSystemRouteOptimizationStatus" />
+        <EntityTypeShape EntityType="OceanDbModel.TblTransactionRouteOptimizationHeader_Queue" Width="1.5" PointX="12" PointY="19.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_TblTransactionRouteOptimizationHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Queue_TblTransactionRouteOptimizationHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_TblMasterDailyRunResource" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_TblMasterRouteGroup_Detail" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobHeader" Width="1.5" PointX="0.75" PointY="41.5" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionOTC_TblMasterActualJobHeader_2" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHeader_Capability_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHeader_OTC_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHeader_TblMasterSitePathHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobHideScreenMapping_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkDepositReport_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkJammed_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkRetract_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSBulkSuspectFake_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCITDelivery_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinBulkNoteCollect_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashAdd_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinCashReturn_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinMachineBalance_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSCoinSuspectFake_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSItemSeal_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingActualCount_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingCashRecycling_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobMCSRecyclingMachineReport_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumActualCount_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashAdd_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumCashReturn_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobSumMachineReport_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCapturedCard_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterHistory_DolphinAssignToAnotherRun_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterActualJobServiceStopLegs_TblSystemRouteOptimizationStatus" />
+        <AssociationConnector Association="OceanDbModel.FK__TblMaster__Liabi__55A3B66A" />
+        <AssociationConnector Association="OceanDbModel.FK__TblMaster__Pavem__51D32586" />
+        <AssociationConnector Association="OceanDbModel.FK__TblMaster__Pavem__53BB6DF8" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_Detail_Item_TblSystemServiceJobType" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRunResourceStatus" Width="1.5" PointX="22.75" PointY="7.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterCurrency_ExchangeRate" Width="1.5" PointX="9" PointY="40.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCurrency_ExchangeRate_TblMasterCountry" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCurrency_ExchangeRate_TblMasterCurrency_Source" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCurrency_ExchangeRate_TblMasterCurrency_Target" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSite" Width="1.5" PointX="6.5" PointY="31.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_TblMasterSite_SFOCashBranch" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_TblMasterSite_SFOFLMBranch" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_TblMasterSite_SFOServicingBranch" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterCustomerLocation_BrinksSite_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterDailyRunResource_Alarm_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterNemoQueueRouteOptimization_MasterSite_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterRouteJobServiceStopLegs_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterEscalationHeader_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterJournal_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterSite_Armored" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterSite_Assigned" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterSite_Cash" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterSite_Servicing" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachine_TblMasterSite_SLM" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineModelType_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterMachineServiceType_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_Solution_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterProblem_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterSolution_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblMasterSource_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Journal_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Problem_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_Solution_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_SFOTblTransactionServiceRequest_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSiteNetworkMember_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathDestination_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSitePathDetail_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblTransactionRouteOptimizationHeader_TblMasterSite" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemRunningValue_Custom" Width="1.5" PointX="22.75" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterRoute_RouteGroupDetailMonitoring_Mapping" Width="1.5" PointX="22.75" PointY="11.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblBankCleanOutJobDelivery_NonbarCodeTemp" Width="1.5" PointX="7.75" PointY="23.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblBankCleanOutJobDelivery_SealTemp" Width="1.5" PointX="7.75" PointY="21.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblBankCleanOutJobDelivery_Temp" Width="1.5" PointX="5.5" PointY="26.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblBankCleanOutJobDelivery_NonbarCodeTemp_TblBankCleanOutJobDelivery_Temp" />
+        <AssociationConnector Association="OceanDbModel.FK_TblBankCleanOutJobDelivery_SealTemp_TblBankCleanOutJobDelivery_Temp" />
+        <AssociationConnector Association="OceanDbModel.FK_TblBankCleanOutJobDelivery_Temp_TblMasterSitePathHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblBankCleanOutJobDelivery_Temp_TblSystemMaterRouteTypeOfWeek" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterSite_SmartBillingSchedule" Width="1.5" PointX="8.75" PointY="26.75" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterSite_SmartBillingSchedule_TblMasterSite" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSmartBillingSchedule_Day_Mapping" Width="1.5" PointX="14.25" PointY="30.875" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSmartBillingSchedule_Day_Mapping_TblMasterSite_SmartBillingSchedule" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSmartBillingSchedule_Day_Mapping_TblSystemDayOfWeek" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterHistory_ReportPushToSmart" Width="1.5" PointX="22.75" PointY="15.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsLiability_Denomination" Width="1.5" PointX="22.75" PointY="17.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemEnvironmentMasterCountryTreeView" Width="1.5" PointX="3" PointY="7.125" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblSystemEnvironmentMasterCountryTreeView_TblSystemEnvironmentMasterCountry" />
+        <EntityTypeShape EntityType="OceanDbModel.TblVaultBalanceDetail" Width="1.5" PointX="11.25" PointY="77.625" IsExpanded="false" />
+        <EntityTypeShape EntityType="OceanDbModel.TblVaultBalanceHeader" Width="1.5" PointX="9" PointY="73.375" IsExpanded="false" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceHeader_TblMasterCustomerLocation_InternalDepartment" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceHeader_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceDetail_TblVaultBalanceHeader" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsCommodity" Width="1.5" PointX="6.6853765187251266" PointY="1.1926807766746175" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterActualJobItemsSeal" Width="1.5" PointX="10.827211696108437" PointY="2.1753360192176587" />
+        <EntityTypeShape EntityType="OceanDbModel.TblMasterConAndDeconsolidate_Header" Width="1.5" PointX="3.4118431431296479" PointY="26.949844834837059" />
+        <EntityTypeShape EntityType="OceanDbModel.TblVaultBalanceNonbarcode" Width="1.5" PointX="1.3176233159925896" PointY="17.13910713099833" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceNonbarcode_TblMasterCommodity" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterConAndDeconsolidate_Header" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterCustomerLocation" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterDailyRunResource" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterRouteGroup_Detail" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterSite" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblMasterSitePathHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblMasterConAndDeconsolidate_Header_TblSystemConAndDeconsolidateStatus" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalance_Discrepancy_TblMasterConAndDeconsolidate_Header" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceNonbarcode_TblVaultBalanceHeader" />
+        <EntityTypeShape EntityType="OceanDbModel.TblVaultBalanceSealAndMaster" Width="1.5" PointX="9.33998121756128" PointY="17.14337515139178" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceSealAndMaster_TblMasterActualJobHeader" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceSealAndMaster_TblMasterActualJobItemsLiability" /    <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceSealAndMaster_TblMasterConAndDeconsolidate_Header" />
+        <AssociationConnector Association="OceanDbModel.FK_TblVaultBalanceSealAndMaster_TblVaultBalanceHeader" />
+        <EntityTypeShape EntityType="OceanDbModel.TblSystemFormat_Date" Width="1.5" PointX="8.09589943480487" PointY="23.821194182998127" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

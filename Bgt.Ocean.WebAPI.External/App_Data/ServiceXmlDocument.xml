@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bgt.Ocean.Service</name>
+    </assembly>
+    <members>
+        <member name="M:Bgt.Ocean.Service.Implementations.IActualJobHeaderService.CreateJobForSFO(Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobView)">
+            <summary>
+            For IncidentController DO NOT DELETE
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.ActualJobHeaderService.CreateJobPickUp(Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobView,System.Guid,System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            This function is also used by SFO
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.BrinksService.GetCustomer(System.Nullable{System.Guid},System.Guid,System.Nullable{System.Guid},System.Int32)">
+            <summary>
+            Mandatory by country and role
+            </summary>
+            <param name="siteGuid"></param>
+            <param name="countryGuid"></param>
+            <param name="masterUserGuid"></param>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.OTCRunControlService.Create_TblMasterActualJobHeader_OTC(System.Guid,System.Guid,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTimeOffset},System.String,System.String,System.String,System.Boolean)">
+             <summary>
+             Created Date: 2018/03/22
+             Supporting to create Lock data that has machine.
+             Create in TblMasterHistory_ActualJob if there is
+            
+             ***** This function is called by current class and RunControlService.cs (CreateJobPickUp because Star Fish will call this function too)
+             </summary>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.SFO.IGenericLogService.InsertTransationGenericLog(Bgt.Ocean.Service.ModelViews.GenericLog.TransactionGenericLogModel)">
+            <summary>
+            Add generic log (This method will commit SFOLogDbEntities automatically)
+            </summary>
+            <param name="transactionGenericLogModel"></param>
+        </member>
+        <member name="M:Bgt.Ocean.Service.Implementations.IUserService.CreateAccessAPILogHistory(System.Nullable{System.Guid},System.DateTime,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Create api access history.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.ExportExcelService.GetFileRequest.FileType">
+            <summary>
+            File type as 'pdf', 'xlsx'
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.UserName">
+            <summary>
+            Application username
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.Password">
+            <summary>
+            Application password
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest.ApplicationId">
+            <summary>
+            Application Id
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.Service.ModelViews.ActualJobHeader.AdhocJobDetailJobView.SFOTechnicianName">
+            <summary>
+            Techmeet Name
+            </summary>
+        </member>
+    </members>
+</doc>

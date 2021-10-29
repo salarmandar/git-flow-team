@@ -1,0 +1,332 @@
+using Bgt.Ocean.Infrastructure.Configuration;
+using Bgt.Ocean.Models;
+using Bgt.Ocean.Models.SystemConfigurationAdditional;
+using Bgt.Ocean.Repository.EntityFramework;
+using Bgt.Ocean.Repository.EntityFramework.Core;
+using Bgt.Ocean.Repository.EntityFramework.Repositories;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.AuditLog;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Consolidation;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Customer;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.CustomerLocation;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.History;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Job;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.MasterRoute;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Mobile;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Monitoring;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.NemoDynamicRoute;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.PricingRules;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Products;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Run;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.SFO;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.SiteNetwork;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.StandardTable;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.StandardTable.SitePath;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Systems;
+using Unity;
+using Unity.Lifetime;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.TempReport;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.MasterData;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Nemo;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.User;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.FleetMaintenance;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.Email;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.RouteOptimization;
+using Bgt.Ocean.Repository.EntityFramework.Repositories.VaultBalance;
+using Bgt.Ocean.Infrastructure.Domain;
+
+namespace Bgt.Ocean.DependencyResolver
+{
+    /// <summary>
+    /// Specifies the Unity configuration for the main container.
+    /// </summary>
+    public static class UnityConfig
+    {
+        /// <summary>
+        /// Registers the type mappings with the Unity container.
+        /// </summary>
+        /// <param name="container">The unity container to configure.</param>
+        /// <remarks>
+        /// There is no need to register concrete types such as controllers or
+        /// API controllers (unless you want to change the defaults), as Unity
+        /// allows resolving a concrete type even if it was not previously
+        /// registered.
+        /// </remarks>
+        public static void RegisterTypes(IUnityContainer container)
+        {
+            #region Configuration
+            container.RegisterType<IDbFactory<OceanDbEntities>, OceanDbFactory>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDbFactory<SFOLogDbEntities>, SFOLogDbFactory>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUnitOfWork<OceanDbEntities>, OceanUnitOfWork>();
+            container.RegisterType<IUnitOfWork<SFOLogDbEntities>, SFOLogDbUnitOfWork>();
+            container.RegisterType<IDnsWrapper, DnsWrapper>();
+            #endregion
+
+            #region Master
+            container.RegisterType<IMasterActualJobActualCountRepository, MasterActualJobActualCountRepository>();
+            container.RegisterType<IMasterActualJobCashAddRepository, MasterActualJobCashAddRepository>();
+            container.RegisterType<IMasterActualJobCashReturnRepository, MasterActualJobCashReturnRepository>();
+            container.RegisterType<IMasterActualJobHeaderCapabilityRepository, MasterActualJobHeaderCapabilityRepository>();
+            container.RegisterType<IMasterActualJobHeaderOTCRepository, MasterActualJobHeaderOTCRepository>();
+            container.RegisterType<IMasterActualJobHeaderRepository, MasterActualJobHeaderRepository>();
+            container.RegisterType<IMasterActualJobHideScreenMappingRepository, MasterActualJobHideScreenMappingRepository>();
+            container.RegisterType<IMasterActualJobItemDiscrapenciesRepository, MasterActualJobItemDiscrapenciesRepository>();
+            container.RegisterType<IMasterActualJobItemsCommodity_ScanHistoryRepository, MasterActualJobItemsCommodity_ScanHistoryRepository>();
+            container.RegisterType<IMasterActualJobItemsCommodityRepository, MasterActualJobItemsCommodityRepository>();
+            container.RegisterType<IMasterActualJobItemsSeal_ScanHistoryRepository, MasterActualJobItemsSeal_ScanHistoryRepository>();
+            container.RegisterType<IMasterActualJobItemsSealRepository, MasterActualJobItemsSealRepository>();
+            container.RegisterType<IMasterActualJobItemsLiabilityRepository, MasterActualJobItemsLiabilityRepository>();
+            container.RegisterType<IMasterActualJobMachineReportRepository, MasterActualJobMachineReportRepository>();
+            container.RegisterType<IMasterActualJobMCSBulkJammedRepository, MasterActualJobMCSBulkJammedRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinBulkNoteCollectEntryRepository, MasterActualJobMCSCoinBulkNoteCollectEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinBulkNoteCollectRepository, MasterActualJobMCSCoinBulkNoteCollectRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinCashAddEntryRepository, MasterActualJobMCSCoinCashAddEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinCashAddRepository, MasterActualJobMCSCoinCashAddRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinCashReturnEntryRepository, MasterActualJobMCSCoinCashReturnEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinCashReturnRepository, MasterActualJobMCSCoinCashReturnRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinMachineBalanceEntryRepository, MasterActualJobMCSCoinMachineBalanceEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinMachineBalanceRepository, MasterActualJobMCSCoinMachineBalanceRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinSuspectFakeDetailRepository, MasterActualJobMCSCoinSuspectFakeDetailRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinSuspectFakeEntryRepository, MasterActualJobMCSCoinSuspectFakeEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSCoinSuspectFakeRepository, MasterActualJobMCSCoinSuspectFakeRepository>();
+            container.RegisterType<IMasterActualJobMCSItemSealRepository, MasterActualJobMCSItemSealRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingActualCountEntryRepository, MasterActualJobMCSRecyclingActualCountEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingActualCountRepository, MasterActualJobMCSRecyclingActualCountRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingCashRecyclingEntryRepository, MasterActualJobMCSRecyclingCashRecyclingEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingCashRecyclingRepository, MasterActualJobMCSRecyclingCashRecyclingRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingMachineReportEntryRepository, MasterActualJobMCSRecyclingMachineReportEntryRepository>();
+            container.RegisterType<IMasterActualJobMCSRecyclingMachineReportRepository, MasterActualJobMCSRecyclingMachineReportRepository>();
+            container.RegisterType<IMasterActualJobServiceStopLegsRepository, MasterActualJobServiceStopLegsRepository>();
+            container.RegisterType<IMasterActualJobServiceStopSpecialCommandRepository, MasterActualJobServiceStopSpecialCommandRepository>();
+            container.RegisterType<IMasterActualJobServiceStopsRepository, MasterActualJobServiceStopsRepository>();
+            container.RegisterType<IMasterActualJobSumActualCountRepository, MasterActualJobSumActualCountRepository>();
+            container.RegisterType<IMasterActualJobSumCashAddRepository, MasterActualJobSumCashAddRepository>();
+            container.RegisterType<IMasterActualJobSumCashReturnRepository, MasterActualJobSumCashReturnRepository>();
+            container.RegisterType<IMasterActualJobSumMachineReportRepository, MasterActualJobSumMachineReportRepository>();
+            container.RegisterType<IMasterActualJobItemUnknowRepository, MasterActualJobItemUnknowRepository>();
+            container.RegisterType<IMasterCityRepository, MasterCityRepository>();
+            container.RegisterType<IMasterClauseRepository, MasterClauseRepository>();
+            container.RegisterType<IMasterCommodityCountryRepository, MasterCommodityCountryRepository>();
+            container.RegisterType<IMasterCommodityRepository, MasterCommodityRepository>();
+            container.RegisterType<IMasterConAndDeconsolidate_HeaderRepository, MasterConAndDeconsolidate_HeaderRepository>();
+            container.RegisterType<IMasterCountry_StateRepository, MasterCountry_StateRepository>();
+            container.RegisterType<IMasterCountryRepository, MasterCountryRepository>();
+            container.RegisterType<IMasterCurrencyRepository, MasterCurrencyRepository>();
+            container.RegisterType<IMasterCustomer_AccountRepository, MasterCustomer_AccountRepository>();
+            container.RegisterType<IMasterCustomerContractRepository, MasterCustomerContractRepository>();
+            container.RegisterType<IMasterCustomerContractServiceLocationRepository, MasterCustomerContractServiceLocationRepository>();
+            container.RegisterType<IMasterCustomerJobHideScreenRepository, MasterCustomerJobHideScreenRepository>();
+            container.RegisterType<IMasterCustomerLocation_EmailActionRepository, MasterCustomerLocation_EmailActionRepository>();
+            container.RegisterType<IMasterCustomerLocationBrinksSiteRepository, MasterCustomerLocationBrinksSiteRepository>();
+            container.RegisterType<IMasterCustomerLocationInternalDepartmentRepository, MasterCustomerLocationInternalDepartmentRepository>();
+            container.RegisterType<IMasterCustomerLocationLocationDestinationRepository, MasterCustomerLocationLocationDestinationRepository>();
+            container.RegisterType<IMasterCustomerLocationLocationDestinationRepository, MasterCustomerLocationLocationDestinationRepository>();
+            container.RegisterType<IMasterCustomerLocationRepository, MasterCustomerLocationRepository>();
+            container.RegisterType<IMasterCustomerRepository, MasterCustomerRepository>();
+            container.RegisterType<IMasterDailyRunResourceAlarmRepository, MasterDailyRunResourceAlarmRepository>();
+            container.RegisterType<IMasterDailyRunResourceHistoryRepository, MasterDailyRunResourceHistoryRepository>();
+            container.RegisterType<IMasterDailyEmployeeRepository, MasterDailyEmployeeRepository>();
+            container.RegisterType<IMasterDailyRunResourceRepository, MasterDailyRunResourceRepository>();
+            container.RegisterType<IMasterHistoryDailyRunResourceSignatureTruckToTruckTransferRepository, MasterHistoryDailyRunResourceSignatureTruckToTruckTransferRepository>();
+            container.RegisterType<IMasterDenominationRepository, MasterDenominationRepository>();
+            container.RegisterType<IMasterDetailRouteOptimizationRepository, MasterDetailRouteOptimizationRepository>();
+            container.RegisterType<IMasterDistrictRepository, MasterDistrictRepository>();
+            container.RegisterType<IMasterErrorRouteOptimizationRepository, MasterErrorRouteOptimizationRepository>();
+            container.RegisterType<IMasterGroupRepository, MasterGroupRepository>();
+            container.RegisterType<IMasterGasolineRepository, MasterGasolineRepository>();
+            container.RegisterType<IMasterRunResourceGasolineExpenseRepository, MasterRunResourceGasolineExpenseRepository>();
+            container.RegisterType<IMasterGasolineVendorRepository, MasterGasolineVendorRepository>();
+            container.RegisterType<IMasterHistory_ActualJobRepository, MasterHistory_ActualJobRepository>();
+            container.RegisterType<IMasterHistory_DailyRunResourceRepository, MasterHistory_DailyRunResourceRepository>();
+            container.RegisterType<IMasterHistory_SealRepository, MasterHistory_SealRepository>();
+            container.RegisterType<IMasterHistoryActualJobOnDailyRunResourceRepository, MasterHistoryActualJobOnDailyRunResourceRepository>();
+            container.RegisterType<IMasterHistoryActualJobRepository, MasterHistoryActualJobRepository>();
+            container.RegisterType<IMasterHistoryErrorPodByServiceRepository, MasterHistoryErrorPodByServiceRepository>();
+            container.RegisterType<IMasterHistoryLogPodByServiceRepository, MasterHistoryLogPodByServiceRepository>();
+            container.RegisterType<IMasterImageRepository, MasterImageRepository>();
+            container.RegisterType<IMasterImageTempRepository, MasterImageTempRepository>();
+            container.RegisterType<IMasterLogVerifyKeyRepository, MasterLogVerifyKeyRepository>();
+            container.RegisterType<IMasterMCSBulkDepositReportEntryRepository, MasterMCSBulkDepositReportEntryRepository>();
+            container.RegisterType<IMasterMCSBulkDepositReportRepository, MasterMCSBulkDepositReportRepository>();
+            container.RegisterType<IMasterMCSBulkJammedDetailRepository, MasterMCSBulkJammedDetailRepository>();
+            container.RegisterType<IMasterMCSBulkJammedEntryRepository, MasterMCSBulkJammedEntryRepository>();
+            container.RegisterType<IMasterMCSBulkRetractEntryRepository, MasterMCSBulkRetractEntryRepository>();
+            container.RegisterType<IMasterMCSBulkRetractRepository, MasterMCSBulkRetractRepository>();
+            container.RegisterType<IMasterMCSBulkSuspectFakeDetailRepository, MasterMCSBulkSuspectFakeDetailRepository>();
+            container.RegisterType<IMasterMCSBulkSuspectFakeEntryRepository, MasterMCSBulkSuspectFakeEntryRepository>();
+            container.RegisterType<IMasterMCSBulkSuspectFakeRepository, MasterMCSBulkSuspectFakeRepository>();
+            container.RegisterType<IMasterMenuDetailRepository, MasterMenuDetailRepository>();
+            container.RegisterType<IMasterNemoCountryValueRepository, MasterNemoCountryValueRepository>();
+            container.RegisterType<IMasterNemoQueueRouteOptimizationRepository, MasterNemoQueueRouteOptimizationRepository>();
+            container.RegisterType<IMasterNemoQueueRouteOptimizationDetailRepository, MasterNemoQueueRouteOptimizationDetailRepository>();
+            container.RegisterType<IMasterNemoSiteValueRepository, MasterNemoSiteValueRepository>();
+            container.RegisterType<IMasterNemoTrafficFactorValueRepository, MasterNemoTrafficFactorValueRepository>();
+            container.RegisterType<IMasterPlaceRepository, MasterPlaceRepository>();
+            container.RegisterType<IMasterQueueRouteOptimizationRepository, MasterQueueRouteOptimizationRepository>();
+            container.RegisterType<IMasterReportRepository, MasterReportRepository>();
+            container.RegisterType<IMasterRouteGroupDetailRepository, MasterRouteGroupDetailRepository>();
+            container.RegisterType<IMasterRouteGroupRepository, MasterRouteGroupRepository>();
+            container.RegisterType<IMasterRouteJobHeaderRepository, MasterRouteJobHeaderRepository>();
+            container.RegisterType<IMasterRouteJobServiceStopLegsRepository, MasterRouteJobServiceStopLegsRepository>();
+            container.RegisterType<IMasterRouteTransactionLogRepository, MasterRouteTransactionLogRepository>();
+            container.RegisterType<IMasterSiteNetworkAuditLogRepository, MasterSiteNetworkAuditLogRepository>();
+            container.RegisterType<IMasterSiteNetworkMemberRepository, MasterSiteNetworkMemberRepository>();
+            container.RegisterType<IMasterSiteNetworkRepository, MasterSiteNetworkRepository>();
+            container.RegisterType<IMasterSitePathAuditLogRepository, MasterSitePathAuditLogRepository>();
+            container.RegisterType<IMasterSitePathDestinationRepository, MasterSitePathDestinationRepository>();
+            container.RegisterType<IMasterSitePathDetailRepository, MasterSitePathDetailRepository>();
+            container.RegisterType<IMasterSitePathHeaderRepository, MasterSitePathHeaderRepository>();
+            container.RegisterType<IMasterSitePathRepository, MasterSitePathRepository>();
+            container.RegisterType<IMasterSiteRepository, MasterSiteRepository>();
+            container.RegisterType<IMasterSite_SmartBillingScheduleRepository, MasterSite_SmartBillingScheduleRepository>();
+            container.RegisterType<IMasterSpecialCommandRepository, MasterSpecialCommandRepository>();
+            container.RegisterType<IMasterSubServiceTypeRepository, MasterSubServiceTypeRepository>();
+            container.RegisterType<IMasterUserAccessGroupCountryEmailRepository, MasterUserAccessGroupCountryEmailRepository>();
+            container.RegisterType<IMasterUserLimitedTimeAccessRepository, MasterUserLimitedTimeAccessRepository>();
+            container.RegisterType<IMasterUserRepository, MasterUserRepository>();
+            container.RegisterType<IMasterRunResourceRepository, MasterRunResourceRepository>();
+            container.RegisterType<IMasterRunResourceMaintenanceRepository, MasterRunResourceMaintenanceRepository>();
+            container.RegisterType<IMasterReasonTypeRepository, MasterReasonTypeRepository>();
+            container.RegisterType<IMasterVendorRepository, MasterVendorRepository>();
+            container.RegisterType<IRunResourceTypeRepository, RunResourceTypeRepository>();
+            container.RegisterType<IMasterHistoryStandardTableRepository, MasterHistoryStandardTableRepository>();
+            container.RegisterType<IMasterRunResourceAccidentRepository, MasterRunResourceAccidentRepository>();
+            container.RegisterType<IMasterRunResourceMaintenanceDetailRepository, MasterRunResourceMaintenanceDetailRepository>();
+            container.RegisterType<IMasterMaintenanceCategoryRepository, MasterMaintenanceCategoryRepository>();
+            container.RegisterType<IMasterAccidentListDetailDamagedRespository, MasterAccidentListDetailDamagedRespository>();
+            container.RegisterType<IMasterAccidentImagesRepository, MasterAccidentImagesRepository>();
+            container.RegisterType<IMasterRunResourcePeriodicMaintenanceHistoryRepository, MasterRunResourcePeriodicMaintenanceHistoryRepository>();
+            container.RegisterType<IMasterHistory_DolphinAssignToAnotherRunRepository, MasterHistory_DolphinAssignToAnotherRunRepository>();
+            container.RegisterType<IMasterHistoryReportPushToSmartRepository, MasterHistoryReportPushToSmartRepository>();
+            container.RegisterType<IMasterEmailTemplateRepository, MasterEmailTemplateRepository>();
+            container.RegisterType<IMasterRouteRepository, MasterRouteRepository>();
+            container.RegisterType<IMasterRouteOptimizationStatusRepository, MasterRouteOptimizationStatusRepository>();
+            container.RegisterType<IMasterActualJobItemsLiabilityDenominationRepository, MasterActualJobItemsLiabilityDenominationRepository>();
+            #endregion
+
+            #region Transaction 
+            container.RegisterType<ITransactionRouteOptimizationHeaderRepository, TransactionRouteOptimizationHeaderRepository>();
+            container.RegisterType<ITransactionRouteOptimizationHeaderDetailRepository, TransactionRouteOptimizationHeaderDetailRepository>();
+            container.RegisterType<ITransactionRouteOptimizationHeaderDetailItemRepository, TransactionRouteOptimizationHeaderDetailItemRepository>();
+            #endregion
+
+            #region System
+            container.RegisterType<ISystemJobHideFieldRepository, SystemJobHideFieldRepository>();
+            container.RegisterType<ISystemMaintenanceStatusRepository, SystemMaintenanceStatusRepository>();
+            container.RegisterType<ISystemApplicationRepository, SystemApplicationRepository>();
+            container.RegisterType<ISystemATMScreenRepository, SystemATMScreenRepository>();
+            container.RegisterType<ISystemConAndDeconsolidateStatusRepository, SystemConAndDeconsolidateStatusRepository>();
+            container.RegisterType<ISystemConfigurationAuditLogRepository, SystemConfigurationAuditLogRepository>();
+            container.RegisterType<ISystemCustomerLocationAuditLogRepository, SystemCustomerLocationAuditLogRepository>();
+            container.RegisterType<ISystemCustomerLocationTypeRepository, SystemCustomerLocationTypeRepository>();
+            container.RegisterType<ISystemDayOfWeekRepository, SystemDayOfWeekRepository>();
+            container.RegisterType<ISystemDisplayTextControlsLanguageRepository, SystemDisplayTextControlsLanguageRepository>();
+            container.RegisterType<ISystemDomainsRepository, SystemDomainsRepository>();
+            container.RegisterType<ISystemEmailActionRepository, SystemEmailActionRepository>();
+            container.RegisterType<ISystemEmailDomainsRepository, SystemEmailDomainsRepository>();
+            container.RegisterType<ISystemEnvironment_GlobalRepository, SystemEnvironment_GlobalRepository>();
+            container.RegisterType<ISystemEnvironmentMasterCountryRepository, SystemEnvironmentMasterCountryRepository>();
+            container.RegisterType<ISystemEnvironmentMasterCountryValueRepository, SystemEnvironmentMasterCountryValueRepository>();
+            container.RegisterType<ISystemEnvironmentMasterCountryTreeViewRepository, SystemEnvironmentMasterCountryTreeViewRepository>();
+            container.RegisterType<ISystemEnvironmentMasterSiteValueRepository, SystemEnvironmentMasterSiteValueRepository>();
+            container.RegisterType<ISystemFileTypeRepository, SystemFileTypeRepository>();
+            container.RegisterType<ISystemFormat_NumberCurrencyRepository, SystemFormat_NumberCurrencyRepository>();
+            container.RegisterType<ISystemGlobalUnitRepository, SystemGlobalUnitRepository>();
+            container.RegisterType<ISystemGlobalUnitRepository, SystemGlobalUnitRepository>();
+            container.RegisterType<ISystemInternalDepartmentTypesRepository, SystemInternalDepartmentTypesRepository>();
+            container.RegisterType<ISystemJobActionsRepository, SystemJobActionsRepository>();
+            container.RegisterType<ISystemJobHideScreenRepository, SystemJobHideScreenRepository>();
+            container.RegisterType<ISystemJobStatusRepository, SystemJobStatusRepository>();
+            container.RegisterType<ISystemLanguageRepository, SystemLanguageRepository>();
+            container.RegisterType<ISystemLeedToCashStatusRepository, SystemLeedToCashStatusRepository>();
+            container.RegisterType<ISystemLineOfBusinessRepository, SystemLineOfBusinessRepository>();
+            container.RegisterType<ISystemLog_ActivityRepository, SystemLog_ActivityRepository>();
+            container.RegisterType<ISystemLog_AttemptToLoginRepository, SystemLog_AttemptToLoginRepository>();
+            container.RegisterType<ISystemLog_HistoryErrorRepository, SystemLog_HistoryErrorRepository>();
+            container.RegisterType<ISystemMessageRepository, SystemMessageRepository>();
+            container.RegisterType<ISystemNotificationConfigPeriodsRepository, SystemNotificationConfigPeriodsRepository>();
+            container.RegisterType<ISystemNotificationConfigPeriodsUsersRepository, SystemNotificationConfigPeriodsUsersRepository>();
+            container.RegisterType<ISystemOnwardDestinationTypesRepository, SystemOnwardDestinationTypesRepository>();
+            container.RegisterType<ISystemReportStyleRepository, SystemReportStyleRepository>();
+            container.RegisterType<ISystemRunningValueGlobalRepository, SystemRunningValueGlobalRepository>();
+            container.RegisterType<ISystemServiceJobTypeLOBRepository, SystemServiceJobTypeLOBRepository>();
+            container.RegisterType<ISystemServiceJobTypeRepository, SystemServiceJobTypeRepository>();
+            container.RegisterType<ISystemServiceStopTypesRepository, SystemServiceStopTypesRepository>();
+            container.RegisterType<ISystemTimeZoneRepository, SystemTimeZoneRepository>();
+            container.RegisterType<ISystemTripIndicatorRepository, SystemTripIndicatorRepository>();
+            container.RegisterType<ISystemTitleNameRepository, SystemTitleNameRepository>();
+            container.RegisterType<ISystemMaterRouteTypeOfWeekRepository, SystemMaterRouteTypeOfWeekRepository>();
+            container.RegisterType<ISystemRouteOptimizationStatusRepository, SystemRouteOptimizationStatusRepository>();
+            container.RegisterType<ISystemRouteOptimizationRouteTypeRepository, SystemRouteOptimizationRouteTypeRepository>();
+            container.RegisterType<ISystemRouteOptimizationRequestTypeRepository, SystemRouteOptimizationRequestTypeRepository>();
+            container.RegisterType<ISystemRouteOptimizationRouteTypeRequestTypeRepository, SystemRouteOptimizationRouteTypeRequestTypeRepository>();
+            container.RegisterType<ITransactionRouteOptimizationHeaderQueueRepository, TransactionRouteOptimizationHeaderQueueRepository>();
+            container.RegisterType<ISystemRunningValueCustomRepository, SystemRunningValueCustomRepository>();
+            container.RegisterType<ISystemFormatDateRepository, SystemFormatDateRepository>();
+            #endregion
+
+            #region SFO
+            container.RegisterType<ISFOMasterCountryTimeZoneRepository, SFOMasterCountryTimeZoneRepository>();
+            container.RegisterType<ISFOMasterEscalationDetail_EmailRepository, SFOMasterEscalationDetail_EmailRepository>();
+            container.RegisterType<ISFOMasterEscalationDetail_PositionRepository, SFOMasterEscalationDetail_PositionRepository>();
+            container.RegisterType<ISFOMasterEscalationDetailRepository, SFOMasterEscalationDetailRepository>();
+            container.RegisterType<ISFOMasterEscalationHeaderRepository, SFOMasterEscalationHeaderRepository>();
+            container.RegisterType<ISFOMasterJournalRepository, SFOMasterJournalRepository>();
+            container.RegisterType<ISFOMasterMachineCassetteRepository, SFOMasterMachineCassetteRepository>();
+            container.RegisterType<ISFOMasterMachineLockTypeRepository, SFOMasterMachineLockTypeRepository>();
+            container.RegisterType<ISFOMasterMachineRepository, SFOMasterMachineRepository>();
+            container.RegisterType<ISFOMasterMachineServiceTypeRepository, SFOMasterMachineServiceTypeRepository>();
+            container.RegisterType<ISFOMasterOTCLockModeRepository, SFOMasterOTCLockModeRepository>();
+            container.RegisterType<ISFOMasterProblemRepository, SFOMasterProblemRepository>();
+            container.RegisterType<ISFOMasterSolutionRepository, SFOMasterSolutionRepository>();
+            container.RegisterType<ISFOMasterSourceRepository, SFOMasterSourceRepository>();
+            container.RegisterType<ISFOSystemDataConfigurationRepository, SFOSystemDataConfigurationRepository>();
+            container.RegisterType<ISFOSystemEnvironmentGlobalRepository, SFOSystemEnvironmentGlobalRepository>();
+            container.RegisterType<ISFOSystemEscalationRuleDetailRepository, SFOSystemEscalationRuleDetailRepository>();
+            container.RegisterType<ISFOSystemEscalationRuleHeader_DetailRepository, SFOSystemEscalationRuleHeader_DetailRepository>();
+            container.RegisterType<ISFOSystemEscalationRuleHeaderRepository, SFOSystemEscalationRuleHeaderRepository>();
+            container.RegisterType<ISFOSystemFunctionRepository, SFOSystemFunctionRepository>();
+            container.RegisterType<ISFOSystemLockTypeRepository, SFOSystemLockTypeRepository>();
+            container.RegisterType<ISFOSystemModelConfigRepository, SFOSystemModelConfigRepository>();
+            container.RegisterType<ISFOSystemOTCLockModeRepository, SFOSystemOTCLockModeRepository>();
+            container.RegisterType<ISFOSystemServiceRequestStateRepository, SFOSystemServiceRequestStateRepository>();
+            container.RegisterType<ISFOTblSystemLogCategoryRepository, SFOTblSystemLogCategoryRepository>();
+            container.RegisterType<ISFOTblSystemLogProcessRepository, SFOTblSystemLogProcessRepository>();
+            container.RegisterType<ISFOTblTransactionOTCRepository, SFOTblTransactionOTCRepository>();
+            container.RegisterType<ISFOTransactionGenericLogRepository, SFOTransactionGenericLogRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestEcashRepository, SFOTransactionServiceRequestEcashRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestInfoRepository, SFOTransactionServiceRequestInfoRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestJournalRepository, SFOTransactionServiceRequestJournalRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestProblemRepository, SFOTransactionServiceRequestProblemRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestRepository, SFOTransactionServiceRequestRepository>();
+            container.RegisterType<ISFOTransactionServiceRequestSolutionRepository, SFOTransactionServiceRequestSolutionRepository>();
+            container.RegisterType<ISFOMasterMonitoringNetworkRepository, SFOMasterMonitoringNetworkRepository>();
+            #endregion
+
+            #region Others
+            container.RegisterType<IEmployeeRepository, EmployeeRepository>();
+            container.RegisterType<IPositionRepository, PositionRepository>();
+            container.RegisterType<IReasonCodeRepository, ReasonCodeRepository>();
+            container.RegisterType<IChargeCategoryRepository, ChargeCategoryRepository>();
+            container.RegisterType<ILeedToCashProductRepository, LeedToCashProductRepository>();
+            container.RegisterType<IMobileATMCheckListEERepository, MobileATMCheckListEERepository>();
+            container.RegisterType<IPricingRuleRepository, PricingRuleRepository>();
+            container.RegisterType<IQuotation_HistoryRepository, Quotation_HistoryRepository>();
+            container.RegisterType<IQuotation_PricingRule_MappingRepository, Quotation_PricingRule_MappingRepository>();
+            container.RegisterType<IQuotation_ProductRepository, Quotation_ProductRepository>();
+            container.RegisterType<IQuotationRepository, QuotationRepository>();
+            container.RegisterType<ISmartBillingScheduleDayMappingRepository, SmartBillingScheduleDayMappingRepository>();
+            container.RegisterType<ITempMainPrevaultReportRepository, TempMainPrevaultReportRepository>();
+            container.RegisterType<ITempPrevaultNonBarcodeReportRepository, TempPrevaultNonBarcodeReportRepository>();
+            container.RegisterType<ITempPrevaultSealReportRepository, TempPrevaultSealReportRepository>();
+            container.RegisterType<IUserEmailTemplateRepository, UserEmailTemplateRepository>();
+            container.RegisterType<IWebAPIUser_TokenRepository, WebAPIUser_TokenRepository>();
+            container.RegisterType<IWebAPIUserRepository, WebAPIUserRepository>();
+            container.RegisterType<IVaultBalanceHeaderRepository, VaultBalanceHeaderRepository>();
+            container.RegisterType<IVaultBalanceDetailRepository, VaultBalanceDetailRepository>();
+            container.RegisterType<IVaultBalanceDiscrepancyRepository, VaultBalanceDiscrepancyRepository>();
+            container.RegisterType<IVaultBalanceSealAndMasterRepository, VaultBalanceSealAndMasterRepository>();
+            container.RegisterType<IVaultBalanceNonbarcodeRepository, VaultBalanceNonbarcodeRepository>();
+            #endregion
+        }
+    }
+}

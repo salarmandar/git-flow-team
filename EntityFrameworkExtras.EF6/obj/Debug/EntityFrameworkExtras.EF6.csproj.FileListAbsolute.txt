@@ -1,0 +1,12 @@
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFrameworkExtras.EF6.dll.config
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFrameworkExtras.EF6.dll
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFrameworkExtras.EF6.pdb
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFramework.dll
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFramework.SqlServer.dll
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFramework.xml
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\bin\Debug\EntityFramework.SqlServer.xml
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\obj\Debug\EntityFrameworkExtras.EF6.csprojAssemblyReference.cache
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\obj\Debug\EntityFrameworkExtras.EF6.csproj.CoreCompileInputs.cache
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\obj\Debug\EntityFrameworkExtras.EF6.csproj.CopyComplete
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\obj\Debug\EntityFrameworkExtras.EF6.dll
+D:\TFS\Predeploy\WebAPI\OceanWebAPIPreDeploy\EntityFrameworkExtras.EF6\obj\Debug\EntityFrameworkExtras.EF6.pdb

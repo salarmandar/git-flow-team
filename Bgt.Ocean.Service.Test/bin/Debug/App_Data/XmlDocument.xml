@@ -1,0 +1,1626 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bgt.Ocean.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Bgt.Ocean.WebAPI.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.UnityConfig.Container">
+            <summary>
+            Configured Unity Container.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.UnityConfig.RegisterTypes(Unity.IUnityContainer)">
+            <summary>
+            Registers the type mappings with the Unity container.
+            </summary>
+            <param name="container">The unity container to configure.</param>
+            <remarks>
+            There is no need to register concrete types such as controllers or
+            API controllers (unless you want to change the defaults), as Unity
+            allows resolving a concrete type even if it was not previously
+            registered.
+            </remarks>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.UnityWebApiActivator">
+            <summary>
+            Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.UnityWebApiActivator.Start">
+            <summary>
+            Integrates Unity when the application starts.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.UnityWebApiActivator.Shutdown">
+            <summary>
+            Disposes the Unity container when the application is shut down.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Bgt.Ocean.WebAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Bgt.Ocean.WebAPI.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Bgt.Ocean.WebAPI.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bgt.Ocean.WebAPI.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetRunResourceTypeList(System.Guid)">
+            <summary>
+            Get Data Run Resource Type
+            </summary>
+            <param name="customerGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetBrinksDriverList(System.Guid)">
+            <summary>
+            Get brinks driver for dropdownlist
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetTitleNameList">
+            <summary>
+            Get title name for dropdownlist
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.RunResourceAccidentInfo(Bgt.Ocean.Models.FleetMaintenance.AccidentInfoViewRequest)">
+            <summary>
+            Get Grid Accident Info
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetAccidentDetail(System.Guid)">
+            <summary>
+            Get detail for accident tab and counterparty tab
+            </summary>
+            <param name="accidentGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetAccidentDamageList_Brinks(System.Guid)">
+            <summary>
+            Get accident damage list (Brinks)
+            </summary>
+            <param name="accidentGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetAccidentDamageList_CounterParty(System.Guid)">
+            <summary>
+            Get accident damage list (Counterparty)
+            </summary>
+            <param name="accidentGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetAccidentController.GetAccidentImageList(System.Guid)">
+            <summary>
+            Get accident image
+            </summary>
+            <param name="accidentGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GetGasolineVendorList(System.Nullable{System.Guid})">
+            <summary>
+            Get dropdown list of gasoline vendor by brinks company
+            </summary>
+            <param name="brinkCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GetGasolineOperatorList">
+            <summary>
+            Get dropdown list of operator for search
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GetGasolineTypeList(System.Guid)">
+            <summary>
+            Get dropdown list of gasoline name by gasoline vendor
+            </summary>
+            <param name="gasolineVendorGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GasolineInfoList(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetGasolineRequest)">
+            <summary>
+            Get data of Gasoline by site and run
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GetGasolineDetial(System.Guid)">
+            <summary>
+            Get datail of Gasoline for Edit
+            </summary>
+            <param name="runGasolineGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.GetGasolineVendorDefault(System.Nullable{System.Guid})">
+            <summary>
+            Get default data of gasoline vendor by brinks company
+            </summary>
+            <param name="brinkCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.CreateRunResourceGasoline(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetGasolineDataRequest)">
+            <summary>
+            Create run resource gasoline
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.UpdateRunResourceGasoline(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetGasolineDataRequest)">
+            <summary>
+            Update run resource gasoline
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetGasolineController.DisableRunResourceGasoline(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetGasolineDisableRequest)">
+            <summary>
+            Disable run resource gasoline
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetFleetMaintenanceByRunResource(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceFilterRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceByRunResource
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetFleetMaintenanceDetail(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceDetailRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceDetail
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetFleetMaintenanceCategoryDetail(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryDetailRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetFleetMaintenanceCategoryDetail
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetMaintenanceIDBySite(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceIDBySite
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetCurrentOdometerByRunResource(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetCurrentOdometerByRunResource
+            </summary>
+            <param name="runGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetMaintenanceCategoryItems(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceCategoryItemsRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceCategoryItems
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetMaintenanceCategory(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceCategory
+            </summary>
+            <param name="brinksCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetVendorBySite(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetVendorBySite
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetVendorByBrinksCompany(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetVendorByBrinksCompany
+            </summary>
+            <param name="brinksCompanyGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.GetMaintenanceStatus">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => GetMaintenanceStatus
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.InsertOrUpdateFleetMaintenance(Bgt.Ocean.Service.Messagings.FleetMaintenance.FleetMaintenanceRequest)">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised=> InsertOrUpdateFleetMaintenance
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FleetMaintenanceController.UpdateCancelFleetMaintenance(System.Nullable{System.Guid})">
+            <summary>
+            => TFS#57836:Fleet Maintenance Revised => UpdateCancelFleetMaintenance
+            </summary>
+            <param name="maintenanceGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_DiscrepancyManagementController.ClosecaseVaultBalance(Bgt.Ocean.Models.PreVault.DiscrepancyCloseCaseModel)">
+            <summary>
+            Close case Item from Discrepancy page 
+            OO Web :: Scripts/Pages/Discrepancies/CloseCase.js
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_DiscrepancyManagementController.GetDiscrepancyVaultBalanceItems(System.Guid)">
+            <summary>
+            Get Discrepancy Item Mode :: Vault balance
+            OO Web :: Scripts/Pages/Discrepancies/DicrepanciesManagement.js
+            </summary>
+            <param name="prevaultGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_DiscrepancyManagementController.GetDiscrepancyCheckInProcessItems(System.Guid,System.Guid)">
+            <summary>
+            Get Discrepancy Item Mode :: Check in Process
+            OO Web :: Scripts/Pages/Discrepancies/DicrepanciesManagement.js
+            </summary>
+            <param name="siteGuid"></param>
+            <param name="prevaultGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.VaultBalanceStartScan(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceDetailRequest)">
+            <summary>
+            Update state vault state to precess
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.VaultBalanceItemsDetail(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceDetailRequest)">
+            <summary>
+            Get vault balance items seal and nonbarcode
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.SaveAndCloseVaultBalance(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceItemsRequest)">
+            <summary>
+            Save and close
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.VerifyVaultBalance(System.String,System.String)">
+            <summary>
+            Verify permission vault balance
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.GetVaultBalanceSealMapping(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceItemsRequest)">
+            <summary>
+            Get seal dupplicate for mapping
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.GetVaultBalanceSummary(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceItemsRequest)">
+            <summary>
+            Get summary for display item overage and shortage
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.CancelVaultBalance(System.Guid)">
+            <summary>
+            The system will cancel the vault balance for the current round and undo all scanned items for the current round.
+            </summary>
+            <param name="vaultBalanceGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.SubmitVaultBalance(Bgt.Ocean.Service.Messagings.PreVault.VaultBalance.VaultBalanceItemsRequest)">
+            <summary>
+            Update data vault balance to state complete
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_VaultBalanceController.GetReportVaultBalance(System.Guid,System.String,System.String)">
+            <summary>
+            Print Vault Balance Report
+            </summary>        
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RunController.TruckToTruckTransferReady(Bgt.Ocean.Service.Messagings.RunControlService.TruckToTruckRequest)">
+            <summary>
+            POST : api/v1/in/Run/TruckToTruckTransferReady
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RunController.TruckToTruckHoldoverJob(Bgt.Ocean.Service.Messagings.RunControlService.TruckToTruckRequest)">
+            <summary>
+            POST : api/v1/in/Run/TruckToTruckHoldoverJob
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RunController.TruckToTruckTransferJob(Bgt.Ocean.Service.Messagings.RunControlService.TruckToTruckRequest)">
+            <summary>
+            POST : api/v1/in/Run/TruckToTruckTransferJob
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RunController.ValidateTruckLiabilityLimit(Bgt.Ocean.Service.Messagings.RunControlService.ValidateTruckLiabilityLimitRequest)">
+            <summary>
+            POST : api/v1/in/Run/ValidateTruckLiabilityLimit
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteOptimizeController.InsertDailyRouteRequest(Bgt.Ocean.Models.RouteOptimization.DailyRouteDetailRequest)">
+            <summary>
+            ยืม Model response มาจาก master route 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SiteNetworkController.GetSiteNetworkListInfo(System.Guid,System.Boolean)">
+            <summary>
+            Get Site Network List by Country
+            </summary>
+            <param name="MasterCountry_Guid"></param>
+            <param name="FlagDisable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SiteNetworkController.GetSiteNetworkInfo(System.Guid)">
+            <summary>
+            Get Site Network by Site Guid
+            </summary>
+            <param name="SiteNetworkGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SiteNetworkController.CreateUpdateSiteNetwork(Bgt.Ocean.Service.ModelViews.SiteNetWork.SiteNetworkViewRequest)">
+            <summary>
+            Update or Create Site Network
+            </summary>
+            <param name="SiteNetwork"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SiteNetworkController.DisableOrEnableSiteNetwork(Bgt.Ocean.Service.ModelViews.SiteNetWork.SiteNetworkViewRequest)">
+            <summary>
+            Disable or Enable Site Network
+            </summary>
+            <param name="SiteNetwork"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SiteNetworkController.GetLogListInfoBySiteNetwork(System.Guid)">
+            <summary>
+            Get Site Network Log By Site Network Guid
+            </summary>
+            <param name="SiteNetworkGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SitePathController.GetSitePathListInfo(System.Guid,System.Boolean)">
+            <summary>
+            Get Brink's Site Path List by Country
+            </summary>
+            <param name="MasterCountry_Guid"></param>
+            <param name="FlagDisable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SitePathController.GetSitePathInfo(System.Guid)">
+            <summary>
+            Get Brink's Site Path by Guid
+            </summary>
+            <param name="SitePathGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SitePathController.CreateUpdateSitePath(Bgt.Ocean.Service.ModelViews.SitePath.SitePathViewRequest)">
+            <summary>
+            Update or Create Brink's Site Path
+            </summary>
+            <param name="SitePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SitePathController.DisableOrEnablePath(Bgt.Ocean.Service.ModelViews.SitePath.SitePathViewRequest)">
+            <summary>
+            Disable or Enable Brink's Site Path
+            </summary>
+            <param name="SitePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_SitePathController.GetLogListInfoBySitePath(System.Guid)">
+            <summary>
+            Get Brink's Site Path Log By Guid
+            </summary>
+            <param name="SitePathGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CheckOutDepartmentController.GetInternalDepartment(System.Guid)">
+            <summary>
+            Get internal department
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CheckOutDepartmentController.GetItemSealCheckOutDepartment(Bgt.Ocean.Service.ModelViews.PreVault.CheckOutDepartmentViewModel)">
+            <summary>
+            POST : api/v1/in/CheckOutDepartment/CheckOutDepartmentItemSealGet
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CheckOutDepartmentController.GetItemNonbarcodeCheckOutDepartment(Bgt.Ocean.Service.ModelViews.PreVault.CheckOutDepartmentViewModel)">
+            <summary>
+            POST : api/v1/in/CheckOutDepartment/CheckOutDepartmentItemNonbarcodeGet
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CheckOutDepartmentController.GetRouteGroupRunResourceList(System.Guid,System.String)">
+            <summary>
+            POST : api/v1/in/CheckOutDepartment/GetRouteGroupRunResourceList
+            </summary>
+            <param name="siteGuid"></param>
+            <param name="workDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CheckOutDepartmentController.SubmitCheckOutDepartment(Bgt.Ocean.Service.Messagings.PreVault.CheckOutDepartmentRequest)">
+            <summary>
+            POST : api/v1/in/CheckOutDepartment/SubmitCheckOutDepartment
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FileController.SaveFileTemp(System.String)">
+            <summary>
+            Save temp file
+            </summary>
+            <param name="inputFileName">Name of input file</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_FileController.RemoveFileTemp(System.Guid)">
+            <summary>
+            for remove temp file
+            </summary>
+            <param name="guid">guid of image temp table</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerController.GetAdhocCustomer(Bgt.Ocean.Service.Messagings.CustomerService.RequestAdhocCustomer)">
+            <summary>
+            GetCustomer
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerController.GetAccountsInCustomer(System.Guid)">
+            <summary>
+            Get all account in customer
+            </summary>
+            <param name="masterCustomer_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerController.GetLocationsInCustomer(System.Guid)">
+            <summary>
+            Get all location in customer
+            </summary>
+            <param name="masterCustomer_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.GetAdhocCustomerLocationByCustomer(Bgt.Ocean.Service.ModelViews.CustomerLocation.AdhocCustomerLocationRequest)">
+            <summary>
+            Get Customer location
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.GetLocationsEmail(Bgt.Ocean.Models.CustomerLocation.LocationEmailRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.GetLocationsEmailByCustomer(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="customerGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.SaveLocationEmailAction(System.Collections.Generic.IEnumerable{Bgt.Ocean.Models.CustomerLocation.LocationEmailActionView})">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.GetChangeCustomer(System.Guid)">
+            <summary>
+            Open popup change customer location
+            </summary>
+            <param name="locationGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_CustomerLocationController.SaveChangeCustomer(Bgt.Ocean.Models.CustomerLocation.SaveChangeCustomerRequest)">
+            <summary>
+            SaveChangeCustomer
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_AdhocController.GetOnwardDestinationTypeList">
+            <summary>
+            Get onward destionation type for dropdown list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_AdhocController.GetTripIndicator(System.Guid)">
+            <summary>
+            Get trip indicator for dropdown list
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_AdhocController.GetInternalDepartmentOnward(System.Guid)">
+            <summary>
+            Get internal department of the onward for dropdown list
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetBrinksCompanyByCountry(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            Get brink's company list by country
+            </summary>
+            <param name="countryGuid"></param>
+            <param name="userGuid"></param>
+            <param name="userRoleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetDefaultMaxRow(System.Guid)">
+            <summary>
+            Max row search is use on query maximum rows by this value
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCountryByUserHandle(System.String)">
+            <summary>
+            Get country list by user handle
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCountryListByUser(System.Guid,System.Int32)">
+            <summary>
+            Get country of brinks by user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCountryList">
+            <summary>
+            Use in popup select city
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCustomerList(System.Guid,System.Guid,System.Int32,System.Boolean)">
+            <summary>
+            Get customer list in country
+            </summary>
+            <param name="countryGuid"></param>
+            <param name="userGuid"></param>
+            <param name="roleId"></param>
+            <param name="haveContractOnly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCurrencyListByCountry(System.Guid)">
+            <summary>
+            Get currency by country
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetCommodityListByCountry(System.Guid)">
+            <summary>
+            Get all commodity by country
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetBrinksSiteByCompany(System.Guid,System.Guid,System.Int32)">
+            <summary>
+            Get Brink's Site List by Brink's Company
+            </summary>
+            <param name="CompanyGuid"></param>
+            <param name="UserGuid"></param>
+            <param name="RoleTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetInternalDepartmentsInCompany(System.Guid,System.Int32)">
+            <summary>
+            Internal Department Type
+            1 Vault
+            2 Pre-Vault
+            3 Room
+            </summary>
+            <param name="company_Guid"></param>
+            <param name="internalDepartmentTypeID"></param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetDenomenationByCurrency(System.Guid)">
+            <summary>
+            Get all colocation
+            </summary>
+            <param name="Currency_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_BrinksController.GetReasonType(System.Guid)">
+            <summary>
+            Get reason type for summary popup
+            </summary>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_InternalController.BrinksLogin(Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest)">
+            <summary>
+            body:
+            {
+                "userName": "ChanakanG",
+                "Password": "Brinks0716*"
+            }
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_InternalController.GetMenuListInUser(System.Guid,System.Nullable{System.Int32})">
+            <summary>
+            Get menus,
+            To get all menu set applicationID = null (by default)
+            </summary>
+            <param name="masterUser_Guid"></param>
+            <param name="applicationID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_InternalController.GetMenuCommandInUser(System.Guid,System.Int32)">
+            <summary>
+            Get menu command Id by user
+            </summary>
+            <param name="masterUser_Guid"></param>
+            <param name="appId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.MasterRouteCopyJobsToSameDay(Bgt.Ocean.Service.Messagings.MasterRouteService.MasterRouteCopyJobsRequest)">
+            <summary>
+             
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.MasterRouteCopyJobsToAnotherday(Bgt.Ocean.Service.Messagings.MasterRouteService.MasterRouteCopyJobsRequest)">
+            <summary>
+             
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.MasterRouteCopyJobsToHoliday(Bgt.Ocean.Service.Messagings.MasterRouteService.MasterRouteCopyJobsRequest)">
+            <summary>
+             
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.ModifyManualSortSeqIndex(Bgt.Ocean.Service.Messagings.MasterRouteService.ManualSortSeqIndexRequest)">
+            <summary>
+            Update manual seq-index
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.GetDayOfWeek">
+            <summary>
+            Get dropdown day of week.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_MasterRouteController.GetLOBDropdownList">
+            <summary>
+            Get dropdown LOB.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.GetDayOfWeek">
+            <summary>
+            GET : api/v1/in/NemoConfiguration/GetDayOfWeek
+            </summary>
+            <param name="languageGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.DistanceUnitListGet">
+            <summary>
+            GET : api/v1/in/NemoConfiguration/DistanceUnitListGet
+            </summary>
+            <param name="languageGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.NemoCountryConfigGet(System.Guid)">
+            <summary>
+            GET : api/v1/in/NemoConfiguration/NemoCountryConfigGet
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.SiteAndTrafficConfigGet(System.Guid,System.Guid)">
+            <summary>
+            GET : api/v1/in/NemoConfiguration/SiteAndTrafficConfigGet
+            </summary>
+            <param name="countryGuid"></param>
+            <param name="siteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.SiteForApplyGet(System.Guid)">
+            <summary>
+            For grid apply to site.
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.SiteIsApplyGet(System.Guid)">
+            <summary>
+            For dropdown list site is apply.
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NemoConfigurationController.NemoCountryConfigAddUpdate(Bgt.Ocean.Models.NemoConfiguration.NemoConfigValueRequest)">
+            <summary>
+            Add and update nemo country configuration
+            </summary>
+            <param name="nemoCountryConfigReq"></param>  
+            <param name="languageGuid"></param>                  
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_ReportController.DownloadProductivityMexicoFile(Bgt.Ocean.Service.Messagings.ExportExcelService.GetFileRequest)">
+            <summary>
+            Download productivity Mexico file
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.CloseRunManuallyUpdate(Bgt.Ocean.Service.Messagings.RunControlService.ManuallyCloseRunRequest)">
+            <summary>
+             /* Required! Format 'MM/dd/yyyy' */
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.JobItemIsEmpty(System.Guid)">
+            <summary>
+            Alert job(s) not allow to close run when there is P or TV-P job that has no seal attached.
+            </summary>
+            <param name="dailyRunGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.GetJobCannotClose(System.Guid,System.Boolean)">
+            <summary>
+            Job(s) not allow to close run when there is P or TV-P job that has no seal attached.
+            </summary>
+            <param name="runDailyGuid"></param>
+            <param name="isDolphin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.ValidateTruckLiabilityLimitMoveJobs(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsJobsRequest)">
+            <summary>
+            Validate on move jobs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.ValidateTruckLiabilityLimit(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitNoExistsItemsRequest)">
+            <summary>
+             Validate on update jobs
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.GetTruckLiabilityLimitPercentageAlert(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.LiabilityLimitExistsRunRequest)">
+            <summary>
+             Validate at run control display icon
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_RouteController.GetSTCOnHandByJob(Bgt.Ocean.Service.Messagings.TruckLiabilityLimit.JobWithSTCRequest)">
+            <summary>
+            Get STC by job list
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.GetMasterGroupByCountry(System.Guid)">
+            <summary>
+            Get Master Group
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.GetUserGroup(System.Guid)">
+            <summary>
+            Get User Group
+            </summary>
+            <param name="userGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.FindUserCanSeeMenu(System.Guid,System.Guid)">
+            <summary>
+            Find User Can See Menu
+            </summary>
+            <param name="masterMenuDetailGuid"></param>
+            <param name="masterSiteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.FindUserByMenuCommand(System.Guid,System.Guid)">
+            <summary>
+            Find User by menu command
+            </summary>
+            <param name="masterMenuDetailCommandGuid"></param>
+            <param name="masterSiteGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.GetUsersInCompany(System.Guid)">
+            <summary>
+            Get user by company
+            </summary>
+            <param name="company_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_UserController.GetUsersInCountry(System.Guid,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Get user by country , filter , sort server side paging
+            </summary>
+            <param name="country_Guid"></param>
+            <param name="filterUserName"></param>
+            <param name="filterFullName"></param>
+            <param name="filterEmail"></param>
+            <param name="pageNumber"></param>
+            <param name="numberPerPage"></param>
+            <param name="sortBy"></param>
+            <param name="sortWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v1.v1_NautilusController.GetCurrencyListByCountry(System.Guid)">
+            <summary>
+            Get currency by country
+            </summary>
+            <param name="countryGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_ContractController.SaveProduct(Bgt.Ocean.Service.Messagings.ProductService.SaveProductRequest)">
+            <summary>
+            [Coral] Use for Standard Contract 
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_InternalController.BrinksLogin(Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest)">
+            <summary>
+            Get user data
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.GetPricingRuleTreeView(Bgt.Ocean.Service.Messagings.QuotationService.GetPricingRuleTreeViewReqeust)">
+            <summary>
+            Get product - pricing rule list when press button "Manage product" on Quotation
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.GetPricingRuleInQuotation(System.Guid,System.Nullable{System.Guid})">
+            <summary>
+            Get pricing rule mapping in quotation
+            </summary>
+            <param name="quotation_Guid"></param>
+            <param name="product_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.MappingPricingRule(Bgt.Ocean.Service.Messagings.QuotationService.MappingPricingRuleRequest)">
+            <summary>
+            [Proposal] quotation need to mapping pricing rule when save after save quotation detail.
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.SavePricingRuleToBid(Bgt.Ocean.Service.Messagings.QuotationService.SavePricingRuleToBidRequest)">
+            <summary>
+            Save pricing rule in Bid Quotation
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.CheckRateExceed(Bgt.Ocean.Service.Messagings.QuotationService.CheckRateExceedRequest)">
+            <summary>
+            Check exceed after save pricing rule in quotation
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.AdjustPricingRule(Bgt.Ocean.Service.Messagings.QuotationService.AdjustRateRequest)">
+            <summary>
+            Adjust rate pricing rule
+            Support case adjust all in product and case single pricing
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_QuotationController.SavePricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.SavePricingRuleRequest)">
+            <summary>
+            Save pricing rule in quotation
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.GetPricingRuleDetail(System.Guid)">
+            <summary>
+            Get pricing rule detail
+            </summary>
+            <param name="pricingRule_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.GetMultiplePricingRuleDetail(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Get pricing rule detail as list.
+            Request with multiple selected pricing rule to get list of pricing rule detail
+            </summary>
+            <param name="pricingRule_Guids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.GetChargeCategoryList(System.Guid)">
+            <summary>
+            Get charge category list sorting by SeqNo
+            </summary>
+            <param name="pricingRule_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.CopyPricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.CopyPricingRuleRequest)">
+            <summary>
+            Copy pricing rule from source to duplicated product
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.RemoveRulesAndActions(Bgt.Ocean.Service.Messagings.PricingRuleService.RemoveRulesAndActionsRequest)">
+            <summary>
+            Remove all rule and action if switch charge type
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.SavePricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.SavePricingRuleRequest)">
+            <summary>
+            Save pricing rule
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.DeletePricingRule(Bgt.Ocean.Service.Messagings.PricingRuleService.DeleteRequest)">
+            <summary>
+            Delete pricing rule
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.DeleteRule(Bgt.Ocean.Service.Messagings.PricingRuleService.DeleteRequest)">
+            <summary>
+            Delete rule
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.SaveRule(Bgt.Ocean.Service.Messagings.PricingRuleService.SaveRuleRequest)">
+            <summary>
+            Save rule detail when submit on popup
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.DeleteAction(Bgt.Ocean.Service.Messagings.PricingRuleService.DeleteRequest)">
+            <summary>
+            Delete action
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.SaveAction(Bgt.Ocean.Service.Messagings.PricingRuleService.SaveActionRequest)">
+            <summary>
+            Save action detail with list of condition
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_PricingRuleController.GetActionDetail(System.Guid)">
+            <summary>
+            Get detail of "Action" popup
+            </summary>
+            <param name="action_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v2.v2_SalesController.GetSalesInCompany(System.Guid)">
+            <summary>
+            Get sales list from Ocean API
+            </summary>
+            <param name="company_Guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.Internals.v3.v3_InternalController.BrinksLogin(Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest)">
+            <summary>
+            User Authentication (With Encrypted Username and Password)
+            </summary>
+            <param name="request">User Authen Data</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v1_WebAliveController.Status">
+            <summary>
+            Check Application Status
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.ApiControllerBase.GetErrorResponse(System.Exception)">
+            <summary>
+            This method will log the exception and returns HttpResponseMessgae with content as its err
+            </summary>
+            <param name="err"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v1_AccountController.VerifyEmail(System.String)">
+            <summary>
+            Verify user email to check is any in system
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v1_AccountController.Register(Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest)">
+            <summary>
+            Register to use API by application username/password
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v1_AccountController.ChangePassword(Bgt.Ocean.Service.Messagings.UserService.ChangePasswordRequest)">
+            <summary>
+            api/v1/account/changepassword
+            </summary>
+            <param name="changePasswordRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v1_AccountController.GetHook">
+            <summary>
+            Hook for test request get "Hook!!"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v2_AccountController.Register(Bgt.Ocean.Service.Messagings.UserService.UserAuthenRequest)">
+            <summary>
+            Register to use API by application username/password
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v2_AccountController.VerifyTokenKey(System.Guid)">
+            <summary>
+            Verify active token 
+            </summary>
+            <param name="tokenId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v2_AccountController.ExpiredTokenKey(System.Guid)">
+            <summary>
+            Check token expired date
+            </summary>
+            <param name="tokenId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v2_AccountController.RetreiveAccessToken(System.Guid)">
+            <summary>
+            Get token from app key
+            </summary>
+            <param name="appKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Controllers.v2_AccountController.ChangeLanguage(Bgt.Ocean.Service.Messagings.UserService.ChangeLanguageRequest)">
+            <summary>
+            Switch language and return new menu bar with new language.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Helpers.HtmlHelperExtensions.CurrentVersion(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Return the Current Version from the AssemblyInfo.cs file.
+            </summary>
+        </member>
+        <member name="M:Bgt.Ocean.WebAPI.Helpers.JsonHelper.GetJsonStringJSDateFormat(System.Object)">
+            <summary>
+            Convert date to JSDateformat (eg. Date(142303..))
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,136 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.WebAPI", "Bgt.Ocean.WebAPI\Bgt.Ocean.WebAPI.csproj", "{8A17C961-2838-47BB-AD06-FA0D56D5C3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Models", "Bgt.Ocean.Models\Bgt.Ocean.Models.csproj", "{495F0F21-89B1-4B87-B866-0986B3B70909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Repository.EntityFramework", "Bgt.Ocean.Repository.EntityFramework\Bgt.Ocean.Repository.EntityFramework.csproj", "{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Service", "Bgt.Ocean.Service\Bgt.Ocean.Service.csproj", "{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Infrastructure", "Bgt.Ocean.Infrastructure\Bgt.Ocean.Infrastructure.csproj", "{1BD9CC03-C846-4774-8A9A-283D6AC23383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.DependencyResolver", "Bgt.Ocean.DependencyResolver\Bgt.Ocean.DependencyResolver.csproj", "{29DC84FE-7F95-447C-84BF-9A3280C94E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkExtras.EF6", "EntityFrameworkExtras.EF6\EntityFrameworkExtras.EF6.csproj", "{7ED1D61C-9396-4663-952D-D2F7DAD19B19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{5F63787B-47C1-4AEB-9966-D3332FE38D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Repository.Test", "Bgt.Ocean.Repository.Test\Bgt.Ocean.Repository.Test.csproj", "{012FFFC7-55CB-43A0-BE57-59AC12466BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Service.Test", "Bgt.Ocean.Service.Test\Bgt.Ocean.Service.Test.csproj", "{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource.Test", "DataSource.Test\DataSource.Test.csproj", "{83C03CCD-926E-4399-9F8D-3B703F821BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bgt.Ocean.Controller.Test", "Bgt.Ocean.Controller.Test\Bgt.Ocean.Controller.Test.csproj", "{BD1582BD-99A9-4E2B-AA65-9CC208220128}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A17C961-2838-47BB-AD06-FA0D56D5C3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A17C961-2838-47BB-AD06-FA0D56D5C3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A17C961-2838-47BB-AD06-FA0D56D5C3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A17C961-2838-47BB-AD06-FA0D56D5C3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495F0F21-89B1-4B87-B866-0986B3B70909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495F0F21-89B1-4B87-B866-0986B3B70909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495F0F21-89B1-4B87-B866-0986B3B70909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495F0F21-89B1-4B87-B866-0986B3B70909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E54EF3-61A3-48A3-A7AC-B749B3036C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8F0211-4EB1-4A19-BA0C-817F8AF61BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BD9CC03-C846-4774-8A9A-283D6AC23383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BD9CC03-C846-4774-8A9A-283D6AC23383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BD9CC03-C846-4774-8A9A-283D6AC23383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BD9CC03-C846-4774-8A9A-283D6AC23383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29DC84FE-7F95-447C-84BF-9A3280C94E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29DC84FE-7F95-447C-84BF-9A3280C94E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29DC84FE-7F95-447C-84BF-9A3280C94E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29DC84FE-7F95-447C-84BF-9A3280C94E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED1D61C-9396-4663-952D-D2F7DAD19B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED1D61C-9396-4663-952D-D2F7DAD19B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED1D61C-9396-4663-952D-D2F7DAD19B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED1D61C-9396-4663-952D-D2F7DAD19B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012FFFC7-55CB-43A0-BE57-59AC12466BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012FFFC7-55CB-43A0-BE57-59AC12466BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012FFFC7-55CB-43A0-BE57-59AC12466BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012FFFC7-55CB-43A0-BE57-59AC12466BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C03CCD-926E-4399-9F8D-3B703F821BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C03CCD-926E-4399-9F8D-3B703F821BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C03CCD-926E-4399-9F8D-3B703F821BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C03CCD-926E-4399-9F8D-3B703F821BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD1582BD-99A9-4E2B-AA65-9CC208220128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD1582BD-99A9-4E2B-AA65-9CC208220128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD1582BD-99A9-4E2B-AA65-9CC208220128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD1582BD-99A9-4E2B-AA65-9CC208220128}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{012FFFC7-55CB-43A0-BE57-59AC12466BEB} = {5F63787B-47C1-4AEB-9966-D3332FE38D9C}
+		{1B7B15F9-85EA-4CEC-88D8-0A01C6BDC521} = {5F63787B-47C1-4AEB-9966-D3332FE38D9C}
+		{83C03CCD-926E-4399-9F8D-3B703F821BFF} = {5F63787B-47C1-4AEB-9966-D3332FE38D9C}
+		{BD1582BD-99A9-4E2B-AA65-9CC208220128} = {5F63787B-47C1-4AEB-9966-D3332FE38D9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E97ADEEA-F455-452F-B02E-638A6A40C44B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.225.4.19:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = Bgt.Ocean.WebAPI\\Bgt.Ocean.WebAPI.csproj
+		SccProjectName0 = Bgt.Ocean.WebAPI
+		SccLocalPath0 = Bgt.Ocean.WebAPI
+		SccProjectUniqueName1 = Bgt.Ocean.Models\\Bgt.Ocean.Models.csproj
+		SccProjectName1 = Bgt.Ocean.Models
+		SccLocalPath1 = Bgt.Ocean.Models
+		SccProjectUniqueName2 = Bgt.Ocean.Repository.EntityFramework\\Bgt.Ocean.Repository.EntityFramework.csproj
+		SccProjectName2 = Bgt.Ocean.Repository.EntityFramework
+		SccLocalPath2 = Bgt.Ocean.Repository.EntityFramework
+		SccProjectUniqueName3 = Bgt.Ocean.Service\\Bgt.Ocean.Service.csproj
+		SccProjectName3 = Bgt.Ocean.Service
+		SccLocalPath3 = Bgt.Ocean.Service
+		SccProjectUniqueName4 = Bgt.Ocean.Infrastructure\\Bgt.Ocean.Infrastructure.csproj
+		SccProjectName4 = Bgt.Ocean.Infrastructure
+		SccLocalPath4 = Bgt.Ocean.Infrastructure
+		SccProjectUniqueName5 = Bgt.Ocean.DependencyResolver\\Bgt.Ocean.DependencyResolver.csproj
+		SccProjectName5 = Bgt.Ocean.DependencyResolver
+		SccLocalPath5 = Bgt.Ocean.DependencyResolver
+		SccProjectUniqueName6 = EntityFrameworkExtras.EF6\\EntityFrameworkExtras.EF6.csproj
+		SccProjectName6 = EntityFrameworkExtras.EF6
+		SccLocalPath6 = EntityFrameworkExtras.EF6
+		SccProjectUniqueName7 = Bgt.Ocean.Repository.Test\\Bgt.Ocean.Repository.Test.csproj
+		SccProjectTopLevelParentUniqueName7 = OceanWebAPI.sln
+		SccProjectName7 = Bgt.Ocean.Repository.Test
+		SccLocalPath7 = Bgt.Ocean.Repository.Test
+		SccProjectUniqueName8 = DataSource.Test\\DataSource.Test.csproj
+		SccProjectTopLevelParentUniqueName8 = OceanWebAPI.sln
+		SccProjectName8 = DataSource.Test
+		SccLocalPath8 = DataSource.Test
+		SccProjectUniqueName9 = Bgt.Ocean.Controller.Test\\Bgt.Ocean.Controller.Test.csproj
+		SccProjectTopLevelParentUniqueName9 = OceanWebAPI.sln
+		SccProjectName9 = Bgt.Ocean.Controller.Test
+		SccLocalPath9 = Bgt.Ocean.Controller.Test
+		SccLocalPath10 = .
+		SccProjectUniqueName11 = Bgt.Ocean.Service.Test\\Bgt.Ocean.Service.Test.csproj
+		SccProjectTopLevelParentUniqueName11 = OceanWebAPI.sln
+		SccProjectName11 = Bgt.Ocean.Service.Test
+		SccLocalPath11 = Bgt.Ocean.Service.Test
+	EndGlobalSection
+EndGlobal
